@@ -169,7 +169,7 @@ public class AquaticBiomes {
                 .skyColor(calculateSkyColor(0.4F))
                 .fogColor(OVERWORLD_FOG_COLOR)
                 .waterColor(NORMAL_WATER_COLOR)
-                .waterFogColor(2109715)
+                .waterFogColor(1318918)
                 .foliageColorOverride(6655808)
                 .grassColorOverride(8818496)
                 .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS)
@@ -181,6 +181,7 @@ public class AquaticBiomes {
         BiomeDefaultFeatures.addLukeWarmKelp(biomeBuilder);
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, RuAquaticPlacements.FLOURAMINE);
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, RuAquaticPlacements.FLOURAGRASS);
 
 
         //add mob spawns

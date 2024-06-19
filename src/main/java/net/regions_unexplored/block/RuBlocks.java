@@ -983,9 +983,9 @@ public class RuBlocks {
     public static void addBlocks() {
         /*-----------------AQUATIC_BLOCKS-----------------*/
 
-        TALL_FLOURAGRASS = BlockRegistry.registerDefaultBlock("tall_flouragrass", () -> new TallSeagrassBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).replaceable().noCollission().instabreak().sound(SoundType.WET_GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)));
+        TALL_FLOURAGRASS = BlockRegistry.registerDefaultBlock("tall_flouragrass", () -> new TallSeagrassBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).replaceable().noCollission().instabreak().sound(SoundType.WET_GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)/*.hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true).lightLevel(s -> 2)*/));
         FLOURAMINE = BlockRegistry.registerDefaultBlock("flouramine", () -> new FlouramineBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).strength(0.5f, 0f).randomTicks().sound(SoundType.WET_GRASS).pushReaction(PushReaction.DESTROY).hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true).lightLevel(s -> 12)));
-        FLOURAMINE_PLANT = RegionsUnexploredMod.BLOCK_REGISTRY.register("flouramine_plant", () -> new FlouraminePlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().strength(0.5f, 0f).sound(SoundType.WET_GRASS).pushReaction(PushReaction.DESTROY).hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true)));
+        FLOURAMINE_PLANT = RegionsUnexploredMod.BLOCK_REGISTRY.register("flouramine_plant", () -> new FlouraminePlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().strength(0.5f, 0f).sound(SoundType.WET_GRASS).pushReaction(PushReaction.DESTROY)));
 
         /*-----------------CAVE_BLOCKS-----------------*/
         //PRISMA_BLOCKS

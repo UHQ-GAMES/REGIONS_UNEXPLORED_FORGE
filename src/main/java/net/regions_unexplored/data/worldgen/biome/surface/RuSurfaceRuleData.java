@@ -83,6 +83,7 @@ public class RuSurfaceRuleData {
     private static final SurfaceRules.RuleSource RED_SAND = makeStateRule(Blocks.RED_SAND);
     private static final SurfaceRules.RuleSource GRAVEL = makeStateRule(Blocks.GRAVEL);
     private static final SurfaceRules.RuleSource ASH = makeStateRule(RuBlocks.ASH.get());
+    private static final SurfaceRules.RuleSource VOLCANIC_ASH = makeStateRule(RuBlocks.VOLCANIC_ASH.get());
 
     //COLD_BLOCKS
     private static final SurfaceRules.RuleSource SNOW_BLOCK = makeStateRule(Blocks.SNOW_BLOCK);
@@ -229,7 +230,7 @@ public class RuSurfaceRuleData {
 
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(RuBiomes.MAPLE_FOREST), SurfaceRules.ifTrue(shieldNoise(1.65D), STONE)),
 
-                SurfaceRules.ifTrue(SurfaceRules.isBiome(RuBiomes.HYACINTH_DEEPS), STONE),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(RuBiomes.HYACINTH_DEEPS, RuBiomes.BRINE), STONE),
 
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(RuBiomes.ASHEN_WOODLAND), ASHEN_DIRT),
 
@@ -331,7 +332,10 @@ public class RuSurfaceRuleData {
                         SurfaceRules.ifTrue(waterBlockCheck1, onSurface),
 
                         SurfaceRules.ifTrue(SurfaceRules.isBiome(RuBiomes.HYACINTH_DEEPS),
-                                SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.noiseCondition(Noises.SWAMP, RuleWeight.getPercent(30)), MOSSY_STONE), GRAVEL))
+                                SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.noiseCondition(Noises.SWAMP, RuleWeight.getPercent(30)), MOSSY_STONE), GRAVEL)),
+
+                        SurfaceRules.ifTrue(SurfaceRules.isBiome(RuBiomes.BRINE),
+                                SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.noiseCondition(Noises.SWAMP, RuleWeight.getPercent(30)), MOSS_BLOCK), VOLCANIC_ASH))
                 )),
 
                 SurfaceRules.ifTrue(oceanGravelCheck, SurfaceRules.sequence(

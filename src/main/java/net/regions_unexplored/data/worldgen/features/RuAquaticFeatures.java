@@ -4,6 +4,7 @@ import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.features.AquaticFeatures;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
@@ -25,6 +26,7 @@ public class RuAquaticFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> FEN_CATTAIL = ConfiguredFeatureRegistry.createKey("fen_cattail");
     public static final ResourceKey<ConfiguredFeature<?, ?>> WATER_CATTAIL = ConfiguredFeatureRegistry.createKey("water_cattail");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FLOURAGRASS = ConfiguredFeatureRegistry.createKey("flouragrass");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FLOURAMINE = ConfiguredFeatureRegistry.createKey("flouramine");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_HYACINTH_STOCK = ConfiguredFeatureRegistry.createKey("tall_hyacinth_stock");
@@ -45,6 +47,7 @@ public class RuAquaticFeatures {
         register(context, FEN_CATTAIL, FeatureRegistry.FEN_CATTAIL.get(), FeatureConfiguration.NONE);
         register(context, WATER_CATTAIL, FeatureRegistry.WATER_CATTAIL.get(), FeatureConfiguration.NONE);
 
+        register(context, FLOURAGRASS, FeatureRegistry.FLOURAGRASS.get(), new ProbabilityFeatureConfiguration(0.8F));
         register(context, FLOURAMINE, FeatureRegistry.FLOURAMINE.get(), FeatureConfiguration.NONE);
 
         register(context, TALL_HYACINTH_STOCK, FeatureRegistry.TALL_HYACINTH_STOCK.get(), new HyacinthStockConfiguration(BlockStateProvider.simple(RuBlocks.TALL_HYACINTH_STOCK.get()), 1, 14));

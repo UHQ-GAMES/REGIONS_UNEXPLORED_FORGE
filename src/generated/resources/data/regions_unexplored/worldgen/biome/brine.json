@@ -25,7 +25,7 @@
     },
     "sky_color": 8168703,
     "water_color": 4159204,
-    "water_fog_color": 2109715
+    "water_fog_color": 1318918
   },
   "features": [
     [],
@@ -88,7 +88,8 @@
       "minecraft:patch_pumpkin",
       "minecraft:seagrass_normal",
       "minecraft:kelp_warm",
-      "regions_unexplored:flouramine"
+      "regions_unexplored:flouramine",
+      "regions_unexplored:flouragrass"
     ],
     [
       "minecraft:freeze_top_layer"
