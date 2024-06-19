@@ -237,8 +237,7 @@ public class RuSurfaceRuleData {
                                 SurfaceRules.ifTrue(SurfaceRules.noiseCondition(Noises.SWAMP, 0.0D), MUD)))),
 
                 SurfaceRules.ifTrue(isPeatBiome, PEAT_DIRT),
-                SurfaceRules.ifTrue(isSiltBiome, SILT_DIRT),
-                DIRT
+                SurfaceRules.ifTrue(isSiltBiome, SILT_DIRT)
         );
 
         SurfaceRules.RuleSource onSurface = SurfaceRules.sequence(
@@ -312,8 +311,7 @@ public class RuSurfaceRuleData {
 
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(RuBiomes.CHALK_CLIFFS), ChalkSurface),
                 SurfaceRules.ifTrue(isPeatBiome, PeatGrassSurface),
-                SurfaceRules.ifTrue(isSiltBiome, SiltGrassSurface),
-                GrassSurface
+                SurfaceRules.ifTrue(isSiltBiome, SiltGrassSurface)
         );
 
         SurfaceRules.RuleSource buildSurface = SurfaceRules.sequence(
@@ -350,9 +348,7 @@ public class RuSurfaceRuleData {
                 SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.sequence(
                         SurfaceRules.ifTrue(SurfaceRules.isBiome(Biomes.FROZEN_PEAKS, Biomes.JAGGED_PEAKS), STONE),
 
-                        SurfaceRules.ifTrue(SurfaceRules.isBiome(RuBiomes.ROCKY_REEF), sandWithSandstoneOverhang),
-
-                        gravelWithStoneOverhang))
+                        SurfaceRules.ifTrue(SurfaceRules.isBiome(RuBiomes.ROCKY_REEF), sandWithSandstoneOverhang)))
         );
 
         ImmutableList.Builder<SurfaceRules.RuleSource> builder = ImmutableList.builder();
@@ -415,7 +411,7 @@ public class RuSurfaceRuleData {
 
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(RuBiomes.BLACKSTONE_BASIN), SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.UNDER_CEILING, SurfaceRules.ifTrue(stateSelectorNoise, BLACKSTONE)), SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, BLACKSTONE))),
 
-                SurfaceRules.ifTrue(SurfaceRules.isBiome(RuBiomes.REDSTONE_ABYSS), SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, SurfaceRules.ifTrue(soulSandLayerNoise, SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.not(hole), SurfaceRules.ifTrue(start30, SurfaceRules.ifTrue(end35, SOUL_SAND))), NETHERRACK))), SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.ifTrue(above31, SurfaceRules.ifTrue(end35, SurfaceRules.ifTrue(gravelLayerNoise, SurfaceRules.sequence(SurfaceRules.ifTrue(above32, GRAVEL), SurfaceRules.ifTrue(SurfaceRules.not(hole), GRAVEL)))))))), NETHERRACK);
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(RuBiomes.REDSTONE_ABYSS), SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, SurfaceRules.ifTrue(soulSandLayerNoise, SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.not(hole), SurfaceRules.ifTrue(start30, SurfaceRules.ifTrue(end35, SOUL_SAND))), NETHERRACK))), SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.ifTrue(above31, SurfaceRules.ifTrue(end35, SurfaceRules.ifTrue(gravelLayerNoise, SurfaceRules.sequence(SurfaceRules.ifTrue(above32, GRAVEL), SurfaceRules.ifTrue(SurfaceRules.not(hole), GRAVEL)))))))));
     }
 
     public static SurfaceRules.RuleSource end() {return END_STONE;}
