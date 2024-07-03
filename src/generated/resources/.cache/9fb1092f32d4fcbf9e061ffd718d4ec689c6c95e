@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-19T20:20:41.7397376	Recipes
+// 1.20.1	2024-07-03T15:00:47.1132423	Recipes
 5770a667d98cebfadd6d0b44cf21efee46e63774 data/regions_unexplored/advancements/recipes/building_blocks/alpha_planks.json
 9733db7e850a39246eedc062245f066c97e830cc data/regions_unexplored/advancements/recipes/building_blocks/alpha_slab.json
 b5f8571fe7c7d2d95172b710a091855df20a3592 data/regions_unexplored/advancements/recipes/building_blocks/alpha_stairs.json
@@ -800,7 +800,7 @@ bc8dae2bdb8d886a494e0f210714c3c68e3445c7 data/regions_unexplored/recipes/cobalt_
 5040b7b6e357b25fcdbef331c49cdc257793fdad data/regions_unexplored/recipes/cobalt_trapdoor.json
 01949dfe0a3f6788729b1e3655a5e772ad005400 data/regions_unexplored/recipes/cobalt_wood.json
 606c3180e2dfc5f04984683c7d3588e93e449034 data/regions_unexplored/recipes/cyan_dye_from_cyan_snowbelle.json
-443f517ca19414840d5d00c06c5ef793e72a2a21 data/regions_unexplored/recipes/cyan_painted_planks.json
+5cc7a81762549ce5c0bf5694a9497af5f0fe818d data/regions_unexplored/recipes/cyan_painted_planks.json
 d5baeee5ae7e9d2c4828238706ab57b98539e8e2 data/regions_unexplored/recipes/cyan_painted_slab.json
 eb27042627d8b9f79fd4c9a668b8d82317b0966b data/regions_unexplored/recipes/cyan_painted_stairs.json
 eb4dae3e0da6f4c50bf990d9f78cb55f0fef63c9 data/regions_unexplored/recipes/cyan_snowbelle.json
