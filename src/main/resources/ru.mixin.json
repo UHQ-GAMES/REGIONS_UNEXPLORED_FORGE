@@ -8,7 +8,11 @@
     "TrunkPlacerDirtMixin",
     "CropPlacerMixin",
     "EatBlockGoalMixin",
-    "NetherrackBlockMixin"
+    "NetherrackBlockMixin",
+    "MinecraftServerMixin",
+    "access.BiomeSourceAccess",
+    "access.NoiseBasedChunkGeneratorAccess",
+    "access.NoiseGeneratorSettingsAccess"
   ],
   "client": [
   ],
