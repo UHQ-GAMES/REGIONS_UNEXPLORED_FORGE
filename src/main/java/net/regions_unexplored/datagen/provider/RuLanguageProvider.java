@@ -68,7 +68,6 @@ public class RuLanguageProvider extends LanguageProvider {
         // Block translations
         RegionsUnexploredMod.BLOCK_REGISTRY.getEntries().forEach(blockRegistryObject -> {
             if(!blockRegistryObject.get().toString().contains("potted_")&&
-                    !blockRegistryObject.get().toString().contains("_plant")&&
                     !blockRegistryObject.get().toString().contains("hanging_earlight")&&
                     !blockRegistryObject.get().toString().contains("duskmelon")&&
                     !blockRegistryObject.get().toString().contains("salmonberry")&&
@@ -78,6 +77,7 @@ public class RuLanguageProvider extends LanguageProvider {
             }
         });
         //Misc block translations
+
         this.add(RuBlocks.DUSKMELON.get(), "Duskmelon Slice");
         this.add(RuBlocks.SALMONBERRY_BUSH.get(), "Salmonberry");
         this.add(RuBlocks.HANGING_EARLIGHT.get(), "Hanging Earlight Fruit");
@@ -211,6 +211,7 @@ public class RuLanguageProvider extends LanguageProvider {
     private static @NotNull String filterBlockLang(@NotNull Block key) {
         return key.getDescriptionId()
                 .replace("block.regions_unexplored.", "")
+                .replace("_plant", "")
                 .replace("_", " ");
     }
 
