@@ -118,11 +118,13 @@ public class RegionsUnexploredMod {
 
     //set up non-client side features
     private void commonSetup(final FMLCommonSetupEvent event) {
-        BiomeRegistry.setupTerrablender();
-        PottedPlants.setup();
-        CompostableBlocks.setup();
-        FlammableBlocks.setup();
-        BlockToolCompat.setup();
+        event.enqueueWork(() -> {
+            BiomeRegistry.setupTerrablender();
+            PottedPlants.setup();
+            CompostableBlocks.setup();
+            FlammableBlocks.setup();
+            BlockToolCompat.setup();
+        });
     }
 
     public static SurfaceRules.RuleSource getSurfaceRules(SurfaceRules.RuleSource fallBack) {
