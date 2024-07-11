@@ -6,6 +6,7 @@
     "regions_unexplored:brimwood_sign",
     "regions_unexplored:cobalt_sign",
     "regions_unexplored:cypress_sign",
+    "regions_unexplored:dead_sign",
     "regions_unexplored:eucalyptus_sign",
     "regions_unexplored:green_bioshroom_sign",
     "regions_unexplored:joshua_sign",
@@ -19,6 +20,7 @@
     "regions_unexplored:pink_bioshroom_sign",
     "regions_unexplored:redwood_sign",
     "regions_unexplored:socotra_sign",
-    "regions_unexplored:willow_sign"
+    "regions_unexplored:willow_sign",
+    "regions_unexplored:yellow_bioshroom_sign"
   ]
 }

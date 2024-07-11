@@ -1,10 +1,10 @@
 modLoader="javafml"
-loaderVersion="[47,)"
+loaderVersion="[48,)"
 license="All rights reserved"
 
 [[mods]]
 modId="regions_unexplored"
-version="0.5.4"
+version="0.5.5"
 displayName="Regions Unexplored"
 displayURL="https://discord.gg/Ss8UHPqHPj"
 logoFile="ruthumb.png"
@@ -17,7 +17,7 @@ Regions Unexplored is a mod that aims to add new content to the overworld. Curre
 [[dependencies.regions_unexplored]]
 modId="forge"
 mandatory=true
-versionRange="[47,)"
+versionRange="[48,)"
 ordering="NONE"
 side="BOTH"
 

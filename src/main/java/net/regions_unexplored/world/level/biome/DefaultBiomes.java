@@ -82,7 +82,7 @@ public class DefaultBiomes {
             /*DEEP*/     {RuBiomes.HYACINTH_DEEPS, Biomes.DEEP_COLD_OCEAN, Biomes.DEEP_OCEAN, Biomes.DEEP_LUKEWARM_OCEAN, Biomes.WARM_OCEAN},
             /*NORM*/     {Biomes.FROZEN_OCEAN,     Biomes.COLD_OCEAN,      Biomes.OCEAN,      Biomes.LUKEWARM_OCEAN,      RuBiomes.ROCKY_REEF}};
 
-    public static ResourceKey<Biome>[] PRIMARY_ISLAND_BIOMES = new ResourceKey[]       {RuBiomes.ALPHA_GROVE, RuBiomes.ASHEN_WOODLAND, RuBiomes.ASHEN_WOODLAND, RuBiomes.TROPICS, RuBiomes.TROPICS};
+    public static ResourceKey<Biome>[] PRIMARY_ISLAND_BIOMES = new ResourceKey[]       {RuBiomes.ALPHA_GROVE, RuBiomes.ALPHA_GROVE, RuBiomes.ASHEN_WOODLAND, RuBiomes.TROPICS, RuBiomes.TROPICS};
 
     public static ResourceKey<Biome>[] PRIMARY_BEACH_BIOMES = new ResourceKey[]        {Biomes.SNOWY_BEACH, RuBiomes.GRAVEL_BEACH, RuBiomes.GRASSY_BEACH, RuBiomes.GRASSY_BEACH, Biomes.BEACH};
 
@@ -174,7 +174,7 @@ public class DefaultBiomes {
             /*DEEP*/     {RuBiomes.HYACINTH_DEEPS, Biomes.DEEP_COLD_OCEAN, Biomes.DEEP_OCEAN, Biomes.DEEP_LUKEWARM_OCEAN, Biomes.WARM_OCEAN},
             /*NORM*/     {Biomes.FROZEN_OCEAN,     Biomes.COLD_OCEAN,      Biomes.OCEAN,      Biomes.LUKEWARM_OCEAN,      RuBiomes.ROCKY_REEF}};
 
-    public static ResourceKey<Biome>[] SECONDARY_ISLAND_BIOMES = new ResourceKey[]       {RuBiomes.ALPHA_GROVE, RuBiomes.ASHEN_WOODLAND, RuBiomes.ASHEN_WOODLAND, RuBiomes.TROPICS, RuBiomes.TROPICS};
+    public static ResourceKey<Biome>[] SECONDARY_ISLAND_BIOMES = new ResourceKey[]       {RuBiomes.ALPHA_GROVE, RuBiomes.ALPHA_GROVE, RuBiomes.ASHEN_WOODLAND, RuBiomes.TROPICS, RuBiomes.TROPICS};
 
     public static ResourceKey<Biome>[] SECONDARY_BEACH_BIOMES = new ResourceKey[]        {Biomes.SNOWY_BEACH, RuBiomes.GRAVEL_BEACH, RuBiomes.GRASSY_BEACH, RuBiomes.GRASSY_BEACH, Biomes.BEACH};
 

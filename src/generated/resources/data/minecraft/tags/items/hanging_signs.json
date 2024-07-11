@@ -6,6 +6,7 @@
     "regions_unexplored:brimwood_hanging_sign",
     "regions_unexplored:cobalt_hanging_sign",
     "regions_unexplored:cypress_hanging_sign",
+    "regions_unexplored:dead_hanging_sign",
     "regions_unexplored:eucalyptus_hanging_sign",
     "regions_unexplored:green_bioshroom_hanging_sign",
     "regions_unexplored:joshua_hanging_sign",
@@ -19,6 +20,7 @@
     "regions_unexplored:pink_bioshroom_hanging_sign",
     "regions_unexplored:redwood_hanging_sign",
     "regions_unexplored:socotra_hanging_sign",
-    "regions_unexplored:willow_hanging_sign"
+    "regions_unexplored:willow_hanging_sign",
+    "regions_unexplored:yellow_bioshroom_hanging_sign"
   ]
 }

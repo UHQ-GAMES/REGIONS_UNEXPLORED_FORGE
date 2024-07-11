@@ -6,6 +6,7 @@
     "regions_unexplored:brimwood_fence_gate",
     "regions_unexplored:cobalt_fence_gate",
     "regions_unexplored:cypress_fence_gate",
+    "regions_unexplored:dead_fence_gate",
     "regions_unexplored:eucalyptus_fence_gate",
     "regions_unexplored:green_bioshroom_fence_gate",
     "regions_unexplored:joshua_fence_gate",
@@ -19,6 +20,7 @@
     "regions_unexplored:pink_bioshroom_fence_gate",
     "regions_unexplored:redwood_fence_gate",
     "regions_unexplored:socotra_fence_gate",
-    "regions_unexplored:willow_fence_gate"
+    "regions_unexplored:willow_fence_gate",
+    "regions_unexplored:yellow_bioshroom_fence_gate"
   ]
 }

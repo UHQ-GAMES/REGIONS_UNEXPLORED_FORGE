@@ -5,6 +5,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.biome.Climate;
+import net.minecraft.world.level.biome.OverworldBiomeBuilder;
 
 import java.util.function.Consumer;
 
@@ -260,17 +261,17 @@ public class RegionSecondaryBiomeBuilder {
     }
 
     public void addUndergroundBiomes(Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> builder) {
-        this.addUndergroundBiome(builder, this.FULL_RANGE, this.FULL_RANGE, Climate.Parameter.span(-1.0F, -0.79F), this.FULL_RANGE, Climate.Parameter.span(-1.0F, 0.0F), 0.0F, DefaultBiomes.isBiomeEnabled(DefaultBiomes.getSecondaryCaveBiome(2)) ? DefaultBiomes.getSecondaryCaveBiome(2) : Biomes.LUSH_CAVES);
-        this.addUndergroundBiome(builder, this.FULL_RANGE, this.FULL_RANGE, Climate.Parameter.span(-1.0F, -0.79F), this.FULL_RANGE, Climate.Parameter.span(0.0F, 1.0F), 0.0F, DefaultBiomes.isBiomeEnabled(DefaultBiomes.getSecondaryCaveBiome(7)) ? DefaultBiomes.getSecondaryCaveBiome(7) : Biomes.DRIPSTONE_CAVES);
+        this.addUndergroundBiome(builder, this.FULL_RANGE, this.FULL_RANGE, Climate.Parameter.span(-1.0F, -0.9F), this.FULL_RANGE, Climate.Parameter.span(-1.0F, 0.0F), 0.0F, DefaultBiomes.isBiomeEnabled(DefaultBiomes.getSecondaryCaveBiome(2)) ? DefaultBiomes.getSecondaryCaveBiome(2) : Biomes.LUSH_CAVES);
+        this.addUndergroundBiome(builder, this.FULL_RANGE, this.FULL_RANGE, Climate.Parameter.span(-1.0F, -0.9F), this.FULL_RANGE, Climate.Parameter.span(0.0F, 1.0F), 0.0F, DefaultBiomes.isBiomeEnabled(DefaultBiomes.getSecondaryCaveBiome(7)) ? DefaultBiomes.getSecondaryCaveBiome(7) : Biomes.DRIPSTONE_CAVES);
 
-        this.addUndergroundBiome(builder, this.FULL_RANGE, this.FULL_RANGE, Climate.Parameter.span(0.775F, 1.0F), this.FULL_RANGE, Climate.Parameter.span(-1.0F, 0.0F), 0.0F, DefaultBiomes.isBiomeEnabled(DefaultBiomes.getSecondaryCaveBiome(6)) ? DefaultBiomes.getSecondaryCaveBiome(6) : Biomes.DRIPSTONE_CAVES);
-        this.addUndergroundBiome(builder, this.FULL_RANGE, this.FULL_RANGE, Climate.Parameter.span(0.775F, 1.0F), this.FULL_RANGE, Climate.Parameter.span(0.0F, 1.0F), 0.0F, DefaultBiomes.isBiomeEnabled(DefaultBiomes.getSecondaryCaveBiome(7)) ? DefaultBiomes.getSecondaryCaveBiome(7) : Biomes.DRIPSTONE_CAVES);
+        this.addUndergroundBiome(builder, this.FULL_RANGE, this.FULL_RANGE, Climate.Parameter.span(0.94F, 1.0F), this.FULL_RANGE, Climate.Parameter.span(-1.0F, 0.0F), 0.0F, DefaultBiomes.isBiomeEnabled(DefaultBiomes.getSecondaryCaveBiome(6)) ? DefaultBiomes.getSecondaryCaveBiome(6) : Biomes.DRIPSTONE_CAVES);
+        this.addUndergroundBiome(builder, this.FULL_RANGE, this.FULL_RANGE, Climate.Parameter.span(0.9F, 1.0F), this.FULL_RANGE, Climate.Parameter.span(0.0F, 1.0F), 0.0F, DefaultBiomes.isBiomeEnabled(DefaultBiomes.getSecondaryCaveBiome(7)) ? DefaultBiomes.getSecondaryCaveBiome(7) : Biomes.DRIPSTONE_CAVES);
 
-        this.addUndergroundBiome(builder, this.FULL_RANGE, Climate.Parameter.span(-1.0F, -0.69F), this.FULL_RANGE, this.FULL_RANGE, Climate.Parameter.span(-1.0F, 0.0F), 0.0F, DefaultBiomes.isBiomeEnabled(DefaultBiomes.getSecondaryCaveBiome(1)) ? DefaultBiomes.getSecondaryCaveBiome(1) : Biomes.LUSH_CAVES);
-        this.addUndergroundBiome(builder, this.FULL_RANGE, Climate.Parameter.span(-1.0F, -0.69F), this.FULL_RANGE, this.FULL_RANGE, Climate.Parameter.span(0.0F, 1.0F), 0.0F, DefaultBiomes.isBiomeEnabled(DefaultBiomes.getSecondaryCaveBiome(5)) ? DefaultBiomes.getSecondaryCaveBiome(5) :  Biomes.LUSH_CAVES);
+        this.addUndergroundBiome(builder, this.FULL_RANGE, Climate.Parameter.span(-1.0F, -0.8F), this.FULL_RANGE, this.FULL_RANGE, Climate.Parameter.span(-1.0F, 0.0F), 0.0F, DefaultBiomes.isBiomeEnabled(DefaultBiomes.getSecondaryCaveBiome(1)) ? DefaultBiomes.getSecondaryCaveBiome(1) : Biomes.LUSH_CAVES);
+        this.addUndergroundBiome(builder, this.FULL_RANGE, Climate.Parameter.span(-1.0F, -0.8F), this.FULL_RANGE, this.FULL_RANGE, Climate.Parameter.span(0.0F, 1.0F), 0.0F, DefaultBiomes.isBiomeEnabled(DefaultBiomes.getSecondaryCaveBiome(5)) ? DefaultBiomes.getSecondaryCaveBiome(5) :  Biomes.LUSH_CAVES);
 
-        this.addUndergroundBiome(builder, this.FULL_RANGE, Climate.Parameter.span(0.65F, 1.0F), this.FULL_RANGE, this.FULL_RANGE, Climate.Parameter.span(-1.0F, 0.0F), 0.0F, DefaultBiomes.isBiomeEnabled(DefaultBiomes.getSecondaryCaveBiome(4)) ? DefaultBiomes.getSecondaryCaveBiome(4) : Biomes.LUSH_CAVES);
-        this.addUndergroundBiome(builder, this.FULL_RANGE, Climate.Parameter.span(0.65F, 1.0F), this.FULL_RANGE, this.FULL_RANGE, Climate.Parameter.span(0.0F, 1.0F), 0.0F, DefaultBiomes.isBiomeEnabled(DefaultBiomes.getSecondaryCaveBiome(5)) ? DefaultBiomes.getSecondaryCaveBiome(5) : Biomes.LUSH_CAVES);
+        this.addUndergroundBiome(builder, this.FULL_RANGE, Climate.Parameter.span(0.8F, 1.0F), this.FULL_RANGE, this.FULL_RANGE, Climate.Parameter.span(-1.0F, 0.0F), 0.0F, DefaultBiomes.isBiomeEnabled(DefaultBiomes.getSecondaryCaveBiome(4)) ? DefaultBiomes.getSecondaryCaveBiome(4) : Biomes.LUSH_CAVES);
+        this.addUndergroundBiome(builder, this.FULL_RANGE, Climate.Parameter.span(0.8F, 1.0F), this.FULL_RANGE, this.FULL_RANGE, Climate.Parameter.span(0.0F, 1.0F), 0.0F, DefaultBiomes.isBiomeEnabled(DefaultBiomes.getSecondaryCaveBiome(5)) ? DefaultBiomes.getSecondaryCaveBiome(5) : Biomes.LUSH_CAVES);
 
         this.addBottomBiome(builder, this.FULL_RANGE, this.FULL_RANGE, this.FULL_RANGE, Climate.Parameter.span(this.erosions[0], this.erosions[1]), this.FULL_RANGE, 0.0F, DefaultBiomes.isBiomeEnabled(DefaultBiomes.getSecondaryCaveBiome(3)) ? DefaultBiomes.getSecondaryCaveBiome(3) : Biomes.DEEP_DARK);
         this.addBottomBiome(builder, this.FULL_RANGE, this.FULL_RANGE, this.FULL_RANGE, Climate.Parameter.span(this.erosions[2], this.erosions[3]), this.FULL_RANGE, 0.0F, DefaultBiomes.isBiomeEnabled(DefaultBiomes.getSecondaryCaveBiome(8)) ? DefaultBiomes.getSecondaryCaveBiome(8) : Biomes.DEEP_DARK);

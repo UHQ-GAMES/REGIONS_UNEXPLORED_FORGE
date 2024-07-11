@@ -114,8 +114,6 @@ dependencies {
     minecraft "net.minecraftforge:forge:${project.minecraft_version}-${project.loader_version}"
 
     implementation fg.deobf("curse.maven:terrablender-563928:4764561")
-    implementation fg.deobf("curse.maven:croptopia-415438:5003008")
-    implementation fg.deobf("curse.maven:epherolib-885449:4947580")
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
     testAnnotationProcessor 'org.spongepowered:mixin:0.8.5:processor'

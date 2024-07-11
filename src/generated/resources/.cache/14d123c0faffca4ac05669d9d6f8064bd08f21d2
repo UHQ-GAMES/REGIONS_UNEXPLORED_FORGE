@@ -1,4 +1,4 @@
-// 1.20.2	2024-02-19T20:28:42.7054107	Tags for minecraft:block mod id regions_unexplored
+// 1.20.2	2024-02-26T15:28:06.2512858	Tags for minecraft:block mod id regions_unexplored
 c68b911808b65d6d0bfdc3f30335a8603b276a7f data/forge/tags/blocks/doors/wooden.json
 42cbe3f376a6f8296386e47b2cc55792c9131c39 data/forge/tags/blocks/fences/wooden.json
 fa5edfcedc25e4053b7dd6e9679d69e0d74e295e data/forge/tags/blocks/fence_gates/wooden.json
@@ -52,8 +52,8 @@ c95c48f7f02e110d75aa593f55ddd2ccac780c1b data/minecraft/tags/blocks/logs.json
 b79905b511be83d5a08ddd2bd6c8a358785015c7 data/minecraft/tags/blocks/logs_that_burn.json
 4df567e2c152a3325acd0907b34a48ac2afaa26b data/minecraft/tags/blocks/mangrove_logs_can_grow_through.json
 4df567e2c152a3325acd0907b34a48ac2afaa26b data/minecraft/tags/blocks/mangrove_roots_can_grow_through.json
-2291354d59779b5a418aff53fc7704e6da9660ff data/minecraft/tags/blocks/mineable/axe.json
-df03981084ea4b72ab9d2e063c8197d2a415f97b data/minecraft/tags/blocks/mineable/hoe.json
+c7db4f95502337e57bf63e0f9d3ec011ce81e961 data/minecraft/tags/blocks/mineable/axe.json
+5a6fbf10dcdd8538c18158c1914b65027e0b51b5 data/minecraft/tags/blocks/mineable/hoe.json
 928047a351fa79b430d364e523ce23b2b25f9628 data/minecraft/tags/blocks/mineable/pickaxe.json
 5f534cce2bee6c0bf22f2ae13666954196f6173e data/minecraft/tags/blocks/mineable/shovel.json
 10d234ca9ece9037b01fe5a6bba75797317140dd data/minecraft/tags/blocks/mooshrooms_spawnable_on.json

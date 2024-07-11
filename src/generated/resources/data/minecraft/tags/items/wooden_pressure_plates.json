@@ -6,6 +6,7 @@
     "regions_unexplored:brimwood_pressure_plate",
     "regions_unexplored:cobalt_pressure_plate",
     "regions_unexplored:cypress_pressure_plate",
+    "regions_unexplored:dead_pressure_plate",
     "regions_unexplored:eucalyptus_pressure_plate",
     "regions_unexplored:green_bioshroom_pressure_plate",
     "regions_unexplored:joshua_pressure_plate",
@@ -19,6 +20,7 @@
     "regions_unexplored:pink_bioshroom_pressure_plate",
     "regions_unexplored:redwood_pressure_plate",
     "regions_unexplored:socotra_pressure_plate",
-    "regions_unexplored:willow_pressure_plate"
+    "regions_unexplored:willow_pressure_plate",
+    "regions_unexplored:yellow_bioshroom_pressure_plate"
   ]
 }

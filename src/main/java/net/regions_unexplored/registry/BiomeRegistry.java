@@ -12,7 +12,6 @@ import net.regions_unexplored.RegionsUnexploredMod;
 import net.regions_unexplored.config.RuCommonConfig;
 import net.regions_unexplored.data.worldgen.biome.RuBiomes;
 import net.regions_unexplored.data.worldgen.biome.builder.*;
-import net.regions_unexplored.data.worldgen.biome.surface.RuOverworldSurfaceBuilders;
 import net.regions_unexplored.data.worldgen.biome.surface.RuSurfaceRuleData;
 import net.regions_unexplored.world.level.region.RuRegionNether;
 import net.regions_unexplored.world.level.region.RuRegionPrimary;
@@ -31,7 +30,7 @@ public class BiomeRegistry {
         Regions.register(new RuRegionSecondary(RuCommonConfig.REGION_SECONDARY_WEIGHT.get()));
         Regions.register(new RuRegionNether(RuCommonConfig.REGION_NETHER_WEIGHT.get()));
         SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.NETHER, RegionsUnexploredMod.MOD_ID, RuSurfaceRuleData.nether());
-        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, RegionsUnexploredMod.MOD_ID, RuOverworldSurfaceBuilders.makeRules());
+        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, RegionsUnexploredMod.MOD_ID, RuSurfaceRuleData.overworld());
     }
 
     public static void bootstrap(BootstapContext<Biome> context) {
