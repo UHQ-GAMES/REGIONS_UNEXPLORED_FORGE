@@ -1,6 +1,7 @@
 package net.regions_unexplored.world.level.block.plant.nether;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -19,7 +20,7 @@ public class DorcelPlantBlock extends FlowerBlock {
     protected static final float AABB_OFFSET = 6.0F;
     protected static final VoxelShape SHAPE = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D);
 
-    public DorcelPlantBlock(MobEffect mobEffect, int i, Properties properties) {
+    public DorcelPlantBlock(Holder<MobEffect> mobEffect, int i, Properties properties) {
         super(mobEffect, i, properties);
     }
 

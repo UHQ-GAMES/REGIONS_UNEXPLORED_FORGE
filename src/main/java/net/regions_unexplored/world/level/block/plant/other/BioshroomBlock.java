@@ -1,6 +1,7 @@
 package net.regions_unexplored.world.level.block.plant.other;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -19,14 +20,14 @@ public class BioshroomBlock extends SaplingBlock {
     protected static final float AABB_OFFSET = 3.0F;
     protected static final VoxelShape SHAPE = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 13.0D, 13.0D);
     protected final TreeGrower treeGrower;
-    private final MobEffect suspiciousStewEffect;
+    private final Holder<MobEffect> suspiciousStewEffect;
     private final int effectDuration;
 
-    public BioshroomBlock(TreeGrower tree, MobEffect mobEffect, int duration, Properties properties) {
+    public BioshroomBlock(TreeGrower tree, Holder<MobEffect> mobEffect, int duration, Properties properties) {
         super(tree, properties);
         this.treeGrower = tree;
         this.suspiciousStewEffect = mobEffect;
-        if (mobEffect.isInstantenous()) {
+        if (mobEffect.get().isInstantenous()) {
             this.effectDuration = duration;
         } else {
             this.effectDuration = duration * 20;
@@ -49,7 +50,7 @@ public class BioshroomBlock extends SaplingBlock {
     }
 
     public MobEffect getSuspiciousStewEffect() {
-        return this.suspiciousStewEffect;
+        return this.suspiciousStewEffect.get();
     }
 
     public int getEffectDuration() {

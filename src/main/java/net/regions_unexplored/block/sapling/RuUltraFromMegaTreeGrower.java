@@ -14,11 +14,12 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.chunk.ChunkGenerator;
-import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraftforge.event.ForgeEventFactory;
 import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 
 import javax.annotation.Nullable;
 import java.util.Map;
@@ -26,7 +27,7 @@ import java.util.Optional;
 
 public final class RuUltraFromMegaTreeGrower {
     private static final Map<String, RuUltraFromMegaTreeGrower> GROWERS = new Object2ObjectArrayMap<>();
-    public static final Codec<RuUltraFromMegaTreeGrower> CODEC = ExtraCodecs.stringResolverCodec((grower) -> {
+    public static final Codec<RuUltraFromMegaTreeGrower> CODEC = Codec.stringResolver((grower) -> {
         return grower.name;
     }, GROWERS::get);
 

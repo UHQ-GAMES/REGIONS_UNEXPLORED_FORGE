@@ -2,6 +2,7 @@ package net.regions_unexplored.world.level.block.plant.flower;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
@@ -15,13 +16,13 @@ import net.minecraftforge.common.PlantType;
 public class CaveFlowerBlock extends BushBlock {
     protected static final float AABB_OFFSET = 3.0F;
     protected static final VoxelShape SHAPE = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 10.0D, 13.0D);
-    private final MobEffect suspiciousStewEffect;
+    private final Holder<MobEffect> suspiciousStewEffect;
     private final int effectDuration;
 
-    public CaveFlowerBlock(MobEffect effect, int duration, Properties properties) {
+    public CaveFlowerBlock(Holder<MobEffect> effect, int duration, Properties properties) {
         super(properties);
         this.suspiciousStewEffect = effect;
-        if (effect.isInstantenous()) {
+        if (effect.get().isInstantenous()) {
             this.effectDuration = duration;
         } else {
             this.effectDuration = duration * 20;
@@ -40,7 +41,7 @@ public class CaveFlowerBlock extends BushBlock {
     }
 
     public MobEffect getSuspiciousStewEffect() {
-        return this.suspiciousStewEffect;
+        return this.suspiciousStewEffect.get();
     }
 
     public int getEffectDuration() {
