@@ -744,7 +744,7 @@ public class RuRecipeProvider extends RecipeProvider implements IConditionBuilde
         paintedPlanks(consumer, RuBlocks.YELLOW_PAINTED_PLANKS.get(), TagKey.create(Registries.ITEM, new ResourceLocation("forge", "dyes/yellow")));
         paintedPlanks(consumer, RuBlocks.LIME_PAINTED_PLANKS.get(), TagKey.create(Registries.ITEM, new ResourceLocation("forge", "dyes/lime")));
         paintedPlanks(consumer, RuBlocks.GREEN_PAINTED_PLANKS.get(), TagKey.create(Registries.ITEM, new ResourceLocation("forge", "dyes/green")));
-        paintedPlanks(consumer, RuBlocks.CYAN_PAINTED_PLANKS.get(), TagKey.create(Registries.ITEM, new ResourceLocation("forge", "dyes/green")));
+        paintedPlanks(consumer, RuBlocks.CYAN_PAINTED_PLANKS.get(), TagKey.create(Registries.ITEM, new ResourceLocation("forge", "dyes/cyan")));
         paintedPlanks(consumer, RuBlocks.LIGHT_BLUE_PAINTED_PLANKS.get(), TagKey.create(Registries.ITEM, new ResourceLocation("forge", "dyes/light_blue")));
         paintedPlanks(consumer, RuBlocks.BLUE_PAINTED_PLANKS.get(), TagKey.create(Registries.ITEM, new ResourceLocation("forge", "dyes/blue")));
         paintedPlanks(consumer, RuBlocks.PURPLE_PAINTED_PLANKS.get(), TagKey.create(Registries.ITEM, new ResourceLocation("forge", "dyes/purple")));

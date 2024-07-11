@@ -12,6 +12,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.levelgen.SurfaceRules;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
@@ -46,6 +47,7 @@ import net.regions_unexplored.world.features.treedecorators.BlackwoodBioshroom;
 import net.regions_unexplored.world.features.treedecorators.ChanceWillowTrunkDecorator;
 import net.regions_unexplored.world.features.treedecorators.WillowTrunkDecorator;
 import org.slf4j.Logger;
+import terrablender.api.SurfaceRuleManager;
 
 @Mod(value = "regions_unexplored")
 public class RegionsUnexploredMod {
@@ -116,11 +118,17 @@ public class RegionsUnexploredMod {
 
     //set up non-client side features
     private void commonSetup(final FMLCommonSetupEvent event) {
-        BiomeRegistry.setupTerrablender();
-        PottedPlants.setup();
-        CompostableBlocks.setup();
-        FlammableBlocks.setup();
-        BlockToolCompat.setup();
+        event.enqueueWork(() -> {
+            BiomeRegistry.setupTerrablender();
+            PottedPlants.setup();
+            CompostableBlocks.setup();
+            FlammableBlocks.setup();
+            BlockToolCompat.setup();
+        });
+    }
+
+    public static SurfaceRules.RuleSource getSurfaceRules(SurfaceRules.RuleSource fallBack) {
+        return SurfaceRuleManager.getNamespacedRules(SurfaceRuleManager.RuleCategory.NETHER, fallBack);
     }
 
     private static void registerFoliagePlacers(){

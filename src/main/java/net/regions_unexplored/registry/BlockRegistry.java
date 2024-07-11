@@ -188,40 +188,40 @@ public class BlockRegistry {
 
     //Configure leaves blocks
     public static LeavesBlock leaves(MapColor colour) {
-        return new LeavesBlock(BlockBehaviour.Properties.of().mapColor(colour).ignitedByLava().strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(BlockRegistry::ocelotOrParrot).isSuffocating(BlockRegistry::never).isViewBlocking(BlockRegistry::never));
+        return new LeavesBlock(BlockBehaviour.Properties.of().mapColor(colour).ignitedByLava().strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(BlockRegistry::ocelotOrParrot).isSuffocating(BlockRegistry::never).isViewBlocking(BlockRegistry::never).pushReaction(PushReaction.DESTROY).isRedstoneConductor(BlockRegistry::never));
     }
     public static LeavesBlock fireproofLeaves(MapColor colour) {
-        return new LeavesBlock(BlockBehaviour.Properties.of().mapColor(colour).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(BlockRegistry::ocelotOrParrot).isSuffocating(BlockRegistry::never).isViewBlocking(BlockRegistry::never));
+        return new LeavesBlock(BlockBehaviour.Properties.of().mapColor(colour).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(BlockRegistry::ocelotOrParrot).isSuffocating(BlockRegistry::never).isViewBlocking(BlockRegistry::never).pushReaction(PushReaction.DESTROY).isRedstoneConductor(BlockRegistry::never));
     }
     public static MauveLeavesBlock mauveLeaves(MapColor colour) {
-        return new MauveLeavesBlock(BlockBehaviour.Properties.of().mapColor(colour).ignitedByLava().strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(BlockRegistry::ocelotOrParrot).isSuffocating(BlockRegistry::never).isViewBlocking(BlockRegistry::never));
+        return new MauveLeavesBlock(BlockBehaviour.Properties.of().mapColor(colour).ignitedByLava().strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(BlockRegistry::ocelotOrParrot).isSuffocating(BlockRegistry::never).isViewBlocking(BlockRegistry::never).pushReaction(PushReaction.DESTROY).isRedstoneConductor(BlockRegistry::never));
     }
     public static BlueMagnoliaLeavesBlock blueMagnoliaLeaves(MapColor colour) {
-        return new BlueMagnoliaLeavesBlock(BlockBehaviour.Properties.of().mapColor(colour).ignitedByLava().strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(BlockRegistry::ocelotOrParrot).isSuffocating(BlockRegistry::never).isViewBlocking(BlockRegistry::never));
+        return new BlueMagnoliaLeavesBlock(BlockBehaviour.Properties.of().mapColor(colour).ignitedByLava().strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(BlockRegistry::ocelotOrParrot).isSuffocating(BlockRegistry::never).isViewBlocking(BlockRegistry::never).pushReaction(PushReaction.DESTROY).isRedstoneConductor(BlockRegistry::never));
     }
     public static PinkMagnoliaLeavesBlock pinkMagnoliaLeaves(MapColor colour) {
-        return new PinkMagnoliaLeavesBlock(BlockBehaviour.Properties.of().mapColor(colour).ignitedByLava().strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(BlockRegistry::ocelotOrParrot).isSuffocating(BlockRegistry::never).isViewBlocking(BlockRegistry::never));
+        return new PinkMagnoliaLeavesBlock(BlockBehaviour.Properties.of().mapColor(colour).ignitedByLava().strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(BlockRegistry::ocelotOrParrot).isSuffocating(BlockRegistry::never).isViewBlocking(BlockRegistry::never).pushReaction(PushReaction.DESTROY).isRedstoneConductor(BlockRegistry::never));
     }
     public static WhiteMagnoliaLeavesBlock whiteMagnoliaLeaves(MapColor colour) {
-        return new WhiteMagnoliaLeavesBlock(BlockBehaviour.Properties.of().mapColor(colour).ignitedByLava().strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(BlockRegistry::ocelotOrParrot).isSuffocating(BlockRegistry::never).isViewBlocking(BlockRegistry::never));
+        return new WhiteMagnoliaLeavesBlock(BlockBehaviour.Properties.of().mapColor(colour).ignitedByLava().strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(BlockRegistry::ocelotOrParrot).isSuffocating(BlockRegistry::never).isViewBlocking(BlockRegistry::never).pushReaction(PushReaction.DESTROY).isRedstoneConductor(BlockRegistry::never));
     }
     public static SilverBirchLeavesBlock silverBirchLeaves(MapColor colour) {
-        return new SilverBirchLeavesBlock(BlockBehaviour.Properties.of().mapColor(colour).ignitedByLava().strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(BlockRegistry::ocelotOrParrot).isSuffocating(BlockRegistry::never).isViewBlocking(BlockRegistry::never));
+        return new SilverBirchLeavesBlock(BlockBehaviour.Properties.of().mapColor(colour).ignitedByLava().strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(BlockRegistry::ocelotOrParrot).isSuffocating(BlockRegistry::never).isViewBlocking(BlockRegistry::never).pushReaction(PushReaction.DESTROY).isRedstoneConductor(BlockRegistry::never));
     }
     public static EnchantedBirchLeavesBlock enchantedBirchLeaves(MapColor colour) {
-        return new EnchantedBirchLeavesBlock(BlockBehaviour.Properties.of().mapColor(colour).ignitedByLava().strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(BlockRegistry::ocelotOrParrot).isSuffocating(BlockRegistry::never).isViewBlocking(BlockRegistry::never));
+        return new EnchantedBirchLeavesBlock(BlockBehaviour.Properties.of().mapColor(colour).ignitedByLava().strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(BlockRegistry::ocelotOrParrot).isSuffocating(BlockRegistry::never).isViewBlocking(BlockRegistry::never).pushReaction(PushReaction.DESTROY).isRedstoneConductor(BlockRegistry::never));
     }
     public static RedMapleLeavesBlock redMapleLeaves(MapColor colour) {
-        return new RedMapleLeavesBlock(BlockBehaviour.Properties.of().mapColor(colour).ignitedByLava().strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(BlockRegistry::ocelotOrParrot).isSuffocating(BlockRegistry::never).isViewBlocking(BlockRegistry::never));
+        return new RedMapleLeavesBlock(BlockBehaviour.Properties.of().mapColor(colour).ignitedByLava().strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(BlockRegistry::ocelotOrParrot).isSuffocating(BlockRegistry::never).isViewBlocking(BlockRegistry::never).pushReaction(PushReaction.DESTROY).isRedstoneConductor(BlockRegistry::never));
     }
     public static OrangeMapleLeavesBlock orangeMapleLeaves(MapColor colour) {
-        return new OrangeMapleLeavesBlock(BlockBehaviour.Properties.of().mapColor(colour).ignitedByLava().strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(BlockRegistry::ocelotOrParrot).isSuffocating(BlockRegistry::never).isViewBlocking(BlockRegistry::never));
+        return new OrangeMapleLeavesBlock(BlockBehaviour.Properties.of().mapColor(colour).ignitedByLava().strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(BlockRegistry::ocelotOrParrot).isSuffocating(BlockRegistry::never).isViewBlocking(BlockRegistry::never).pushReaction(PushReaction.DESTROY).isRedstoneConductor(BlockRegistry::never));
     }
     public static JoshuaLeavesBlock joshuaLeaves(MapColor colour) {
-        return new JoshuaLeavesBlock(BlockBehaviour.Properties.of().pushReaction(PushReaction.BLOCK).mapColor(colour).ignitedByLava().strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().noCollission());
+        return new JoshuaLeavesBlock(BlockBehaviour.Properties.of().pushReaction(PushReaction.BLOCK).mapColor(colour).ignitedByLava().strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().noCollission().pushReaction(PushReaction.DESTROY).isRedstoneConductor(BlockRegistry::never));
     }
     public static LeavesBlock appleLeaves(MapColor colour) {
-        return new AppleLeavesBlock(BlockBehaviour.Properties.of().mapColor(colour).ignitedByLava().strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(BlockRegistry::ocelotOrParrot).isSuffocating(BlockRegistry::never).isViewBlocking(BlockRegistry::never));
+        return new AppleLeavesBlock(BlockBehaviour.Properties.of().mapColor(colour).ignitedByLava().strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(BlockRegistry::ocelotOrParrot).isSuffocating(BlockRegistry::never).isViewBlocking(BlockRegistry::never).pushReaction(PushReaction.DESTROY).isRedstoneConductor(BlockRegistry::never));
     }
     public static BrimwoodLeavesBlock brimLeaves(MapColor colour) {
         return new BrimwoodLeavesBlock(colour);
