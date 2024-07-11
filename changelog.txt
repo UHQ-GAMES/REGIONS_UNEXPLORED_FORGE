@@ -1,4 +1,16 @@
 ------------------------------------------------------------------------------------------------------------------------
+-0.5.6
++CHANGES:
+    -Added Bone Meal functionality to Viridescent Nylium
+    -Added workaround for surface rule issue in BetterX world type
+    -Added ja_jp translations
+    -Added missing hanging plant translations
+    -Fixed CommonSetup issue
+    -Fixed Dirt Path tags
+    -Fixed Leaves push reaction and conductivity
+    -Fixed Nether surface rules overwriting non-RU biome surfaces
+    -Fixed incorrect Cyan Painted Planks recipe
+------------------------------------------------------------------------------------------------------------------------
 -0.5.5
 +CHANGES:
     -Fixed Cobalt nylium dropping Netherrack instead of Blackstone
