@@ -1,0 +1,373 @@
+{
+  "parent": "regions_unexplored:this_tree_bleeds_red",
+  "criteria": {
+    "alpha_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:alpha_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "ashen_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:ashen_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "bamboo_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:bamboo_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "baobab_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:baobab_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "blackwood_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:blackwood_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "blue_bioshroom_stem": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:blue_bioshroom_stem"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "brimwood_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:brimwood_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "cobalt_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:cobalt_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "cypress_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:cypress_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "dead_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:dead_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "eucalyptus_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:eucalyptus_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "green_bioshroom_stem": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:green_bioshroom_stem"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "joshua_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:joshua_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "kapok_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:kapok_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "larch_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:larch_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "magnolia_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:magnolia_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "maple_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:maple_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "mauve_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:mauve_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "palm_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:palm_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "pine_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:pine_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "pink_bioshroom_stem": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:pink_bioshroom_stem"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "redwood_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:redwood_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "silver_birch_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:silver_birch_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "small_oak_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:small_oak_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "socotra_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:socotra_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "willow_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:willow_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "yellow_bioshroom_stem": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:yellow_bioshroom_stem"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "regions_unexplored:textures/gui/advancements/backgrounds/argillite.png",
+    "description": {
+      "translate": "advancements.regions_unexplored.got_wood.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "regions_unexplored:redwood_log"
+    },
+    "title": {
+      "translate": "advancements.regions_unexplored.got_wood.title"
+    }
+  },
+  "requirements": [
+    [
+      "bamboo_log"
+    ],
+    [
+      "small_oak_log"
+    ],
+    [
+      "ashen_log"
+    ],
+    [
+      "silver_birch_log"
+    ],
+    [
+      "alpha_log"
+    ],
+    [
+      "baobab_log"
+    ],
+    [
+      "blackwood_log"
+    ],
+    [
+      "brimwood_log"
+    ],
+    [
+      "cobalt_log"
+    ],
+    [
+      "cypress_log"
+    ],
+    [
+      "dead_log"
+    ],
+    [
+      "eucalyptus_log"
+    ],
+    [
+      "joshua_log"
+    ],
+    [
+      "kapok_log"
+    ],
+    [
+      "larch_log"
+    ],
+    [
+      "magnolia_log"
+    ],
+    [
+      "maple_log"
+    ],
+    [
+      "mauve_log"
+    ],
+    [
+      "palm_log"
+    ],
+    [
+      "pine_log"
+    ],
+    [
+      "redwood_log"
+    ],
+    [
+      "socotra_log"
+    ],
+    [
+      "willow_log"
+    ],
+    [
+      "blue_bioshroom_stem"
+    ],
+    [
+      "green_bioshroom_stem"
+    ],
+    [
+      "pink_bioshroom_stem"
+    ],
+    [
+      "yellow_bioshroom_stem"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

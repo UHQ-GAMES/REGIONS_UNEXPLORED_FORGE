@@ -1,0 +1,34 @@
+{
+  "parent": "regions_unexplored:parent",
+  "criteria": {
+    "socotra_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:socotra_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "regions_unexplored:textures/gui/advancements/backgrounds/argillite.png",
+    "description": {
+      "translate": "advancements.regions_unexplored.this_tree_bleeds_red.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "regions_unexplored:socotra_log"
+    },
+    "title": {
+      "translate": "advancements.regions_unexplored.this_tree_bleeds_red.title"
+    }
+  },
+  "requirements": [
+    [
+      "socotra_log"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

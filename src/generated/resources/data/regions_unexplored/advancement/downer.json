@@ -1,0 +1,30 @@
+{
+  "parent": "regions_unexplored:eternal_expedition",
+  "criteria": {
+    "dorcel": {
+      "conditions": {
+        "block": "regions_unexplored:dorcel"
+      },
+      "trigger": "minecraft:enter_block"
+    }
+  },
+  "display": {
+    "background": "regions_unexplored:textures/gui/advancements/backgrounds/argillite.png",
+    "description": {
+      "translate": "advancements.regions_unexplored.downer.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "regions_unexplored:dorcel"
+    },
+    "title": {
+      "translate": "advancements.regions_unexplored.downer.title"
+    }
+  },
+  "requirements": [
+    [
+      "dorcel"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

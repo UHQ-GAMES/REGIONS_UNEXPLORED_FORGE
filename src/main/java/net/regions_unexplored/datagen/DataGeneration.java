@@ -43,10 +43,11 @@ public class DataGeneration {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> holder = event.getLookupProvider();
 
-        generator.addProvider(event.includeServer(), new DatapackBuiltinEntriesProvider(packOutput, event.getLookupProvider(), BOOTSTRAPS, Set.of(RegionsUnexploredMod.MOD_ID)));
+        var datapackRegistries = new DatapackBuiltinEntriesProvider(packOutput, event.getLookupProvider(), BOOTSTRAPS, Set.of(RegionsUnexploredMod.MOD_ID));
 
+        var dataProvider = generator.addProvider(event.includeServer(), datapackRegistries);
 
-        generator.addProvider(true, new RuAdvancementProvider(packOutput, event.getLookupProvider(), existingFileHelper));
+        generator.addProvider(true, new RuAdvancementProvider(packOutput, datapackRegistries.getRegistryProvider(), existingFileHelper));
 
         generator.addProvider(event.includeServer(), new RuBlockModelProvider(packOutput, RegionsUnexploredMod.MOD_ID, existingFileHelper));
 
@@ -55,9 +56,9 @@ public class DataGeneration {
         generator.addProvider(true, new RuLanguageProvider(packOutput));
 
         //tags
-        TagsProvider<Block> blockTagsProvider = generator.addProvider(event.includeServer(), new RuBlockTagProvider(packOutput, event.getLookupProvider(), RegionsUnexploredMod.MOD_ID, existingFileHelper));
-        TagsProvider<Item> itemTagsProvider = generator.addProvider(event.includeServer(), new RuItemTagProvider(packOutput, event.getLookupProvider(), blockTagsProvider.contentsGetter(),  RegionsUnexploredMod.MOD_ID, existingFileHelper));
-        TagsProvider<Biome> biomeTagsProvider = generator.addProvider(event.includeServer(), new RuBiomeTagProvider(packOutput, event.getLookupProvider(), RegionsUnexploredMod.MOD_ID, existingFileHelper));
+        TagsProvider<Block> blockTagsProvider = generator.addProvider(event.includeServer(), new RuBlockTagProvider(packOutput, datapackRegistries.getRegistryProvider(), RegionsUnexploredMod.MOD_ID, existingFileHelper));
+        TagsProvider<Item> itemTagsProvider = generator.addProvider(event.includeServer(), new RuItemTagProvider(packOutput, datapackRegistries.getRegistryProvider(), blockTagsProvider.contentsGetter(),  RegionsUnexploredMod.MOD_ID, existingFileHelper));
+        TagsProvider<Biome> biomeTagsProvider = generator.addProvider(event.includeServer(), new RuBiomeTagProvider(packOutput, datapackRegistries.getRegistryProvider(), RegionsUnexploredMod.MOD_ID, existingFileHelper));
 
     }
 }

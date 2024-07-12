@@ -34,7 +34,7 @@ public class RuAdvancementProvider extends ForgeAdvancementProvider {
     private static class AdvancementBuilder implements ForgeAdvancementProvider.AdvancementGenerator {
         @Override
         public void generate(HolderLookup.Provider registries, Consumer<AdvancementHolder> saver, ExistingFileHelper existingFileHelper) {
-            HolderGetter<Biome> holdergetter = registries.lookupOrThrow(RegionsUnexploredMod.BIOME_REGISTRY.getRegistryKey());
+            HolderGetter<Biome> holdergetter = registries.lookupOrThrow(Registries.BIOME);
 
             AdvancementHolder PARENT = Advancement.Builder.advancement()
                     .display(

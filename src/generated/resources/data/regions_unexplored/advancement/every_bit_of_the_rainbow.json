@@ -1,0 +1,229 @@
+{
+  "parent": "regions_unexplored:pioneer",
+  "criteria": {
+    "black_snowbelle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:black_snowbelle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "blue_snowbelle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:blue_snowbelle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "brown_snowbelle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:brown_snowbelle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "cyan_snowbelle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:cyan_snowbelle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "gray_snowbelle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:gray_snowbelle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "green_snowbelle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:green_snowbelle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "light_blue_snowbelle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:light_blue_snowbelle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "light_gray_snowbelle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:light_gray_snowbelle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "lime_snowbelle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:lime_snowbelle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "magenta_snowbelle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:magenta_snowbelle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "orange_snowbelle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:orange_snowbelle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "pink_snowbelle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:pink_snowbelle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "purple_snowbelle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:purple_snowbelle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "red_snowbelle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:red_snowbelle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "white_snowbelle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:white_snowbelle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "yellow_snowbelle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:yellow_snowbelle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "regions_unexplored:textures/gui/advancements/backgrounds/argillite.png",
+    "description": {
+      "translate": "advancements.regions_unexplored.every_bit_of_the_rainbow.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "regions_unexplored:white_snowbelle"
+    },
+    "title": {
+      "translate": "advancements.regions_unexplored.every_bit_of_the_rainbow.title"
+    }
+  },
+  "requirements": [
+    [
+      "white_snowbelle"
+    ],
+    [
+      "black_snowbelle"
+    ],
+    [
+      "blue_snowbelle"
+    ],
+    [
+      "green_snowbelle"
+    ],
+    [
+      "pink_snowbelle"
+    ],
+    [
+      "brown_snowbelle"
+    ],
+    [
+      "cyan_snowbelle"
+    ],
+    [
+      "gray_snowbelle"
+    ],
+    [
+      "magenta_snowbelle"
+    ],
+    [
+      "red_snowbelle"
+    ],
+    [
+      "orange_snowbelle"
+    ],
+    [
+      "yellow_snowbelle"
+    ],
+    [
+      "purple_snowbelle"
+    ],
+    [
+      "lime_snowbelle"
+    ],
+    [
+      "light_gray_snowbelle"
+    ],
+    [
+      "light_blue_snowbelle"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

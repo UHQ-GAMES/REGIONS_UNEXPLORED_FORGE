@@ -1,0 +1,74 @@
+{
+  "parent": "regions_unexplored:mycologist",
+  "criteria": {
+    "blue_bioshroom_stem": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:blue_bioshroom_stem"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "green_bioshroom_stem": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:green_bioshroom_stem"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "pink_bioshroom_stem": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:pink_bioshroom_stem"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "yellow_bioshroom_stem": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:yellow_bioshroom_stem"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "regions_unexplored:textures/gui/advancements/backgrounds/argillite.png",
+    "description": {
+      "translate": "advancements.regions_unexplored.ancient_specimens.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "regions_unexplored:blue_bioshroom_stem"
+    },
+    "title": {
+      "translate": "advancements.regions_unexplored.ancient_specimens.title"
+    }
+  },
+  "requirements": [
+    [
+      "blue_bioshroom_stem"
+    ],
+    [
+      "pink_bioshroom_stem"
+    ],
+    [
+      "yellow_bioshroom_stem"
+    ],
+    [
+      "green_bioshroom_stem"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

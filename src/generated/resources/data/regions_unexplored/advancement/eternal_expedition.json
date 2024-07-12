@@ -1,0 +1,116 @@
+{
+  "parent": "regions_unexplored:parent",
+  "criteria": {
+    "blackstone_basin": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "regions_unexplored:blackstone_basin"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
+    "glistering_meadow": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "regions_unexplored:glistering_meadow"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
+    "infernal_holt": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "regions_unexplored:infernal_holt"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
+    "mycotoxic_undergrowth": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "regions_unexplored:mycotoxic_undergrowth"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
+    "redstone_abyss": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "regions_unexplored:redstone_abyss"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "background": "regions_unexplored:textures/gui/advancements/backgrounds/argillite.png",
+    "description": {
+      "translate": "advancements.regions_unexplored.eternal_expedition.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "regions_unexplored:brimwood_sapling"
+    },
+    "title": {
+      "translate": "advancements.regions_unexplored.eternal_expedition.title"
+    }
+  },
+  "requirements": [
+    [
+      "blackstone_basin"
+    ],
+    [
+      "mycotoxic_undergrowth"
+    ],
+    [
+      "glistering_meadow"
+    ],
+    [
+      "infernal_holt"
+    ],
+    [
+      "redstone_abyss"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

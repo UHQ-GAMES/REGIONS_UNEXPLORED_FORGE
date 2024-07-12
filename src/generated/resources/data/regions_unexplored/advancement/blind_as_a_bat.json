@@ -1,0 +1,32 @@
+{
+  "parent": "regions_unexplored:spelunker",
+  "criteria": {
+    "duskmelon": {
+      "conditions": {
+        "item": {
+          "items": "regions_unexplored:duskmelon_slice"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "background": "regions_unexplored:textures/gui/advancements/backgrounds/argillite.png",
+    "description": {
+      "translate": "advancements.regions_unexplored.blind_as_a_bat.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "regions_unexplored:duskmelon_slice"
+    },
+    "title": {
+      "translate": "advancements.regions_unexplored.blind_as_a_bat.title"
+    }
+  },
+  "requirements": [
+    [
+      "duskmelon"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

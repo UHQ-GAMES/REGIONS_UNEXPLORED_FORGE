@@ -1,0 +1,32 @@
+{
+  "parent": "regions_unexplored:eternal_expedition",
+  "criteria": {
+    "earlight": {
+      "conditions": {
+        "item": {
+          "items": "regions_unexplored:hanging_earlight_fruit"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "background": "regions_unexplored:textures/gui/advancements/backgrounds/argillite.png",
+    "description": {
+      "translate": "advancements.regions_unexplored.light_snack.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "regions_unexplored:hanging_earlight_fruit"
+    },
+    "title": {
+      "translate": "advancements.regions_unexplored.light_snack.title"
+    }
+  },
+  "requirements": [
+    [
+      "earlight"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
