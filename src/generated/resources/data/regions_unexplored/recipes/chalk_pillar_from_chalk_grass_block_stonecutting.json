@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "regions_unexplored:chalk_grass_block"
-  },
-  "result": "regions_unexplored:chalk_pillar"
-}

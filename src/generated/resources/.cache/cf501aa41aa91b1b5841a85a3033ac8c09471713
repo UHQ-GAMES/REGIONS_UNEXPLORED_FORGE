@@ -1,4 +1,4 @@
-// 1.20.4	2024-02-21T22:43:38.6834615	Tags for minecraft:worldgen/biome mod id regions_unexplored
+// 1.21	2024-07-12T00:03:23.9502595	Tags for minecraft:worldgen/biome mod id regions_unexplored
 36649860d25a60634c9747c746e4a7f41282eab1 data/forge/tags/worldgen/biome/is_cave.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/forge/tags/worldgen/biome/is_cold.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/forge/tags/worldgen/biome/is_cold/end.json
