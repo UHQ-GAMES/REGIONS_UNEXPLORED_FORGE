@@ -54,6 +54,7 @@ public class RegionsUnexploredMod {
     public static final String MOD_ID = "regions_unexplored";
 
     //biome registry
+
     public static final DeferredRegister<Biome> BIOME_REGISTRY = DeferredRegister.create(Registries.BIOME, MOD_ID);
     //feature registries
     public static final DeferredRegister<Feature<?>> FEATURE_REGISTRY = DeferredRegister.create(ForgeRegistries.FEATURES, MOD_ID);
@@ -72,11 +73,7 @@ public class RegionsUnexploredMod {
 
     public RegionsUnexploredMod() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-
-        bus.addListener(this::clientSetup);
-        bus.addListener(this::commonSetup);
-        RuTabs.addTabs();
-
+        BiomeRegistry.addBiomes();
         //add registries to IEventBus
         BIOME_REGISTRY.register(bus);
         FEATURE_REGISTRY.register(bus);
@@ -89,11 +86,16 @@ public class RegionsUnexploredMod {
         ENTITY_REGISTRY.register(bus);
         PARTICLE_REGISTRY.register(bus);
 
+        bus.addListener(this::clientSetup);
+        bus.addListener(this::commonSetup);
+
+        RuTabs.addTabs();
+
+
         registerConfig();
         registerTreeDecorators();
         registerFoliagePlacers();
 
-        BiomeRegistry.addBiomes();
         FeatureRegistry.addFeatures();
         RuBlocks.addBlocks();
         RuBlockEntities.addBlockEntities();

@@ -43,10 +43,10 @@ public class DataGeneration {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> holder = event.getLookupProvider();
 
-        var dataProvider = generator.addProvider(event.includeServer(), new DatapackBuiltinEntriesProvider(packOutput, event.getLookupProvider(), BOOTSTRAPS, Set.of(RegionsUnexploredMod.MOD_ID)));
+        generator.addProvider(event.includeServer(), new DatapackBuiltinEntriesProvider(packOutput, event.getLookupProvider(), BOOTSTRAPS, Set.of(RegionsUnexploredMod.MOD_ID)));
 
 
-        //generator.addProvider(true, new RuAdvancementProvider(packOutput, event.getLookupProvider(), existingFileHelper));
+        generator.addProvider(true, new RuAdvancementProvider(packOutput, event.getLookupProvider(), existingFileHelper));
 
         generator.addProvider(event.includeServer(), new RuBlockModelProvider(packOutput, RegionsUnexploredMod.MOD_ID, existingFileHelper));
 
