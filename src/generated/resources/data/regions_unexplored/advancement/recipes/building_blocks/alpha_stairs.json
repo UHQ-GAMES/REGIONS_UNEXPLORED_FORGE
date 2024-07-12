@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_alpha_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:alpha_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "regions_unexplored:alpha_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_alpha_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "regions_unexplored:alpha_stairs"
+    ]
+  }
+}

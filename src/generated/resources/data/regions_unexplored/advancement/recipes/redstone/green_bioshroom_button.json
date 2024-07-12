@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_green_bioshroom_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:green_bioshroom_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "regions_unexplored:green_bioshroom_button"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_green_bioshroom_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "regions_unexplored:green_bioshroom_button"
+    ]
+  }
+}

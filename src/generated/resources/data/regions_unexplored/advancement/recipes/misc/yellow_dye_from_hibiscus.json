@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_hibiscus": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:hibiscus"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "regions_unexplored:yellow_dye_from_hibiscus"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_hibiscus"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "regions_unexplored:yellow_dye_from_hibiscus"
+    ]
+  }
+}

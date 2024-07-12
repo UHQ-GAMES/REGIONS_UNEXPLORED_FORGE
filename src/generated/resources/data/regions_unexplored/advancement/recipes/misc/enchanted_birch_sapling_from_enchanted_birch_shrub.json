@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_enchanted_birch_shrub": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:enchanted_birch_shrub"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "regions_unexplored:enchanted_birch_sapling_from_enchanted_birch_shrub"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_enchanted_birch_shrub"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "regions_unexplored:enchanted_birch_sapling_from_enchanted_birch_shrub"
+    ]
+  }
+}

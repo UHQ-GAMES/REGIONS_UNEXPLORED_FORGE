@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "snowbelle",
+  "ingredients": [
+    {
+      "tag": "forge:dyes/white"
+    },
+    {
+      "tag": "regions_unexplored:snowbelle"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "regions_unexplored:white_snowbelle"
+  }
+}

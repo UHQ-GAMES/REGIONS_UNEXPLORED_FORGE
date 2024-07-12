@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mallow": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:mallow"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "regions_unexplored:orange_dye_from_mallow"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mallow"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "regions_unexplored:orange_dye_from_mallow"
+    ]
+  }
+}

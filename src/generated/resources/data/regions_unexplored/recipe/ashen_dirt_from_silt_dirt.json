@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "coarse_dirt",
+  "key": {
+    "D": {
+      "item": "regions_unexplored:silt_dirt"
+    },
+    "G": {
+      "tag": "regions_unexplored:ash"
+    }
+  },
+  "pattern": [
+    "DG",
+    "GD"
+  ],
+  "result": {
+    "count": 4,
+    "id": "regions_unexplored:ashen_dirt"
+  }
+}

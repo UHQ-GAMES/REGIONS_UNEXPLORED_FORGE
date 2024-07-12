@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "bioshrooms",
+  "ingredients": [
+    {
+      "item": "regions_unexplored:tall_pink_bioshroom"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "regions_unexplored:pink_bioshroom"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "values": [
+    "regions_unexplored:cypress_log",
+    "regions_unexplored:stripped_cypress_log",
+    "regions_unexplored:cypress_wood",
+    "regions_unexplored:stripped_cypress_wood"
+  ]
+}

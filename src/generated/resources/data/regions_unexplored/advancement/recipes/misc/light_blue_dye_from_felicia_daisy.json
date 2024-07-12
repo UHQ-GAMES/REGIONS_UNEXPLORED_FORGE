@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_felicia_daisy": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:felicia_daisy"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "regions_unexplored:light_blue_dye_from_felicia_daisy"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_felicia_daisy"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "regions_unexplored:light_blue_dye_from_felicia_daisy"
+    ]
+  }
+}

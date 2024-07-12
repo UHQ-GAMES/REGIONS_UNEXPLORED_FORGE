@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_barley": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:barley"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "regions_unexplored:barley_smoking"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_barley"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "regions_unexplored:barley_smoking"
+    ]
+  }
+}

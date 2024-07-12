@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "saplings",
+  "ingredients": [
+    {
+      "item": "regions_unexplored:ashen_shrub"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "regions_unexplored:ashen_sapling"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "stone_grass",
+  "key": {
+    "#": {
+      "item": "minecraft:deepslate"
+    },
+    "X": {
+      "tag": "regions_unexplored:grass"
+    }
+  },
+  "pattern": [
+    "X",
+    "#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "regions_unexplored:deepslate_grass_block"
+  }
+}

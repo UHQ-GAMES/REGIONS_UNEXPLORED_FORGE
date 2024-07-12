@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "chalk",
+  "key": {
+    "#": {
+      "item": "regions_unexplored:chalk"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "regions_unexplored:chalk_stairs"
+  }
+}

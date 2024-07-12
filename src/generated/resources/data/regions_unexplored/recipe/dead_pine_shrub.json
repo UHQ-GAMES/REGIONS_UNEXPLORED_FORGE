@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "shrubs",
+  "key": {
+    "#": {
+      "item": "regions_unexplored:dead_pine_sapling"
+    }
+  },
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "regions_unexplored:dead_pine_shrub"
+  }
+}

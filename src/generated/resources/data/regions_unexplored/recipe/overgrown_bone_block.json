@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "overgrown_bone_block",
+  "ingredients": [
+    {
+      "item": "minecraft:bone_block"
+    },
+    {
+      "item": "regions_unexplored:glistering_nylium"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "regions_unexplored:overgrown_bone_block"
+  }
+}

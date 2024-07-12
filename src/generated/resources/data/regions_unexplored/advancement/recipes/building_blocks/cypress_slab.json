@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cypress_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:cypress_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "regions_unexplored:cypress_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cypress_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "regions_unexplored:cypress_slab"
+    ]
+  }
+}

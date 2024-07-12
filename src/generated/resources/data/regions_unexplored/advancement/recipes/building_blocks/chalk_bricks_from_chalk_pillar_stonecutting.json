@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chalk_pillar": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:chalk_pillar"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "regions_unexplored:chalk_bricks_from_chalk_pillar_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_chalk_pillar"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "regions_unexplored:chalk_bricks_from_chalk_pillar_stonecutting"
+    ]
+  }
+}

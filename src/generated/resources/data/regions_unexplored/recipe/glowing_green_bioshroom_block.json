@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "bioshroom_blocks",
+  "key": {
+    "#": {
+      "item": "regions_unexplored:green_bioshroom_block"
+    },
+    "X": {
+      "item": "minecraft:glowstone"
+    }
+  },
+  "pattern": [
+    " # ",
+    "#X#",
+    " # "
+  ],
+  "result": {
+    "count": 4,
+    "id": "regions_unexplored:glowing_green_bioshroom_block"
+  }
+}

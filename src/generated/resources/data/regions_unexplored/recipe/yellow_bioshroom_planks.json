@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "regions_unexplored:yellow_bioshroom_logs"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "regions_unexplored:yellow_bioshroom_planks"
+  }
+}

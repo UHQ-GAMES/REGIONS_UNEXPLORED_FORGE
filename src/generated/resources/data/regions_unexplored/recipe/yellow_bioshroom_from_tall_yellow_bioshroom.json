@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "bioshrooms",
+  "ingredients": [
+    {
+      "item": "regions_unexplored:tall_yellow_bioshroom"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "regions_unexplored:yellow_bioshroom"
+  }
+}

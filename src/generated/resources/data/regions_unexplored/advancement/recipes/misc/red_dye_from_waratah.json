@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "regions_unexplored:red_dye_from_waratah"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_waratah": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:waratah"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_waratah"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "regions_unexplored:red_dye_from_waratah"
+    ]
+  }
+}

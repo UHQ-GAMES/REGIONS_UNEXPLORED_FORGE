@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "regions_unexplored:pink_bioshroom_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "regions_unexplored:pink_bioshroom_button"
+  }
+}

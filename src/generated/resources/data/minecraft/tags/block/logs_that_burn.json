@@ -1,0 +1,25 @@
+{
+  "values": [
+    "#regions_unexplored:branches",
+    "#regions_unexplored:bamboo_logs",
+    "#regions_unexplored:baobab_logs",
+    "#regions_unexplored:blackwood_logs",
+    "#regions_unexplored:blue_bioshroom_logs",
+    "#regions_unexplored:cypress_logs",
+    "#regions_unexplored:eucalyptus_logs",
+    "#regions_unexplored:green_bioshroom_logs",
+    "#regions_unexplored:joshua_logs",
+    "#regions_unexplored:kapok_logs",
+    "#regions_unexplored:larch_logs",
+    "#regions_unexplored:magnolia_logs",
+    "#regions_unexplored:maple_logs",
+    "#regions_unexplored:mauve_logs",
+    "#regions_unexplored:palm_logs",
+    "#regions_unexplored:pine_logs",
+    "#regions_unexplored:pink_bioshroom_logs",
+    "#regions_unexplored:redwood_logs",
+    "#regions_unexplored:socotra_logs",
+    "#regions_unexplored:willow_logs",
+    "regions_unexplored:alpha_log"
+  ]
+}

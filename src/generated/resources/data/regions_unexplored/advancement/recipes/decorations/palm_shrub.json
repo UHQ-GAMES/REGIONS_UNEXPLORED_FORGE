@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_palm_sapling": {
+      "conditions": {
+        "items": [
+          {
+            "items": "regions_unexplored:palm_sapling"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "regions_unexplored:palm_shrub"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_palm_sapling"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "regions_unexplored:palm_shrub"
+    ]
+  }
+}
