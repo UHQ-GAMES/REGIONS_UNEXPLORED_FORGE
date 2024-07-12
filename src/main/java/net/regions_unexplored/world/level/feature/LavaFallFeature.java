@@ -21,21 +21,23 @@ public class LavaFallFeature extends Feature<NoneFeatureConfiguration> {
         BlockPos pos = context.origin();
         WorldGenLevel level = context.level();
 
-
-        BlockPos.MutableBlockPos placePos = pos.mutable();
-        if (!level.getBlockState(placePos.below()).isAir()){
-            while (level.getBlockState(placePos).isAir()){
-                if (level.isOutsideBuildHeight(placePos)){
-                   return false;
-                }
-                placePos.move(Direction.UP);
-            }
+        if (level.getBlockState(pos.below()).isAir()&&!level.getBlockState(pos).isAir()){
+            return false;
         }
 
-        if(level.getBlockState(placePos).is(BlockTags.BASE_STONE_OVERWORLD)&&level.getBlockState(pos).isAir()) {
+        BlockPos.MutableBlockPos placePos = pos.mutable();
+
+        while (level.getBlockState(placePos).isAir()){
+            if (level.isOutsideBuildHeight(placePos)){
+                return false;
+            }
+            placePos.move(Direction.UP);
+        }
+
+        if(level.getBlockState(placePos).is(BlockTags.BASE_STONE_OVERWORLD)) {
             if (level.getBlockState(placePos.above()).is(BlockTags.BASE_STONE_OVERWORLD)) {
                 level.setBlock(placePos, Fluids.LAVA.defaultFluidState().createLegacyBlock(), 2);
-                level.scheduleTick(placePos, Fluids.LAVA.defaultFluidState().getType(), 0);
+                level.scheduleTick(placePos, Fluids.LAVA.defaultFluidState().getType(), 2);
                 level.setBlock(placePos.above(), Blocks.MAGMA_BLOCK.defaultBlockState(), 2);
                 return true;
             }
