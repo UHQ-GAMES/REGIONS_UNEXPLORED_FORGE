@@ -3,7 +3,7 @@ package net.regions_unexplored.data.worldgen.placement;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.valueproviders.ClampedNormalInt;
@@ -47,7 +47,7 @@ public class RuNetherPlacements {
     public static final ResourceKey<PlacedFeature>  POINTED_REDSTONE_NETHER = PlacedFeatureRegistry.createKey("pointed_redstone_nether");
     public static final ResourceKey<PlacedFeature>  LARGE_POINTED_REDSTONE_NETHER = PlacedFeatureRegistry.createKey("large_pointed_redstone_nether");
     public static final ResourceKey<PlacedFeature>  POINTED_REDSTONE_CLUSTER_NETHER = PlacedFeatureRegistry.createKey("pointed_redstone_cluster_nether");
-    public static void bootstrap(BootstapContext<PlacedFeature> context) {
+    public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> featureGetter = context.lookup(Registries.CONFIGURED_FEATURE);
 
         final Holder<ConfiguredFeature<?, ?>> SMALL_YELLOW_BIOSHROOM = featureGetter.getOrThrow(RuNetherFeatures.SMALL_YELLOW_BIOSHROOM);
@@ -111,11 +111,11 @@ public class RuNetherPlacements {
         register(context, RuNetherPlacements.POINTED_REDSTONE_CLUSTER_NETHER, POINTED_REDSTONE_CLUSTER_NETHER, CountPlacement.of(UniformInt.of(78, 126)), InSquarePlacement.spread(), PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, BiomeFilter.biome());
     }
 
-    protected static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> feature, PlacementModifier... placement) {
+    protected static void register(BootstrapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> feature, PlacementModifier... placement) {
         register(context, key, feature, List.of(placement));
     }
 
-    protected static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> feature, List<PlacementModifier> placement) {
+    protected static void register(BootstrapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> feature, List<PlacementModifier> placement) {
         context.register(key, new PlacedFeature(feature, placement));
     }
 }

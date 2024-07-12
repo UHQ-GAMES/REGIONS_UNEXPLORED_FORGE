@@ -2,7 +2,7 @@ package net.regions_unexplored.registry;
 
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
@@ -13,7 +13,7 @@ import net.regions_unexplored.block.RuBlocks;
 import net.regions_unexplored.data.worldgen.placement.*;
 
 public class PlacedFeatureRegistry {
-    public static void bootstrap(BootstapContext<PlacedFeature> context) {
+    public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         RuAquaticPlacements.bootstrap(context);
         RuMiscOverworldPlacements.bootstrap(context);
         RuNetherPlacements.bootstrap(context);
@@ -22,7 +22,7 @@ public class PlacedFeatureRegistry {
     }
 
     public static ResourceKey<PlacedFeature> createKey(String name) {
-        return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(RegionsUnexploredMod.MOD_ID, name));
+        return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(RegionsUnexploredMod.MOD_ID, name));
     }
 
     public static BlockPredicate onDirtPredicate = BlockPredicate.matchesBlocks(Direction.DOWN.getNormal(), Blocks.PODZOL, Blocks.COARSE_DIRT, Blocks.DIRT, RuBlocks.PEAT_DIRT.get(), RuBlocks.SILT_DIRT.get(), RuBlocks.PEAT_COARSE_DIRT.get(), RuBlocks.SILT_COARSE_DIRT.get(), RuBlocks.PEAT_PODZOL.get(), RuBlocks.SILT_PODZOL.get());

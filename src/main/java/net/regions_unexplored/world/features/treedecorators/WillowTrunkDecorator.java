@@ -1,5 +1,6 @@
 package net.regions_unexplored.world.features.treedecorators;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
@@ -15,10 +16,10 @@ import java.util.Random;
 
 public class WillowTrunkDecorator extends TrunkVineDecorator {
 	public static final WillowTrunkDecorator INSTANCE = new WillowTrunkDecorator();
-	public static com.mojang.serialization.Codec<WillowTrunkDecorator> codec;
+	public static MapCodec<WillowTrunkDecorator> codec;
 	public static TreeDecoratorType<?> tdt;
 	static {
-		codec = com.mojang.serialization.Codec.unit(() -> INSTANCE);
+		codec = MapCodec.unit(() -> INSTANCE);
 		tdt = new TreeDecoratorType<>(codec);
 	}
 

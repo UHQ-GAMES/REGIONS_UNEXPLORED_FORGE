@@ -14,6 +14,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.Vec3;
 import net.regions_unexplored.entity.RuEntities;
 import net.regions_unexplored.item.RuItems;
 import org.jetbrains.annotations.NotNull;
@@ -34,7 +35,7 @@ public class RuChestBoat extends ChestBoat {
     }
 
     @Override
-    protected Vector3f getPassengerAttachmentPoint(Entity entity, EntityDimensions entityDimensions, float isBamboo) {
+    protected Vec3 getPassengerAttachmentPoint(Entity entity, EntityDimensions entityDimensions, float isBamboo) {
         float f = this.getSinglePassengerXOffset();
         if (this.getPassengers().size() > 1) {
             int i = this.getPassengers().indexOf(entity);
@@ -49,7 +50,7 @@ public class RuChestBoat extends ChestBoat {
             }
         }
 
-        return new Vector3f(0.0F, entityDimensions.height / 3.0F, f);
+        return new Vec3(0.0F, entityDimensions.height() / 3.0F, f);
     }
 
     @Override
@@ -77,7 +78,7 @@ public class RuChestBoat extends ChestBoat {
     @Override
     protected void addAdditionalSaveData(CompoundTag tag) {
         tag.putString("model", getModel().getName());
-        this.addChestVehicleSaveData(tag);
+        this.addChestVehicleSaveData(tag, this.registryAccess());
     }
 
     @Override
@@ -85,7 +86,7 @@ public class RuChestBoat extends ChestBoat {
         if (tag.contains("model", Tag.TAG_STRING)) {
             this.entityData.set(DATA_ID_TYPE, RuBoat.ModelType.byName(tag.getString("model")).ordinal());
         }
-        this.readChestVehicleSaveData(tag);
+        this.readChestVehicleSaveData(tag, this.registryAccess());
     }
 
     @Override

@@ -8,6 +8,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -78,20 +79,21 @@ public class DuskmelonBlock extends BushBlock implements BonemealableBlock {
    public void entityInside(BlockState p_57270_, Level p_57271_, BlockPos p_57272_, Entity p_57273_) {
    }
 
-   public InteractionResult use(BlockState p_57275_, Level p_57276_, BlockPos p_57277_, Player p_57278_, InteractionHand p_57279_, BlockHitResult p_57280_) {
-      int i = p_57275_.getValue(AGE);
+   @Override
+   protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult result) {
+      int i = state.getValue(AGE);
       boolean flag = i == 2;
-      if (!flag && p_57278_.getItemInHand(p_57279_).is(Items.BONE_MEAL)) {
-         return InteractionResult.PASS;
+      if (!flag && player.getItemInHand(hand).is(Items.BONE_MEAL)) {
+         return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
       } else if (i > 1) {
-         popResource(p_57276_, p_57277_, new ItemStack(RuItems.DUSKMELON_SLICE.get(), 1));
-         p_57276_.playSound((Player)null, p_57277_, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + p_57276_.random.nextFloat() * 0.4F);
-         BlockState blockstate = p_57275_.setValue(AGE, Integer.valueOf(0));
-         p_57276_.setBlock(p_57277_, blockstate, 2);
-         p_57276_.gameEvent(GameEvent.BLOCK_CHANGE, p_57277_, GameEvent.Context.of(p_57278_, blockstate));
-         return InteractionResult.sidedSuccess(p_57276_.isClientSide);
+         popResource(level, pos, new ItemStack(RuItems.DUSKMELON_SLICE.get(), 1));
+         level.playSound((Player)null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
+         BlockState blockstate = state.setValue(AGE, Integer.valueOf(0));
+         level.setBlock(pos, blockstate, 2);
+         level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, blockstate));
+         return ItemInteractionResult.sidedSuccess(level.isClientSide);
       } else {
-         return super.use(p_57275_, p_57276_, p_57277_, p_57278_, p_57279_, p_57280_);
+         return super.useItemOn(stack, state, level, pos, player, hand, result);
       }
    }
 

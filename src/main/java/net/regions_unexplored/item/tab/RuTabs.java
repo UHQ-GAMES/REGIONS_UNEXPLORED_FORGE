@@ -18,7 +18,7 @@ public class RuTabs {
                 CreativeModeTab.builder().icon(() -> new ItemStack(RuBlocks.PRISMARITE_CLUSTER.get()))
                         .title(Component.translatable("itemGroup.regions_unexplored_main"))
                         .hideTitle()
-                        .withBackgroundLocation(new ResourceLocation(RegionsUnexploredMod.MOD_ID, "textures/gui/container/creative_inventory/tab_item_search.png"))
+                        .backgroundTexture(ResourceLocation.fromNamespaceAndPath(RegionsUnexploredMod.MOD_ID, "textures/gui/container/creative_inventory/tab_item_search.png"))
                         .withSearchBar(58)
                         .withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
                         .displayItems((featureFlags, output) -> {

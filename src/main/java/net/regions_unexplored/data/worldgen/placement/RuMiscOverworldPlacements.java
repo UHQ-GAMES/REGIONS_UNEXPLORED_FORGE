@@ -4,7 +4,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.valueproviders.ClampedNormalInt;
@@ -67,7 +67,7 @@ public class RuMiscOverworldPlacements {
     public static final ResourceKey<PlacedFeature> NOISE_ROCKS = PlacedFeatureRegistry.createKey("noise_rocks");
     public static final ResourceKey<PlacedFeature> NOISE_BUSH = PlacedFeatureRegistry.createKey("noise_bush");
 
-    public static void bootstrap(BootstapContext<PlacedFeature> context) {
+    public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> featureGetter = context.lookup(Registries.CONFIGURED_FEATURE);
         //---------------------FEATURES---------------------//
         Holder<ConfiguredFeature<?, ?>> DISK_CLAY = featureGetter.getOrThrow(RuMiscOverworldFeatures.DISK_CLAY);
@@ -164,11 +164,11 @@ public class RuMiscOverworldPlacements {
         return orePlacement(CountPlacement.of(i), placementModifier);
     }
 
-    protected static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> feature, PlacementModifier... placement) {
+    protected static void register(BootstrapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> feature, PlacementModifier... placement) {
         register(context, key, feature, List.of(placement));
     }
 
-    protected static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> feature, List<PlacementModifier> placement) {
+    protected static void register(BootstrapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> feature, List<PlacementModifier> placement) {
         context.register(key, new PlacedFeature(feature, placement));
     }
 }

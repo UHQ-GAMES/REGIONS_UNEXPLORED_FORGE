@@ -90,21 +90,21 @@ public class RuTags {
     }
 
     private static TagKey<Block> createBlock(String key) {
-        return TagKey.create(Registries.BLOCK, new ResourceLocation(RegionsUnexploredMod.MOD_ID, key));
+        return TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(RegionsUnexploredMod.MOD_ID, key));
     }
     public static TagKey<Block> createBlock(ResourceLocation name) {
         return TagKey.create(Registries.BLOCK, name);
     }
 
     private static TagKey<Item> createItem(String key) {
-        return TagKey.create(Registries.ITEM, new ResourceLocation(RegionsUnexploredMod.MOD_ID, key));
+        return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(RegionsUnexploredMod.MOD_ID, key));
     }
     public static TagKey<Item> createItem(ResourceLocation name) {
         return TagKey.create(Registries.ITEM, name);
     }
 
     private static TagKey<Biome> createBiome(String key) {
-        return TagKey.create(Registries.BIOME, new ResourceLocation(RegionsUnexploredMod.MOD_ID, key));
+        return TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(RegionsUnexploredMod.MOD_ID, key));
     }
     public static TagKey<Biome> createBiome(ResourceLocation name) {
         return TagKey.create(Registries.BIOME, name);

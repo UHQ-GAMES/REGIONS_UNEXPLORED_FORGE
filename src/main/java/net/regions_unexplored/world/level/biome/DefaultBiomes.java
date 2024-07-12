@@ -1388,6 +1388,6 @@ public class DefaultBiomes {
     }
 
     public static ResourceKey<Biome> getBiome(String id){
-        return ResourceKey.create(Registries.BIOME, new ResourceLocation(id));
+        return ResourceKey.create(Registries.BIOME, ResourceLocation.tryParse(id));
     }
 }

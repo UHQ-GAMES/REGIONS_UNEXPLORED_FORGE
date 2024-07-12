@@ -14,6 +14,7 @@ import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.Vec3;
 import net.regions_unexplored.block.RuBlocks;
 import net.regions_unexplored.entity.RuEntities;
 import net.regions_unexplored.item.RuItems;
@@ -37,7 +38,7 @@ public class RuBoat extends Boat {
     }
 
     @Override
-    protected Vector3f getPassengerAttachmentPoint(Entity entity, EntityDimensions entityDimensions, float isBamboo) {
+    protected Vec3 getPassengerAttachmentPoint(Entity entity, EntityDimensions entityDimensions, float isBamboo) {
         float f = this.getSinglePassengerXOffset();
         if (this.getPassengers().size() > 1) {
             int i = this.getPassengers().indexOf(entity);
@@ -52,7 +53,7 @@ public class RuBoat extends Boat {
             }
         }
 
-        return new Vector3f(0.0F, entityDimensions.height / 3.0F, f);
+        return new Vec3(0.0F, entityDimensions.height() / 3.0F, f);
     }
 
     @Override

@@ -44,6 +44,7 @@ import net.regions_unexplored.world.level.block.plant.tall.*;
 import net.regions_unexplored.world.level.block.wood.BambooLogBlock;
 import net.regions_unexplored.world.level.block.wood.SmallOakLogBlock;
 import net.regions_unexplored.world.level.block.wood.StrippedBambooLogBlock;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 
 public class RuBlocks {
     /*-----------------CAVE_BLOCKS-----------------*/

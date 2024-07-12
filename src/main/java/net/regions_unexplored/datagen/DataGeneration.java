@@ -1,5 +1,6 @@
 package net.regions_unexplored.datagen;
 
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.DataGenerator;
@@ -22,16 +23,17 @@ import net.regions_unexplored.registry.ConfiguredFeatureRegistry;
 import net.regions_unexplored.registry.PlacedFeatureRegistry;
 
 import java.util.Set;
+import java.util.concurrent.CompletableFuture;
 
 @Mod.EventBusSubscriber( modid = RegionsUnexploredMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DataGeneration {
 
     private static final RegistrySetBuilder BOOTSTRAPS = new RegistrySetBuilder()
-            .add(Registries.BIOME, BiomeRegistry::bootstrap)
-            .add(Registries.DAMAGE_TYPE, RuDamageTypes::bootstrap)
-            .add(Registries.NOISE, RuNoises::bootstrap)
             .add(Registries.CONFIGURED_FEATURE, ConfiguredFeatureRegistry::bootstrap)
             .add(Registries.PLACED_FEATURE, PlacedFeatureRegistry::bootstrap)
+            .add(Registries.BIOME, BiomeRegistry::bootstrap)
+            .add(Registries.NOISE, RuNoises::bootstrap)
+            .add(Registries.DAMAGE_TYPE, RuDamageTypes::bootstrap)
             ;
 
     @SubscribeEvent
@@ -39,16 +41,23 @@ public class DataGeneration {
         DataGenerator generator = event.getGenerator();
         PackOutput packOutput = generator.getPackOutput();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
+        CompletableFuture<HolderLookup.Provider> holder = event.getLookupProvider();
 
-        generator.addProvider(event.includeServer(), new DatapackBuiltinEntriesProvider(packOutput, event.getLookupProvider(), BOOTSTRAPS, Set.of(RegionsUnexploredMod.MOD_ID)));
+        var dataProvider = generator.addProvider(event.includeServer(), new DatapackBuiltinEntriesProvider(packOutput, event.getLookupProvider(), BOOTSTRAPS, Set.of(RegionsUnexploredMod.MOD_ID)));
+
+
+        generator.addProvider(true, new RuAdvancementProvider(packOutput, event.getLookupProvider(), existingFileHelper));
+
         generator.addProvider(event.includeServer(), new RuBlockModelProvider(packOutput, RegionsUnexploredMod.MOD_ID, existingFileHelper));
 
+        generator.addProvider(true, new RuRecipeProvider(packOutput, holder));
+        generator.addProvider(true, RuLootTableProvider.create(packOutput, holder));
+        generator.addProvider(true, new RuLanguageProvider(packOutput));
+
+        //tags
         TagsProvider<Block> blockTagsProvider = generator.addProvider(event.includeServer(), new RuBlockTagProvider(packOutput, event.getLookupProvider(), RegionsUnexploredMod.MOD_ID, existingFileHelper));
         TagsProvider<Item> itemTagsProvider = generator.addProvider(event.includeServer(), new RuItemTagProvider(packOutput, event.getLookupProvider(), blockTagsProvider.contentsGetter(),  RegionsUnexploredMod.MOD_ID, existingFileHelper));
         TagsProvider<Biome> biomeTagsProvider = generator.addProvider(event.includeServer(), new RuBiomeTagProvider(packOutput, event.getLookupProvider(), RegionsUnexploredMod.MOD_ID, existingFileHelper));
-        generator.addProvider(true, new RuAdvancementProvider(packOutput, event.getLookupProvider(), existingFileHelper));
-        generator.addProvider(true, RuLootTableProvider.create(packOutput));
-        generator.addProvider(true, new RuRecipeProvider(packOutput));
-        generator.addProvider(true, new RuLanguageProvider(packOutput));
+
     }
 }

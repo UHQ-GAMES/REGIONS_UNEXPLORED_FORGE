@@ -1,6 +1,7 @@
 package net.regions_unexplored.world.features.foliageplacers;
 
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
@@ -14,8 +15,10 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerType;
 import net.minecraft.world.level.material.Fluids;
 
+import java.util.Map;
+
 public class WillowFoliagePlacer extends FoliagePlacer {
-    public static final Codec<WillowFoliagePlacer> CODEC = RecordCodecBuilder.create((placer) -> {
+    public static final MapCodec<WillowFoliagePlacer> CODEC = RecordCodecBuilder.mapCodec((placer) -> {
         return foliagePlacerParts(placer).and(placer.group(IntProvider.codec(4, 16).fieldOf("height").forGetter((height) -> {
             return height.height;
         }), Codec.floatRange(0.0F, 1.0F).fieldOf("flower_decoration_chance").forGetter((flowerChance) -> {

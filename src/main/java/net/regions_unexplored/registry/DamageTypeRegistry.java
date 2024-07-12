@@ -8,6 +8,6 @@ import net.regions_unexplored.RegionsUnexploredMod;
 
 public class DamageTypeRegistry {
     public static ResourceKey<DamageType> createKey(String key) {
-        return ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation(RegionsUnexploredMod.MOD_ID, key));
+        return ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.fromNamespaceAndPath(RegionsUnexploredMod.MOD_ID, key));
     }
 }

@@ -61,7 +61,7 @@ public class RuSandyDoublePlantBlock extends DoublePlantBlock {
         BlockPos blockpos = context.getClickedPos();
         FluidState fluidstate = context.getLevel().getFluidState(context.getClickedPos());
         Level level = context.getLevel();
-        boolean isRed = context.getLevel().getBlockState(context.getClickedPos().below()).is(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "sand/red")));
+        boolean isRed = context.getLevel().getBlockState(context.getClickedPos().below()).is(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "sand/red")));
         if(blockpos.getY() < level.getMaxBuildHeight() - 1) {
             if(level.getBlockState(blockpos.above()).canBeReplaced(context)) {
                 return this.stateDefinition.any().setValue(HALF, DoubleBlockHalf.LOWER).setValue(IS_RED, isRed);

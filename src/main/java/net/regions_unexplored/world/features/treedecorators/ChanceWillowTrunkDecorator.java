@@ -1,5 +1,6 @@
 package net.regions_unexplored.world.features.treedecorators;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
@@ -15,10 +16,10 @@ import java.util.Random;
 
 public class ChanceWillowTrunkDecorator extends TrunkVineDecorator {
 	public static final ChanceWillowTrunkDecorator INSTANCE = new ChanceWillowTrunkDecorator();
-	public static com.mojang.serialization.Codec<ChanceWillowTrunkDecorator> codec;
+	public static MapCodec<ChanceWillowTrunkDecorator> codec;
 	public static TreeDecoratorType<?> tdt;
 	static {
-		codec = com.mojang.serialization.Codec.unit(() -> INSTANCE);
+		codec = MapCodec.unit(() -> INSTANCE);
 		tdt = new TreeDecoratorType<>(codec);
 	}
 

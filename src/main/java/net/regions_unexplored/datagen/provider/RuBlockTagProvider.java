@@ -212,12 +212,12 @@ public class RuBlockTagProvider extends BlockTagsProvider {
                 .add(RuBlocks.STONE_GRASS_BLOCK.getKey())
                 .add(RuBlocks.ARGILLITE_GRASS_BLOCK.getKey())
                 .add(RuBlocks.VIRIDESCENT_NYLIUM.getKey())
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "podzol")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "coarse_dirt")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "podzol")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "coarse_dirt")))
         ;
         //this.tag(BlockTags.ANVIL);
         this.tag(BlockTags.AXOLOTLS_SPAWNABLE_ON)
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "calcite")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "calcite")))
         ;
         this.tag(BlockTags.AZALEA_GROWS_ON)
                 .add(RuBlocks.ALPHA_GRASS_BLOCK.getKey())
@@ -242,8 +242,8 @@ public class RuBlockTagProvider extends BlockTagsProvider {
                 .add(RuBlocks.STONE_GRASS_BLOCK.getKey())
                 .add(RuBlocks.ARGILLITE_GRASS_BLOCK.getKey())
                 .add(RuBlocks.VIRIDESCENT_NYLIUM.getKey())
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "podzol")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "coarse_dirt")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "podzol")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "coarse_dirt")))
         ;
         //this.tag(BlockTags.AZALEA_ROOT_REPLACEABLE);
         this.tag(BlockTags.BAMBOO_BLOCKS)
@@ -340,7 +340,7 @@ public class RuBlockTagProvider extends BlockTagsProvider {
         this.tag(BlockTags.DRIPSTONE_REPLACEABLE)
                 .add(RuBlocks.RAW_REDSTONE_BLOCK.getKey())
                 .add(RuBlocks.OVERGROWN_BONE_BLOCK.getKey())
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "netherrack")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "netherrack")))
         ;
         //this.tag(BlockTags.EMERALD_ORES);
         this.tag(BlockTags.ENDERMAN_HOLDABLE)
@@ -760,8 +760,8 @@ public class RuBlockTagProvider extends BlockTagsProvider {
                 .add(RuBlocks.SILT_DIRT.getKey())
                 .add(RuBlocks.SILT_GRASS_BLOCK.getKey())
                 .add(RuBlocks.SILT_MUD.getKey())
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "podzol")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "coarse_dirt")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "podzol")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "coarse_dirt")))
         ;
         //this.tag(BlockTags.RAILS);
         //this.tag(BlockTags.REDSTONE_ORES);
@@ -1528,12 +1528,12 @@ public class RuBlockTagProvider extends BlockTagsProvider {
         this.tag(RuTags.CATTAIL_CAN_SURVIVE_ON)
                 .addTag(BlockTags.DIRT)
                 .addTag(BlockTags.SAND)
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "clay")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "gravel")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "clay")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "gravel")))
         ;
         this.tag(RuTags.SANDY_PLANT_CAN_SURVIVE_ON)
                 .addTag(BlockTags.SAND)
-                .addTag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "sandstone")))
+                .addTag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "sandstone")))
         ;
         this.tag(RuTags.SHRUB_CAN_SURVIVE_ON)
                 .addTag(BlockTags.DIRT)
@@ -1545,14 +1545,14 @@ public class RuBlockTagProvider extends BlockTagsProvider {
                 .addTag(BlockTags.TERRACOTTA)
                 .addTag(BlockTags.BASE_STONE_OVERWORLD)
                 .addTag(BlockTags.BASE_STONE_NETHER)
-                .addTag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "ores")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "calcite")))
+                .addTag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "ores")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "calcite")))
                 .add(RuBlocks.CHALK.getKey())
                 .add(RuBlocks.CHALK_GRASS_BLOCK.getKey())
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "dripstone_block")))
-                .addTag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "gravel")))
-                .addTag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "stone")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "gilded_blackstone")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "dripstone_block")))
+                .addTag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "gravel")))
+                .addTag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "stone")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "gilded_blackstone")))
                 .add(RuBlocks.MOSSY_STONE.getKey())
                 .add(RuBlocks.ARGILLITE.getKey())
                 .add(RuBlocks.VIRIDESCENT_NYLIUM.getKey())
@@ -1578,49 +1578,49 @@ public class RuBlockTagProvider extends BlockTagsProvider {
                 .add(RuBlocks.STEPPE_GRASS.getKey())
                 .add(RuBlocks.STEPPE_SHRUB.getKey())
                 .add(RuBlocks.STONE_BUD.getKey())
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "short_grass")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "fern")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "short_grass")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "fern")))
         ;
         this.tag(RuTags.REPLACEABLE_BLOCKS)
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "air")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "amethyst_cluster")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "azalea")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "big_dripleaf")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "big_dripleaf_stem")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "brown_mushroom")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "bubble_column")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "cave_air")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "cave_vines")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "cave_vines_plant")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "crimson_fungus")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "dead_bush")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "fern")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "flowering_azalea")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "glow_lichen")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "kelp")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "kelp_plant")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "large_amethyst_bud")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "lilac")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "lily_pad")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "mangrove_propagule")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "mangrove_roots")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "medium_amethyst_bud")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "nether_sprouts")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "red_mushroom")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "sculk_vein")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "sea_pickle")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "seagrass")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "small_amethyst_bud")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "small_dripleaf")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "sugar_cane")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "sunflower")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "sweet_berry_bush")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "tall_seagrass")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "vine")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "void_air")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "warped_fungus")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "warped_roots")))
-                .add(ResourceKey.create(Registries.BLOCK, new ResourceLocation("minecraft", "water")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "air")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "amethyst_cluster")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "azalea")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "big_dripleaf")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "big_dripleaf_stem")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "brown_mushroom")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "bubble_column")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "cave_air")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "cave_vines")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "cave_vines_plant")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "crimson_fungus")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "dead_bush")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "fern")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "flowering_azalea")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "glow_lichen")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "kelp")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "kelp_plant")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "large_amethyst_bud")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "lilac")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "lily_pad")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "mangrove_propagule")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "mangrove_roots")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "medium_amethyst_bud")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "nether_sprouts")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "red_mushroom")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "sculk_vein")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "sea_pickle")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "seagrass")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "small_amethyst_bud")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "small_dripleaf")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "sugar_cane")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "sunflower")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "sweet_berry_bush")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "tall_seagrass")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "vine")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "void_air")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "warped_fungus")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "warped_roots")))
+                .add(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", "water")))
                 .add(RuBlocks.MEADOW_SAGE.getKey())
                 .add(RuBlocks.BARLEY.getKey())
                 .add(RuBlocks.BARREL_CACTUS.getKey())
@@ -1672,15 +1672,15 @@ public class RuBlockTagProvider extends BlockTagsProvider {
 
     @SuppressWarnings(value = "all")
     public void addForgeTags(HolderLookup.Provider provider) {
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "barrels/wooden")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "chests/ender")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "chests/trapped")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "chests/wooden")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "cobblestone/deepslate")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "cobblestone/infested")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "cobblestone/mossy")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "cobblestone/normal")));
-        this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "fence_gates/wooden")))
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "barrels/wooden")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "chests/ender")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "chests/trapped")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "chests/wooden")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "cobblestone/deepslate")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "cobblestone/infested")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "cobblestone/mossy")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "cobblestone/normal")));
+        this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "fence_gates/wooden")))
                 .add(RuBlocks.BAOBAB_FENCE_GATE.getKey())
                 .add(RuBlocks.BLACKWOOD_FENCE_GATE.getKey())
                 .add(RuBlocks.BLUE_BIOSHROOM_FENCE_GATE.getKey())
@@ -1704,8 +1704,8 @@ public class RuBlockTagProvider extends BlockTagsProvider {
                 .add(RuBlocks.WILLOW_FENCE_GATE.getKey())
                 .add(RuBlocks.YELLOW_BIOSHROOM_FENCE_GATE.getKey())
         ;
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "fences/nether_brick")));
-        this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "fences/wooden")))
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "fences/nether_brick")));
+        this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "fences/wooden")))
                 .add(RuBlocks.BAOBAB_FENCE.getKey())
                 .add(RuBlocks.BLACKWOOD_FENCE.getKey())
                 .add(RuBlocks.BLUE_BIOSHROOM_FENCE.getKey())
@@ -1729,63 +1729,63 @@ public class RuBlockTagProvider extends BlockTagsProvider {
                 .add(RuBlocks.WILLOW_FENCE.getKey())
                 .add(RuBlocks.YELLOW_BIOSHROOM_FENCE.getKey())
         ;
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "glass/colorless")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "glass_panes/colorless")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "ore_bearing_ground/deepslate")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "ore_bearing_ground/nether")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "ore_bearing_ground/stone")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "ore_rates/dense")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "ore_rates/singular")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "ore_rates/sparse")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "ores/coal")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "ores/copper")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "ores/diamond")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "ores/emerald")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "ores/gold")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "ores/iron")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "ores/lapis")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "ores/quartz")));
-        this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "ores/redstone")))
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "glass/colorless")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "glass_panes/colorless")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "ore_bearing_ground/deepslate")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "ore_bearing_ground/nether")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "ore_bearing_ground/stone")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "ore_rates/dense")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "ore_rates/singular")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "ore_rates/sparse")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "ores/coal")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "ores/copper")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "ores/diamond")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "ores/emerald")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "ores/gold")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "ores/iron")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "ores/lapis")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "ores/quartz")));
+        this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "ores/redstone")))
                 .add(RuBlocks.RAW_REDSTONE_BLOCK.getKey())
         ;
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "ores_in_ground/deepslate")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "ores_in_ground/netherrack")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "ores_in_ground/stone")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "sand/colorless")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "sand/red")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "storage_blocks/redstone")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "barrels")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "bookshelves")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "chests")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "cobblestone")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "end_stones")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "enderman_place_on_blacklist")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "fence_gates")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "fences")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "glass")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "glass_panes")));
-        this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "gravel")))
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "ores_in_ground/deepslate")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "ores_in_ground/netherrack")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "ores_in_ground/stone")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "sand/colorless")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "sand/red")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "storage_blocks/redstone")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "barrels")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "bookshelves")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "chests")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "cobblestone")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "end_stones")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "enderman_place_on_blacklist")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "fence_gates")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "fences")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "glass")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "glass_panes")));
+        this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "gravel")))
                 .add(RuBlocks.ASH.getKey())
                 .add(RuBlocks.VOLCANIC_ASH.getKey())
         ;
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "netherrack")));
-        this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "obsidian")))
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "netherrack")));
+        this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "obsidian")))
                 .add(RuBlocks.COBALT_OBSIDIAN.getKey())
         ;
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "ores")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "sand")));
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "sandstone")));
-        this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "stained_glass")))
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "ores")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "sand")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "sandstone")));
+        this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "stained_glass")))
                 .add(RuBlocks.PRISMAGLASS.getKey())
         ;
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "stained_glass_panes")));
-        this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "stone")))
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "stained_glass_panes")));
+        this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "stone")))
                 .add(RuBlocks.MOSSY_STONE.getKey())
                 .add(RuBlocks.ARGILLITE.getKey())
                 .add(RuBlocks.CHALK.getKey())
                 .add(RuBlocks.POLISHED_CHALK.getKey())
         ;
-        this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "trapdoors/wooden")))
+        this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "trapdoors/wooden")))
                 .add(RuBlocks.BAOBAB_TRAPDOOR.getKey())
                 .add(RuBlocks.BLACKWOOD_TRAPDOOR.getKey())
                 .add(RuBlocks.BLUE_BIOSHROOM_TRAPDOOR.getKey())
@@ -1809,7 +1809,7 @@ public class RuBlockTagProvider extends BlockTagsProvider {
                 .add(RuBlocks.WILLOW_TRAPDOOR.getKey())
                 .add(RuBlocks.YELLOW_BIOSHROOM_TRAPDOOR.getKey())
         ;
-        this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "doors/wooden")))
+        this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "doors/wooden")))
                 .add(RuBlocks.BAOBAB_DOOR.getKey())
                 .add(RuBlocks.BLACKWOOD_DOOR.getKey())
                 .add(RuBlocks.BLUE_BIOSHROOM_DOOR.getKey())
@@ -1833,7 +1833,7 @@ public class RuBlockTagProvider extends BlockTagsProvider {
                 .add(RuBlocks.WILLOW_DOOR.getKey())
                 .add(RuBlocks.YELLOW_BIOSHROOM_DOOR.getKey())
         ;
-        this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "stairs/wooden")))
+        this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "stairs/wooden")))
                 .add(RuBlocks.ALPHA_STAIRS.getKey())
                 .add(RuBlocks.BAOBAB_STAIRS.getKey())
                 .add(RuBlocks.BLACKWOOD_STAIRS.getKey())
@@ -1874,12 +1874,12 @@ public class RuBlockTagProvider extends BlockTagsProvider {
                 .add(RuBlocks.PINK_PAINTED_STAIRS.getKey())
                 .add(RuBlocks.ORANGE_PAINTED_STAIRS.getKey())
         ;
-        this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "stairs/stone")))
+        this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "stairs/stone")))
                 .add(RuBlocks.CHALK_STAIRS.getKey())
                 .add(RuBlocks.CHALK_BRICK_STAIRS.getKey())
                 .add(RuBlocks.POLISHED_CHALK_STAIRS.getKey())
         ;
-        this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "slabs/wooden")))
+        this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "slabs/wooden")))
                 .add(RuBlocks.ALPHA_SLAB.getKey())
                 .add(RuBlocks.BAOBAB_SLAB.getKey())
                 .add(RuBlocks.BLACKWOOD_SLAB.getKey())
@@ -1920,12 +1920,12 @@ public class RuBlockTagProvider extends BlockTagsProvider {
                 .add(RuBlocks.PINK_PAINTED_SLAB.getKey())
                 .add(RuBlocks.ORANGE_PAINTED_SLAB.getKey())
         ;
-        this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "slabs/stone")))
+        this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "slabs/stone")))
                 .add(RuBlocks.CHALK_SLAB.getKey())
                 .add(RuBlocks.CHALK_BRICK_SLAB.getKey())
                 .add(RuBlocks.POLISHED_CHALK_SLAB.getKey())
         ;
-        this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "planks")))
+        this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "planks")))
                 .add(RuBlocks.ALPHA_PLANKS.getKey())
                 .add(RuBlocks.BAOBAB_PLANKS.getKey())
                 .add(RuBlocks.BLACKWOOD_PLANKS.getKey())
@@ -1966,7 +1966,7 @@ public class RuBlockTagProvider extends BlockTagsProvider {
                 .add(RuBlocks.PINK_PAINTED_PLANKS.getKey())
                 .add(RuBlocks.ORANGE_PAINTED_PLANKS.getKey())
         ;
-        this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "logs")))
+        this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "logs")))
                 .add(RuBlocks.ALPHA_LOG.getKey())
                 .add(RuBlocks.ASHEN_LOG.getKey())
                 .add(RuBlocks.BAOBAB_LOG.getKey())
@@ -1994,7 +1994,7 @@ public class RuBlockTagProvider extends BlockTagsProvider {
                 .add(RuBlocks.WILLOW_LOG.getKey())
                 .add(RuBlocks.YELLOW_BIOSHROOM_STEM.getKey())
         ;
-        this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "wood")))
+        this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "wood")))
                 .add(RuBlocks.ASHEN_WOOD.getKey())
                 .add(RuBlocks.BAOBAB_WOOD.getKey())
                 .add(RuBlocks.BLACKWOOD_WOOD.getKey())
@@ -2020,7 +2020,7 @@ public class RuBlockTagProvider extends BlockTagsProvider {
                 .add(RuBlocks.WILLOW_WOOD.getKey())
                 .add(RuBlocks.YELLOW_BIOSHROOM_HYPHAE.getKey())
         ;
-        this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "stripped_logs")))
+        this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "stripped_logs")))
                 .add(RuBlocks.STRIPPED_BAOBAB_LOG.getKey())
                 .add(RuBlocks.STRIPPED_BLACKWOOD_LOG.getKey())
                 .add(RuBlocks.STRIPPED_BLUE_BIOSHROOM_STEM.getKey())
@@ -2044,7 +2044,7 @@ public class RuBlockTagProvider extends BlockTagsProvider {
                 .add(RuBlocks.STRIPPED_WILLOW_LOG.getKey())
                 .add(RuBlocks.STRIPPED_YELLOW_BIOSHROOM_STEM.getKey())
         ;
-        this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "stripped_wood")))
+        this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "stripped_wood")))
                 .add(RuBlocks.STRIPPED_BAOBAB_WOOD.getKey())
                 .add(RuBlocks.STRIPPED_BLACKWOOD_WOOD.getKey())
                 .add(RuBlocks.STRIPPED_BLUE_BIOSHROOM_HYPHAE.getKey())
@@ -2068,6 +2068,6 @@ public class RuBlockTagProvider extends BlockTagsProvider {
                 .add(RuBlocks.STRIPPED_WILLOW_WOOD.getKey())
                 .add(RuBlocks.STRIPPED_YELLOW_BIOSHROOM_HYPHAE.getKey())
         ;
-        //this.tag(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "storage_blocks")));
+        //this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("forge", "storage_blocks")));
     }
 }

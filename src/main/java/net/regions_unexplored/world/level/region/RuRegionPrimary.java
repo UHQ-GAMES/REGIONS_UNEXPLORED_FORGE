@@ -14,7 +14,7 @@ import terrablender.api.RegionType;
 import java.util.function.Consumer;
 
 public class RuRegionPrimary extends Region {
-    public static final ResourceLocation LOCATION = new ResourceLocation(RegionsUnexploredMod.MOD_ID, "primary");
+    public static final ResourceLocation LOCATION = ResourceLocation.fromNamespaceAndPath(RegionsUnexploredMod.MOD_ID, "primary");
 
     public RuRegionPrimary(int weight) {
         super(LOCATION, RegionType.OVERWORLD, weight);

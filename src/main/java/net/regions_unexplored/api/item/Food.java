@@ -1,5 +1,6 @@
 package net.regions_unexplored.api.item;
 
+import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.food.FoodProperties;
@@ -23,7 +24,7 @@ public class Food {
         this.saturationModifier = saturationModifier;
     }
 
-    public Food addEffect(MobEffect effect, int effectDurationInTicks, float chance) {
+    public Food addEffect(Holder<MobEffect> effect, int effectDurationInTicks, float chance) {
         this.effect.add(new MobEffectInstance(effect, effectDurationInTicks));
         this.effectChance = chance;
         return this;
@@ -47,15 +48,13 @@ public class Food {
     public FoodProperties createComponent() {
         FoodProperties.Builder builder = new FoodProperties.Builder()
                 .nutrition(this.hunger)
-                .saturationMod(this.saturationModifier);
+                .saturationModifier(this.saturationModifier);
 
         for (MobEffectInstance me: this.effect) builder.effect(me, this.effectChance);
 
-        if (meat) builder.meat();
-
         if (snack) builder.fast();
 
-        if (alwaysEdible) builder.alwaysEat();
+        if (alwaysEdible) builder.alwaysEdible();
 
         return builder.build();
     }

@@ -79,7 +79,8 @@ public class RuBiomes {
     public static ResourceKey<Biome> TROPICS = createKey("tropics");
     public static ResourceKey<Biome> WILLOW_FOREST = createKey("willow_forest");
 
-    public static ResourceKey<Biome> createKey(String name) {
-        return ResourceKey.create(Registries.BIOME, new ResourceLocation(RegionsUnexploredMod.MOD_ID, name));
+    private static ResourceKey<Biome> createKey(String name) {
+        ResourceKey<Biome> key = ResourceKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(RegionsUnexploredMod.MOD_ID, name));
+        return key;
     }
 }

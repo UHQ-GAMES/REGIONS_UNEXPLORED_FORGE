@@ -1,6 +1,7 @@
 package net.regions_unexplored.util;
 
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -44,7 +45,7 @@ public class AddSurfaceRuleUtil {
             }
         }
 
-        Codec<? extends BiomeSource> biomeSourceCodec = ((BiomeSourceAccess) chunkGenerator.getBiomeSource()).regions_unexplored$invokeCodec();
+        MapCodec<? extends BiomeSource> biomeSourceCodec = ((BiomeSourceAccess) chunkGenerator.getBiomeSource()).regions_unexplored$invokeCodec();
         RegionsUnexploredMod.LOGGER.info(String.format("Loading dimension \"%s\" with biome source: \"%s\".", levelStemKey.location(), BuiltInRegistries.BIOME_SOURCE.getKey(biomeSourceCodec).toString()));
     }
 }

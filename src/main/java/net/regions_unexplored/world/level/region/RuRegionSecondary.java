@@ -15,7 +15,7 @@ import java.util.function.Consumer;
 
 public class RuRegionSecondary extends Region {
 
-    public static final ResourceLocation LOCATION = new ResourceLocation(RegionsUnexploredMod.MOD_ID, "secondary");
+    public static final ResourceLocation LOCATION = ResourceLocation.fromNamespaceAndPath(RegionsUnexploredMod.MOD_ID, "secondary");
 
     public RuRegionSecondary(int weight) {
         super(LOCATION, RegionType.OVERWORLD, weight);

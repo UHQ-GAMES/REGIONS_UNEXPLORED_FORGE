@@ -1,5 +1,6 @@
 package net.regions_unexplored.world.features.treedecorators;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.LevelSimulatedReader;
 import net.minecraft.world.level.block.Blocks;
@@ -11,10 +12,10 @@ import net.regions_unexplored.data.tags.RuTags;
 
 public class BlackwoodBioshroom extends TrunkVineDecorator {
 	public static final BlackwoodBioshroom INSTANCE = new BlackwoodBioshroom();
-	public static com.mojang.serialization.Codec<BlackwoodBioshroom> codec;
+	public static MapCodec<BlackwoodBioshroom> codec;
 	public static TreeDecoratorType<?> tdt;
 	static {
-		codec = com.mojang.serialization.Codec.unit(() -> INSTANCE);
+		codec = MapCodec.unit(() -> INSTANCE);
 		tdt = new TreeDecoratorType<>(codec);
 	}
 

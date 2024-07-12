@@ -539,11 +539,11 @@ public class RuBiomeTagProvider extends BiomeTagsProvider {
 
     public void addForgeTags(HolderLookup.Provider provider) {
         //is_cold
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_cold/end")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_cold/end")))
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_cold/nether")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_cold/nether")))
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_cold/overworld")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_cold/overworld")))
                 .addOptional(RuBiomes.AUTUMNAL_MAPLE_FOREST.location())
                 .addOptional(RuBiomes.PUMPKIN_FIELDS.location())
                 .addOptional(RuBiomes.POPPY_FIELDS.location())
@@ -559,11 +559,11 @@ public class RuBiomeTagProvider extends BiomeTagsProvider {
                 .addOptional(RuBiomes.FROZEN_TUNDRA.location())
         ;
         //is_dense
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_dense/end")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_dense/end")))
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_dense/nether")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_dense/nether")))
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_dense/overworld")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_dense/overworld")))
                 .addOptional(RuBiomes.BLACKWOOD_TAIGA.location())
                 .addOptional(RuBiomes.BOREAL_TAIGA.location())
                 .addOptional(RuBiomes.GOLDEN_BOREAL_TAIGA.location())
@@ -576,16 +576,16 @@ public class RuBiomeTagProvider extends BiomeTagsProvider {
                 .addOptional(RuBiomes.OLD_GROWTH_BAYOU.location())
         ;
         //is_dry
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_dry/end")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_dry/end")))
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_dry/nether")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_dry/nether")))
                 .addOptional(RuBiomes.MYCOTOXIC_UNDERGROWTH.location())
                 .addOptional(RuBiomes.BLACKSTONE_BASIN.location())
                 .addOptional(RuBiomes.INFERNAL_HOLT.location())
                 .addOptional(RuBiomes.GLISTERING_MEADOW.location())
                 .addOptional(RuBiomes.REDSTONE_ABYSS.location())
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_dry/overworld")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_dry/overworld")))
                 .addOptional(RuBiomes.JOSHUA_DESERT.location())
                 .addOptional(RuBiomes.SAGUARO_DESERT.location())
                 .addOptional(RuBiomes.OUTBACK.location())
@@ -595,16 +595,16 @@ public class RuBiomeTagProvider extends BiomeTagsProvider {
                 .addOptional(RuBiomes.DRY_BUSHLAND.location())
         ;
         //is_hot
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_hot/end")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_hot/end")))
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_hot/nether")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_hot/nether")))
                 .addOptional(RuBiomes.MYCOTOXIC_UNDERGROWTH.location())
                 .addOptional(RuBiomes.BLACKSTONE_BASIN.location())
                 .addOptional(RuBiomes.INFERNAL_HOLT.location())
                 .addOptional(RuBiomes.GLISTERING_MEADOW.location())
                 .addOptional(RuBiomes.REDSTONE_ABYSS.location())
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_hot/overworld")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_hot/overworld")))
                 .addOptional(RuBiomes.JOSHUA_DESERT.location())
                 .addOptional(RuBiomes.SAGUARO_DESERT.location())
                 .addOptional(RuBiomes.OUTBACK.location())
@@ -618,11 +618,11 @@ public class RuBiomeTagProvider extends BiomeTagsProvider {
                 .addOptional(RuBiomes.EUCALYPTUS_FOREST.location())
         ;
         //is_sparse
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_sparse/end")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_sparse/end")))
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_sparse/nether")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_sparse/nether")))
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_sparse/overworld")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_sparse/overworld")))
                 .addOptional(RuBiomes.BAOBAB_SAVANNA.location())
                 .addOptional(RuBiomes.DRY_BUSHLAND.location())
                 .addOptional(RuBiomes.TEMPERATE_GROVE.location())
@@ -630,11 +630,11 @@ public class RuBiomeTagProvider extends BiomeTagsProvider {
                 .addOptional(RuBiomes.TOWERING_CLIFFS.location())
         ;
         //is_wet
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_wet/end")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_wet/end")))
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_wet/nether")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_wet/nether")))
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_wet/overworld")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_wet/overworld")))
                 .addOptional(RuBiomes.RAINFOREST.location())
                 .addOptional(RuBiomes.SPARSE_RAINFOREST.location())
                 .addOptional(RuBiomes.REDWOODS.location())
@@ -643,16 +643,16 @@ public class RuBiomeTagProvider extends BiomeTagsProvider {
                 .addOptional(RuBiomes.BLACKWOOD_TAIGA.location())
         ;
         //other_forge_tags
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_cave")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_cave")))
                 .addOptional(RuBiomes.ANCIENT_DELTA.location())
                 .addOptional(RuBiomes.REDSTONE_CAVES.location())
                 .addOptional(RuBiomes.PRISMACHASM.location())
                 .addOptional(RuBiomes.BIOSHROOM_CAVES.location())
                 .addOptional(RuBiomes.SCORCHING_CAVES.location())
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_cold")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_cold")))
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_coniferous")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_coniferous")))
                 .addOptional(RuBiomes.BLACKWOOD_TAIGA.location())
                 .addOptional(RuBiomes.BOREAL_TAIGA.location())
                 .addOptional(RuBiomes.GOLDEN_BOREAL_TAIGA.location())
@@ -660,33 +660,33 @@ public class RuBiomeTagProvider extends BiomeTagsProvider {
                 .addOptional(RuBiomes.REDWOODS.location())
                 .addOptional(RuBiomes.SPARSE_REDWOODS.location())
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_dense")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_dense")))
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_desert")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_desert")))
                 .addOptional(RuBiomes.JOSHUA_DESERT.location())
                 .addOptional(RuBiomes.SAGUARO_DESERT.location())
                 .addOptional(RuBiomes.OUTBACK.location())
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_dry")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_dry")))
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_hot")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_hot")))
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_lush")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_lush")))
                 .addOptional(RuBiomes.ANCIENT_DELTA.location())
                 .addOptional(RuBiomes.BIOSHROOM_CAVES.location())
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_mountain")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_mountain")))
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_mushroom")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_mushroom")))
                 .addOptional(RuBiomes.BLACKWOOD_TAIGA.location())
                 .addOptional(RuBiomes.BIOSHROOM_CAVES.location())
                 .addOptional(RuBiomes.FUNGAL_FEN.location())
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_peak")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_peak")))
                 .addOptional(RuBiomes.ARID_MOUNTAINS.location())
                 .addOptional(RuBiomes.MOUNTAINS.location())
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_plains")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_plains")))
                 .addOptional(RuBiomes.BARLEY_FIELDS.location())
                 .addOptional(RuBiomes.FLOWER_FIELDS.location())
                 .addOptional(RuBiomes.GRASSLAND.location())
@@ -697,28 +697,28 @@ public class RuBiomeTagProvider extends BiomeTagsProvider {
                 .addOptional(RuBiomes.PUMPKIN_FIELDS.location())
                 .addOptional(RuBiomes.SHRUBLAND.location())
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_plateau")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_plateau")))
                 .addOptional(RuBiomes.MAGNOLIA_WOODLAND.location())
                 .addOptional(RuBiomes.HIGHLAND_FIELDS.location())
                 .addOptional(RuBiomes.STEPPE.location())
                 .addOptional(RuBiomes.ICY_HEIGHTS.location())
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_rare")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_rare")))
                 .addOptional(RuBiomes.ALPHA_GROVE.location())
                 .addOptional(RuBiomes.TROPICS.location())
                 .addOptional(RuBiomes.ASHEN_WOODLAND.location())
                 .addOptional(RuBiomes.FUNGAL_FEN.location())
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_sandy")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_sandy")))
                 .addOptional(RuBiomes.JOSHUA_DESERT.location())
                 .addOptional(RuBiomes.SAGUARO_DESERT.location())
                 .addOptional(RuBiomes.OUTBACK.location())
                 .addOptional(RuBiomes.GRASSY_BEACH.location())
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_slope")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_slope")))
                 .addOptional(RuBiomes.PINE_SLOPES.location())
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_snowy")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_snowy")))
                 .addOptional(RuBiomes.SPIRES.location())
                 .addOptional(RuBiomes.COLD_DECIDUOUS_FOREST.location())
                 .addOptional(RuBiomes.COLD_BOREAL_TAIGA.location())
@@ -726,28 +726,28 @@ public class RuBiomeTagProvider extends BiomeTagsProvider {
                 .addOptional(RuBiomes.FROZEN_PINE_TAIGA.location())
                 .addOptional(RuBiomes.FROZEN_TUNDRA.location())
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_sparse")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_sparse")))
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_spooky")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_spooky")))
                 .addOptional(RuBiomes.BLACKWOOD_TAIGA.location())
                 .addOptional(RuBiomes.ASHEN_WOODLAND.location())
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_swamp")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_swamp")))
                 .addOptional(RuBiomes.BAYOU.location())
                 .addOptional(RuBiomes.FEN.location())
                 .addOptional(RuBiomes.FUNGAL_FEN.location())
                 .addOptional(RuBiomes.MARSH.location())
                 .addOptional(RuBiomes.OLD_GROWTH_BAYOU.location())
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_underground")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_underground")))
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_void")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_void")))
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_wasteland")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_wasteland")))
                 .addOptional(RuBiomes.ASHEN_WOODLAND.location())
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_water")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_water")))
         ;
-        this.tag(TagKey.create(Registries.BIOME, new ResourceLocation("forge", "is_wet")))
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_wet")))
         ;}
 }
