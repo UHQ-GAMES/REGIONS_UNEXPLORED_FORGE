@@ -240,7 +240,7 @@ public class RuSurfaceRuleData {
 
                 SurfaceRules.ifTrue(isPeatBiome, PEAT_DIRT),
                 SurfaceRules.ifTrue(isSiltBiome, SILT_DIRT),
-                SurfaceRules.ifTrue(isGrassBiome, GRASS_BLOCK)
+                SurfaceRules.ifTrue(isGrassBiome, DIRT)
         );
 
         SurfaceRules.RuleSource onSurface = SurfaceRules.sequence(
