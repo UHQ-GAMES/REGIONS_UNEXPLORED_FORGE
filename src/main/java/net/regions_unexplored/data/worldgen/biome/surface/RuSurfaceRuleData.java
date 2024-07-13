@@ -142,6 +142,7 @@ public class RuSurfaceRuleData {
         SurfaceRules.ConditionSource isSandBiome = SurfaceRules.isBiome(RuBiomes.ROCKY_REEF, RuBiomes.TROPICAL_RIVER, RuBiomes.GRASSY_BEACH);
         SurfaceRules.ConditionSource isPeatBiome = SurfaceRules.isBiome(RuBiomes.BAYOU, RuBiomes.FEN, RuBiomes.PINE_TAIGA, RuBiomes.BLACKWOOD_TAIGA, RuBiomes.BOREAL_TAIGA, RuBiomes.COLD_BOREAL_TAIGA, RuBiomes.GOLDEN_BOREAL_TAIGA);
         SurfaceRules.ConditionSource isSiltBiome = SurfaceRules.isBiome(RuBiomes.PUMPKIN_FIELDS, RuBiomes.POPPY_FIELDS, RuBiomes.AUTUMNAL_MAPLE_FOREST, RuBiomes.SILVER_BIRCH_FOREST, RuBiomes.TROPICS, RuBiomes.DRY_BUSHLAND, RuBiomes.JOSHUA_DESERT, RuBiomes.BARLEY_FIELDS, RuBiomes.PRAIRIE, RuBiomes.ORCHARD, RuBiomes.STEPPE);
+        SurfaceRules.ConditionSource isGrassBiome = SurfaceRules.isBiome(RuBiomes.ANCIENT_DELTA, RuBiomes.BAOBAB_SAVANNA, RuBiomes.BIOSHROOM_CAVES, RuBiomes.DECIDUOUS_FOREST, RuBiomes.FROZEN_TUNDRA, RuBiomes.FUNGAL_FEN, RuBiomes.PRISMACHASM, RuBiomes.REDSTONE_CAVES, RuBiomes.SCORCHING_CAVES);
 
         SurfaceRules.RuleSource AlphaGrassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(waterBlockCheck, ALPHA_GRASS), DIRT);
         SurfaceRules.RuleSource GrassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(waterBlockCheck, GRASS_BLOCK), DIRT);
@@ -237,7 +238,8 @@ public class RuSurfaceRuleData {
                                 SurfaceRules.ifTrue(SurfaceRules.noiseCondition(Noises.SWAMP, 0.0D), MUD)))),
 
                 SurfaceRules.ifTrue(isPeatBiome, PEAT_DIRT),
-                SurfaceRules.ifTrue(isSiltBiome, SILT_DIRT)
+                SurfaceRules.ifTrue(isSiltBiome, SILT_DIRT),
+                SurfaceRules.ifTrue(isGrassBiome, DIRT)
         );
 
         SurfaceRules.RuleSource onSurface = SurfaceRules.sequence(
@@ -311,7 +313,8 @@ public class RuSurfaceRuleData {
 
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(RuBiomes.CHALK_CLIFFS), ChalkSurface),
                 SurfaceRules.ifTrue(isPeatBiome, PeatGrassSurface),
-                SurfaceRules.ifTrue(isSiltBiome, SiltGrassSurface)
+                SurfaceRules.ifTrue(isSiltBiome, SiltGrassSurface),
+                SurfaceRules.ifTrue(isGrassBiome, GrassSurface)
         );
 
         SurfaceRules.RuleSource buildSurface = SurfaceRules.sequence(
