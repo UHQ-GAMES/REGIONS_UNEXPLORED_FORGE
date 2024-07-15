@@ -17,18 +17,19 @@ We have a LTS and latest policy and all other versions will be lifeline support 
 
 ### LTS versions:
 
-- 1.20.2
+- 1.21
 
 ### Latest
 
-- 1.20.2
+- 1.21
 
 ### Lifeline support
 
-- 1.19.2
+- 1.20.1
 
 ### Discontinued
 
+- 1.20.2
 - 1.20.1
 - 1.20
 - 1.19.4
