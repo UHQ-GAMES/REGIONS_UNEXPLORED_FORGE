@@ -31,21 +31,26 @@ public class WetBiomes {
         return Mth.hsvToRgb(0.62222224F - $$1 * 0.05F, 0.5F + $$1 * 0.1F, 1.0F);
     }
 
-    private static MobSpawnSettings.Builder baseSwampSpawning() {
+    private static MobSpawnSettings.Builder baseSwampSpawning(boolean hasWolfSpawns) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
         spawnBuilder.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.SLIME, 1, 1, 1));
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.FROG, 10, 2, 5));
         spawnBuilder.addSpawn(MobCategory.WATER_AMBIENT, new MobSpawnSettings.SpawnerData(EntityType.TROPICAL_FISH, 25, 8, 8));
+        if(hasWolfSpawns){
+            spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.WOLF, 4, 2, 4));
+            spawnBuilder.creatureGenerationProbability(0.03F);
+        }
         return spawnBuilder;
     }
-    private static MobSpawnSettings.Builder baseJungleSpawning() {
+    private static MobSpawnSettings.Builder baseJungleSpawning(boolean hasWolfSpawns) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
         BiomeDefaultFeatures.farmAnimals(spawnBuilder);
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.CHICKEN, 10, 4, 4));
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.PARROT, 40, 1, 2));
         spawnBuilder.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.OCELOT, 2, 1, 1));
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        if(hasWolfSpawns)spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.WOLF, 8, 2, 4));
         return spawnBuilder;
     }
     private static BiomeGenerationSettings.Builder baseSwampGeneration(HolderGetter<PlacedFeature> featureGetter, HolderGetter<ConfiguredWorldCarver<?>> carverGetter, boolean hasLilyPads, boolean hasFlowers) {
@@ -111,7 +116,7 @@ public class WetBiomes {
 
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseSwampSpawning();
+        MobSpawnSettings.Builder spawnBuilder = baseSwampSpawning(true);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(true)
@@ -148,7 +153,7 @@ public class WetBiomes {
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, RuVegetationPlacements.TALL_GRASS);
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, RuVegetationPlacements.EUCALYPTUS_SHRUB);
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseJungleSpawning();
+        MobSpawnSettings.Builder spawnBuilder = baseJungleSpawning(true);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(true)
@@ -190,7 +195,7 @@ public class WetBiomes {
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, RuVegetationPlacements.PINE_DEAD_SHRUB_MIX);
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseSwampSpawning();
+        MobSpawnSettings.Builder spawnBuilder = baseSwampSpawning(true);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(true)
@@ -229,7 +234,7 @@ public class WetBiomes {
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, RuMiscOverworldPlacements.MOSS_PATCH_WITH_WATER);
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseSwampSpawning();
+        MobSpawnSettings.Builder spawnBuilder = baseSwampSpawning(false);
         spawnBuilder.addSpawn(MobCategory.AXOLOTLS, new MobSpawnSettings.SpawnerData(EntityType.AXOLOTL, 5, 2, 6));
 
         return (new Biome.BiomeBuilder())
@@ -271,7 +276,7 @@ public class WetBiomes {
 
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseSwampSpawning();
+        MobSpawnSettings.Builder spawnBuilder = baseSwampSpawning(true);
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.MOOSHROOM, 8, 4, 8));
         spawnBuilder.addSpawn(MobCategory.AXOLOTLS, new MobSpawnSettings.SpawnerData(EntityType.AXOLOTL, 4, 2, 4));
 
@@ -310,7 +315,7 @@ public class WetBiomes {
 
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseSwampSpawning();
+        MobSpawnSettings.Builder spawnBuilder = baseSwampSpawning(false);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(true)
@@ -368,7 +373,7 @@ public class WetBiomes {
         }
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseJungleSpawning();
+        MobSpawnSettings.Builder spawnBuilder = baseJungleSpawning(!oldGrowth);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(true)

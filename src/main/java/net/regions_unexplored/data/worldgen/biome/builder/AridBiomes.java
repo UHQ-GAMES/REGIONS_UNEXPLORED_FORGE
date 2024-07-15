@@ -27,17 +27,23 @@ public class AridBiomes {
         return Mth.hsvToRgb(0.62222224F - $$1 * 0.05F, 0.5F + $$1 * 0.1F, 1.0F);
     }
 
-    private static MobSpawnSettings.Builder baseSavannaSpawning() {
+    private static MobSpawnSettings.Builder baseSavannaSpawning(boolean hasExtraWolves) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
         BiomeDefaultFeatures.desertSpawns(spawnBuilder);
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.ARMADILLO, 10, 2, 3));
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.WOLF, hasExtraWolves ? 8 : 4, 4, 8));
         return spawnBuilder;
     }
-    private static MobSpawnSettings.Builder baseDesertSpawning() {
+    private static MobSpawnSettings.Builder baseDesertSpawning(boolean hasArmadilloSpawn) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
         BiomeDefaultFeatures.farmAnimals(spawnBuilder);
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.HORSE, 1, 2, 6));
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.DONKEY, 1, 1, 2));
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        if(hasArmadilloSpawn) {
+            spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.ARMADILLO, 6, 1, 2));
+            spawnBuilder.creatureGenerationProbability(0.03F);
+        }
         return spawnBuilder;
     }
 
@@ -99,7 +105,7 @@ public class AridBiomes {
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, RuVegetationPlacements.BAOBAB_ACACIA_SHRUB_MIX);
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseSavannaSpawning();
+        MobSpawnSettings.Builder spawnBuilder = baseSavannaSpawning(true);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(false)
@@ -137,7 +143,7 @@ public class AridBiomes {
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, RuVegetationPlacements.SOCOTRA_SHRUB);
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseSavannaSpawning();
+        MobSpawnSettings.Builder spawnBuilder = baseSavannaSpawning(true);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(false)
@@ -174,7 +180,7 @@ public class AridBiomes {
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, RuVegetationPlacements.JOSHUA_SHRUB);
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseDesertSpawning();
+        MobSpawnSettings.Builder spawnBuilder = baseDesertSpawning(true);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(false)
@@ -209,7 +215,9 @@ public class AridBiomes {
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, RuVegetationPlacements.ACACIA_SHRUB);
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseDesertSpawning();
+        MobSpawnSettings.Builder spawnBuilder = baseDesertSpawning(true);
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.WOLF, 4, 4, 8));
+        spawnBuilder.creatureGenerationProbability(0.04F);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(false)
@@ -244,7 +252,7 @@ public class AridBiomes {
 
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseDesertSpawning();
+        MobSpawnSettings.Builder spawnBuilder = baseDesertSpawning(false);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(false)
@@ -274,7 +282,7 @@ public class AridBiomes {
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, RuVegetationPlacements.STEPPE_VEGETATION);
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseSavannaSpawning();
+        MobSpawnSettings.Builder spawnBuilder = baseSavannaSpawning(false);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(false)

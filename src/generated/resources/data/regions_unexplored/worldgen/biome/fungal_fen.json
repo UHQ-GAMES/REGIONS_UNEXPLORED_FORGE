@@ -6,6 +6,7 @@
       "minecraft:canyon"
     ]
   },
+  "creature_spawn_probability": 0.03,
   "downfall": 1.0,
   "effects": {
     "fog_color": 12640721,
@@ -134,6 +135,12 @@
         "maxCount": 5,
         "minCount": 2,
         "weight": 10
+      },
+      {
+        "type": "minecraft:wolf",
+        "maxCount": 4,
+        "minCount": 2,
+        "weight": 4
       },
       {
         "type": "minecraft:mooshroom",

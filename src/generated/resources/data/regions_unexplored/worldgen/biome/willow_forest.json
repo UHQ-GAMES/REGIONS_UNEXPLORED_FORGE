@@ -137,6 +137,12 @@
         "weight": 8
       },
       {
+        "type": "minecraft:wolf",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 5
+      },
+      {
         "type": "minecraft:fox",
         "maxCount": 4,
         "minCount": 3,

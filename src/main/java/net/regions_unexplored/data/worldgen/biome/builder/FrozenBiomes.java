@@ -27,12 +27,11 @@ public class FrozenBiomes {
         return Mth.hsvToRgb(0.62222224F - $$1 * 0.05F, 0.5F + $$1 * 0.1F, 1.0F);
     }
 
-    private static MobSpawnSettings.Builder baseFrozenSpawning(boolean addPolarBear) {
+    private static MobSpawnSettings.Builder baseFrozenSpawning(boolean hasPolarBearSpawns, boolean hasWolfSpawns) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
+        if(hasWolfSpawns) spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.WOLF, 8, 4, 4));
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.RABBIT, 10, 2, 3));
-        if(addPolarBear){
-        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.POLAR_BEAR, 1, 1, 2));
-        }
+        if(hasPolarBearSpawns) spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.POLAR_BEAR, 1, 1, 2));
         BiomeDefaultFeatures.caveSpawns(spawnBuilder);
         BiomeDefaultFeatures.monsters(spawnBuilder, 95, 5, 20, false);
         spawnBuilder.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.STRAY, 80, 4, 4));
@@ -88,7 +87,7 @@ public class FrozenBiomes {
 
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseFrozenSpawning(false);
+        MobSpawnSettings.Builder spawnBuilder = baseFrozenSpawning(false,true);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(true)
@@ -130,7 +129,7 @@ public class FrozenBiomes {
 
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseFrozenSpawning(false);
+        MobSpawnSettings.Builder spawnBuilder = baseFrozenSpawning(false, true);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(true)
@@ -171,7 +170,7 @@ public class FrozenBiomes {
 
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseFrozenSpawning(false);
+        MobSpawnSettings.Builder spawnBuilder = baseFrozenSpawning(false, true);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(true)
@@ -212,7 +211,7 @@ public class FrozenBiomes {
 
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseFrozenSpawning(true);
+        MobSpawnSettings.Builder spawnBuilder = baseFrozenSpawning(true, false);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(true)
@@ -251,7 +250,7 @@ public class FrozenBiomes {
 
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseFrozenSpawning(false);
+        MobSpawnSettings.Builder spawnBuilder = baseFrozenSpawning(false, true);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(true)
@@ -287,7 +286,7 @@ public class FrozenBiomes {
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, RuVegetationPlacements.SNOW_GRASS);
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseFrozenSpawning(true);
+        MobSpawnSettings.Builder spawnBuilder = baseFrozenSpawning(true, false);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(true)

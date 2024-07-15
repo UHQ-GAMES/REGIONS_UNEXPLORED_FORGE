@@ -5,6 +5,8 @@ import net.minecraft.data.worldgen.BiomeDefaultFeatures;
 import net.minecraft.sounds.Musics;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Mth;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.*;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver;
@@ -25,9 +27,10 @@ public class PlainsBiomes {
         return Mth.hsvToRgb(0.62222224F - $$1 * 0.05F, 0.5F + $$1 * 0.1F, 1.0F);
     }
 
-    private static MobSpawnSettings.Builder basePlainsSpawning() {
+    private static MobSpawnSettings.Builder basePlainsSpawning(boolean hasWolfSpawns) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
         BiomeDefaultFeatures.plainsSpawns(spawnBuilder);
+        if(hasWolfSpawns)spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.WOLF, 2, 4, 4));
         return spawnBuilder;
     }
 
@@ -64,7 +67,7 @@ public class PlainsBiomes {
 
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = basePlainsSpawning();
+        MobSpawnSettings.Builder spawnBuilder = basePlainsSpawning(false);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(true)
@@ -97,7 +100,7 @@ public class PlainsBiomes {
 
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = basePlainsSpawning();
+        MobSpawnSettings.Builder spawnBuilder = basePlainsSpawning(false);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(true)
@@ -132,7 +135,7 @@ public class PlainsBiomes {
 
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = basePlainsSpawning();
+        MobSpawnSettings.Builder spawnBuilder = basePlainsSpawning(false);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(true)
@@ -144,7 +147,7 @@ public class PlainsBiomes {
                 .build();
     }
 
-    public static Biome lupinePlains(HolderGetter<PlacedFeature> featureGetter, HolderGetter<ConfiguredWorldCarver<?>> carverGetter) {
+    public static Biome cloverPlains(HolderGetter<PlacedFeature> featureGetter, HolderGetter<ConfiguredWorldCarver<?>> carverGetter) {
         BiomeSpecialEffects.Builder effectBuilder = (new BiomeSpecialEffects.Builder())
                 .skyColor(calculateSkyColor(0.7F))
                 .fogColor(OVERWORLD_FOG_COLOR)
@@ -165,7 +168,7 @@ public class PlainsBiomes {
 
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = basePlainsSpawning();
+        MobSpawnSettings.Builder spawnBuilder = basePlainsSpawning(true);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(true)
@@ -201,7 +204,7 @@ public class PlainsBiomes {
 
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = basePlainsSpawning();
+        MobSpawnSettings.Builder spawnBuilder = basePlainsSpawning(false);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(true)
@@ -233,7 +236,7 @@ public class PlainsBiomes {
 
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = basePlainsSpawning();
+        MobSpawnSettings.Builder spawnBuilder = basePlainsSpawning(true);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(true)
@@ -268,7 +271,7 @@ public class PlainsBiomes {
 
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = basePlainsSpawning();
+        MobSpawnSettings.Builder spawnBuilder = basePlainsSpawning(false);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(true)
@@ -303,7 +306,7 @@ public class PlainsBiomes {
 
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = basePlainsSpawning();
+        MobSpawnSettings.Builder spawnBuilder = basePlainsSpawning(false);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(true)
@@ -342,7 +345,7 @@ public class PlainsBiomes {
 
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = basePlainsSpawning();
+        MobSpawnSettings.Builder spawnBuilder = basePlainsSpawning(true);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(true)

@@ -7,7 +7,9 @@ import net.minecraft.data.tags.BiomeTagsProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.entity.animal.Wolf;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.regions_unexplored.data.tags.RuTags;
 import net.regions_unexplored.data.worldgen.biome.RuBiomes;
 import org.jetbrains.annotations.Nullable;
 
@@ -20,6 +22,7 @@ public class RuBiomeTagProvider extends BiomeTagsProvider {
     }
 
     public void addTags(HolderLookup.Provider provider) {
+        addWolfTags(provider);
         addStructureTags(provider);
         addForgeTags(provider);
         this.tag(BiomeTags.ALLOWS_SURFACE_SLIME_SPAWNS)
@@ -749,5 +752,189 @@ public class RuBiomeTagProvider extends BiomeTagsProvider {
         this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_water")))
         ;
         this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "is_wet")))
-        ;}
+        ;
+    }
+
+    public void addWolfTags(HolderLookup.Provider provider) {
+        //ashen
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "has_wolf_variant/ashen")))
+                .addTag(RuTags.HAS_ASHEN_WOLF)
+        ;
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("c", "has_wolf_variant/ashen")))
+                .addTag(RuTags.HAS_ASHEN_WOLF)
+        ;
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("minecraft", "has_wolf_variant/ashen")))
+                .addTag(RuTags.HAS_ASHEN_WOLF)
+        ;
+
+        //black
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "has_wolf_variant/black")))
+                .addTag(RuTags.HAS_BLACK_WOLF)
+        ;
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("c", "has_wolf_variant/black")))
+                .addTag(RuTags.HAS_ASHEN_WOLF)
+        ;
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("minecraft", "has_wolf_variant/black")))
+                .addTag(RuTags.HAS_BLACK_WOLF)
+        ;
+
+        //chestnut
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "has_wolf_variant/chestnut")))
+                .addTag(RuTags.HAS_CHESTNUT_WOLF)
+        ;
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("c", "has_wolf_variant/chestnut")))
+                .addTag(RuTags.HAS_CHESTNUT_WOLF)
+        ;
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("minecraft", "has_wolf_variant/chestnut")))
+                .addTag(RuTags.HAS_CHESTNUT_WOLF)
+        ;
+
+        //pale
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "has_wolf_variant/pale")))
+                .addTag(RuTags.HAS_PALE_WOLF)
+        ;
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("c", "has_wolf_variant/pale")))
+                .addTag(RuTags.HAS_PALE_WOLF)
+        ;
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("minecraft", "has_wolf_variant/pale")))
+                .addTag(RuTags.HAS_PALE_WOLF)
+        ;
+
+        //rusty
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "has_wolf_variant/rusty")))
+                .addTag(RuTags.HAS_RUSTY_WOLF)
+        ;
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("c", "has_wolf_variant/rusty")))
+                .addTag(RuTags.HAS_RUSTY_WOLF)
+        ;
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("minecraft", "has_wolf_variant/rusty")))
+                .addTag(RuTags.HAS_RUSTY_WOLF)
+        ;
+
+        //snowy
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "has_wolf_variant/snowy")))
+                .addTag(RuTags.HAS_SNOWY_WOLF)
+        ;
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("c", "has_wolf_variant/snowy")))
+                .addTag(RuTags.HAS_SNOWY_WOLF)
+        ;
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("minecraft", "has_wolf_variant/snowy")))
+                .addTag(RuTags.HAS_SNOWY_WOLF)
+        ;
+
+        //spotted
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "has_wolf_variant/spotted")))
+                .addTag(RuTags.HAS_SPOTTED_WOLF)
+        ;
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("c", "has_wolf_variant/spotted")))
+                .addTag(RuTags.HAS_SPOTTED_WOLF)
+        ;
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("minecraft", "has_wolf_variant/spotted")))
+                .addTag(RuTags.HAS_SPOTTED_WOLF)
+        ;
+
+        //striped
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "has_wolf_variant/striped")))
+                .addTag(RuTags.HAS_STRIPED_WOLF)
+        ;
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("c", "has_wolf_variant/striped")))
+                .addTag(RuTags.HAS_STRIPED_WOLF)
+        ;
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("minecraft", "has_wolf_variant/striped")))
+                .addTag(RuTags.HAS_STRIPED_WOLF)
+        ;
+
+        //woods
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("forge", "has_wolf_variant/woods")))
+                .addTag(RuTags.HAS_WOODS_WOLF)
+        ;
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("c", "has_wolf_variant/woods")))
+                .addTag(RuTags.HAS_WOODS_WOLF)
+        ;
+        this.tag(TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("minecraft", "has_wolf_variant/woods")))
+                .addTag(RuTags.HAS_WOODS_WOLF)
+        ;
+
+
+        //local wolf tags
+        this.tag(RuTags.HAS_ASHEN_WOLF)
+                .add(RuBiomes.CHALK_CLIFFS)
+                .add(RuBiomes.COLD_BOREAL_TAIGA)
+                .add(RuBiomes.FROZEN_PINE_TAIGA)
+                .add(RuBiomes.MOUNTAINS)
+                .add(RuBiomes.PINE_SLOPES)
+                .add(RuBiomes.TOWERING_CLIFFS)
+        ;
+        this.tag(RuTags.HAS_BLACK_WOLF)
+                .add(RuBiomes.ASHEN_WOODLAND)
+                .add(RuBiomes.BLACKWOOD_TAIGA)
+                .add(RuBiomes.MAGNOLIA_WOODLAND)
+                .add(RuBiomes.PINE_TAIGA)
+                .add(RuBiomes.SCORCHING_CAVES)
+                .add(RuBiomes.TROPICS)
+        ;
+        this.tag(RuTags.HAS_CHESTNUT_WOLF)
+                .add(RuBiomes.BARLEY_FIELDS)
+                .add(RuBiomes.CLOVER_PLAINS)
+                .add(RuBiomes.HIGHLAND_FIELDS)
+                .add(RuBiomes.POPPY_FIELDS)
+                .add(RuBiomes.PRAIRIE)
+                .add(RuBiomes.WILLOW_FOREST)
+        ;
+        this.tag(RuTags.HAS_PALE_WOLF)
+                .add(RuBiomes.ALPHA_GROVE)
+                .add(RuBiomes.BOREAL_TAIGA)
+                .add(RuBiomes.FLOWER_FIELDS)
+                .add(RuBiomes.GRASSLAND)
+                .add(RuBiomes.MARSH)
+                .add(RuBiomes.ROCKY_MEADOW)
+                .add(RuBiomes.TEMPERATE_GROVE)
+        ;
+        this.tag(RuTags.HAS_RUSTY_WOLF)
+                .add(RuBiomes.ANCIENT_DELTA)
+                .add(RuBiomes.AUTUMNAL_MAPLE_FOREST)
+                .add(RuBiomes.BAMBOO_FOREST)
+                .add(RuBiomes.BIOSHROOM_CAVES)
+                .add(RuBiomes.EUCALYPTUS_FOREST)
+                .add(RuBiomes.PUMPKIN_FIELDS)
+                .add(RuBiomes.REDWOODS)
+                .add(RuBiomes.SPARSE_REDWOODS)
+        ;
+        this.tag(RuTags.HAS_SNOWY_WOLF)
+                .add(RuBiomes.COLD_DECIDUOUS_FOREST)
+                .add(RuBiomes.FROZEN_TUNDRA)
+                .add(RuBiomes.ICY_HEIGHTS)
+                .add(RuBiomes.SHRUBLAND)
+                .add(RuBiomes.SPIRES)
+        ;
+        this.tag(RuTags.HAS_SPOTTED_WOLF)
+                .add(RuBiomes.BAOBAB_SAVANNA)
+                .add(RuBiomes.FUNGAL_FEN)
+                .add(RuBiomes.JOSHUA_DESERT)
+                .add(RuBiomes.MAUVE_HILLS)
+                .add(RuBiomes.PRISMACHASM)
+                .add(RuBiomes.REDSTONE_CAVES)
+                .add(RuBiomes.SAGUARO_DESERT)
+        ;
+        this.tag(RuTags.HAS_STRIPED_WOLF)
+                .add(RuBiomes.ARID_MOUNTAINS)
+                .add(RuBiomes.DRY_BUSHLAND)
+                .add(RuBiomes.OUTBACK)
+                .add(RuBiomes.RAINFOREST)
+                .add(RuBiomes.ROCKY_REEF)
+                .add(RuBiomes.SPARSE_RAINFOREST)
+                .add(RuBiomes.STEPPE)
+        ;
+        this.tag(RuTags.HAS_WOODS_WOLF)
+                .add(RuBiomes.BAYOU)
+                .add(RuBiomes.DECIDUOUS_FOREST)
+                .add(RuBiomes.FEN)
+                .add(RuBiomes.GOLDEN_BOREAL_TAIGA)
+                .add(RuBiomes.MAPLE_FOREST)
+                .add(RuBiomes.OLD_GROWTH_BAYOU)
+                .add(RuBiomes.ORCHARD)
+                .add(RuBiomes.SILVER_BIRCH_FOREST)
+        ;
+
+    }
 }

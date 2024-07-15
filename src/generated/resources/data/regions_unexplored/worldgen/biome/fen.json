@@ -6,6 +6,7 @@
       "minecraft:canyon"
     ]
   },
+  "creature_spawn_probability": 0.03,
   "downfall": 0.7,
   "effects": {
     "fog_color": 12638463,
@@ -122,6 +123,12 @@
         "maxCount": 5,
         "minCount": 2,
         "weight": 10
+      },
+      {
+        "type": "minecraft:wolf",
+        "maxCount": 4,
+        "minCount": 2,
+        "weight": 4
       }
     ],
     "misc": [],

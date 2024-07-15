@@ -1,4 +1,22 @@
-// 1.21	2024-07-12T00:03:23.9502595	Tags for minecraft:worldgen/biome mod id regions_unexplored
+// 1.21	2024-07-15T02:15:06.6445162	Tags for minecraft:worldgen/biome mod id regions_unexplored
+c7ffa1f3eae38078a42dca452be5a53567ce4e0f data/c/tags/worldgen/biome/has_wolf_variant/ashen.json
+c7ffa1f3eae38078a42dca452be5a53567ce4e0f data/c/tags/worldgen/biome/has_wolf_variant/black.json
+41f30d2c8a22c016cd052fa6a992ef3ccf0fcdb7 data/c/tags/worldgen/biome/has_wolf_variant/chestnut.json
+f0956869ba7650fd81828eea1632649360e9e8e6 data/c/tags/worldgen/biome/has_wolf_variant/pale.json
+83f5e15c05ee9090c4f92be755b45d78617501b0 data/c/tags/worldgen/biome/has_wolf_variant/rusty.json
+494ca2fe41ef0b84ecacb6aa6f7fc81e8950258a data/c/tags/worldgen/biome/has_wolf_variant/snowy.json
+e2b5a172de2ef365de97e876b988ad3e7ffde981 data/c/tags/worldgen/biome/has_wolf_variant/spotted.json
+b80ef4d3790eda8249354f5fe9d95d94f303cb9f data/c/tags/worldgen/biome/has_wolf_variant/striped.json
+8c2be72874bc47237e6207f35374f48f0c1e0766 data/c/tags/worldgen/biome/has_wolf_variant/woods.json
+c7ffa1f3eae38078a42dca452be5a53567ce4e0f data/forge/tags/worldgen/biome/has_wolf_variant/ashen.json
+090fcc90b82e1576d2724835d4dcd6183d109231 data/forge/tags/worldgen/biome/has_wolf_variant/black.json
+41f30d2c8a22c016cd052fa6a992ef3ccf0fcdb7 data/forge/tags/worldgen/biome/has_wolf_variant/chestnut.json
+f0956869ba7650fd81828eea1632649360e9e8e6 data/forge/tags/worldgen/biome/has_wolf_variant/pale.json
+83f5e15c05ee9090c4f92be755b45d78617501b0 data/forge/tags/worldgen/biome/has_wolf_variant/rusty.json
+494ca2fe41ef0b84ecacb6aa6f7fc81e8950258a data/forge/tags/worldgen/biome/has_wolf_variant/snowy.json
+e2b5a172de2ef365de97e876b988ad3e7ffde981 data/forge/tags/worldgen/biome/has_wolf_variant/spotted.json
+b80ef4d3790eda8249354f5fe9d95d94f303cb9f data/forge/tags/worldgen/biome/has_wolf_variant/striped.json
+8c2be72874bc47237e6207f35374f48f0c1e0766 data/forge/tags/worldgen/biome/has_wolf_variant/woods.json
 36649860d25a60634c9747c746e4a7f41282eab1 data/forge/tags/worldgen/biome/is_cave.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/forge/tags/worldgen/biome/is_cold.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/forge/tags/worldgen/biome/is_cold/end.json
@@ -66,6 +84,15 @@ f4609dff9aee1e1747c27ebad771340b2f7f3333 data/minecraft/tags/worldgen/biome/has_
 7cf45fc972a07064bb6cc272816b7349e30b1524 data/minecraft/tags/worldgen/biome/has_structure/village_snowy.json
 79169b4b328301bd5470d2b07130015eb20cfda7 data/minecraft/tags/worldgen/biome/has_structure/village_taiga.json
 7882d4dbc8205bdbdf9f022193957a8448395257 data/minecraft/tags/worldgen/biome/has_structure/woodland_mansion.json
+c7ffa1f3eae38078a42dca452be5a53567ce4e0f data/minecraft/tags/worldgen/biome/has_wolf_variant/ashen.json
+090fcc90b82e1576d2724835d4dcd6183d109231 data/minecraft/tags/worldgen/biome/has_wolf_variant/black.json
+41f30d2c8a22c016cd052fa6a992ef3ccf0fcdb7 data/minecraft/tags/worldgen/biome/has_wolf_variant/chestnut.json
+f0956869ba7650fd81828eea1632649360e9e8e6 data/minecraft/tags/worldgen/biome/has_wolf_variant/pale.json
+83f5e15c05ee9090c4f92be755b45d78617501b0 data/minecraft/tags/worldgen/biome/has_wolf_variant/rusty.json
+494ca2fe41ef0b84ecacb6aa6f7fc81e8950258a data/minecraft/tags/worldgen/biome/has_wolf_variant/snowy.json
+e2b5a172de2ef365de97e876b988ad3e7ffde981 data/minecraft/tags/worldgen/biome/has_wolf_variant/spotted.json
+b80ef4d3790eda8249354f5fe9d95d94f303cb9f data/minecraft/tags/worldgen/biome/has_wolf_variant/striped.json
+8c2be72874bc47237e6207f35374f48f0c1e0766 data/minecraft/tags/worldgen/biome/has_wolf_variant/woods.json
 241ffb40b589d391deae784ba0eadaaf3cd2210d data/minecraft/tags/worldgen/biome/increased_fire_burnout.json
 f3d2a874b85873d3a146e6474cf63dba8b222ea4 data/minecraft/tags/worldgen/biome/is_beach.json
 679aaf558b87b382b692ca1dba27785cb8c9dbd7 data/minecraft/tags/worldgen/biome/is_deep_ocean.json
@@ -98,3 +125,12 @@ f64a3bef665292a3e2d2a7face22fbdf4bf9c18c data/minecraft/tags/worldgen/biome/spaw
 440485c95ff0181b95d2cd45a7d8d7cb1b2b6b65 data/minecraft/tags/worldgen/biome/without_patrol_spawns.json
 440485c95ff0181b95d2cd45a7d8d7cb1b2b6b65 data/minecraft/tags/worldgen/biome/without_wandering_trader_spawns.json
 440485c95ff0181b95d2cd45a7d8d7cb1b2b6b65 data/minecraft/tags/worldgen/biome/without_zombie_sieges.json
+09c870647e39ed98608bd4fb8f99f144150d5779 data/regions_unexplored/tags/worldgen/biome/has_wolf_variant/ashen.json
+f2f83437ff5e28ce76fb20fcd782a9eba15d66e8 data/regions_unexplored/tags/worldgen/biome/has_wolf_variant/black.json
+502ca5e375a7911abbeb31e15a808e49015bb9db data/regions_unexplored/tags/worldgen/biome/has_wolf_variant/chestnut.json
+d961ecff415a1d51108f0dcb04b40078ea171daa data/regions_unexplored/tags/worldgen/biome/has_wolf_variant/pale.json
+8749603437247b095362d4b0d2a72ce7ac08a136 data/regions_unexplored/tags/worldgen/biome/has_wolf_variant/rusty.json
+565deb446a4e849328e16db8976cfd24aadb048f data/regions_unexplored/tags/worldgen/biome/has_wolf_variant/snowy.json
+e3a5671df4145358a2b042d08a1aff71a46e6ce8 data/regions_unexplored/tags/worldgen/biome/has_wolf_variant/spotted.json
+2d8f90300afd8adae76689a225e772ed37cb4d56 data/regions_unexplored/tags/worldgen/biome/has_wolf_variant/striped.json
+7e6bd77ac614363d6fccf60b2391ca5c600f6bab data/regions_unexplored/tags/worldgen/biome/has_wolf_variant/woods.json

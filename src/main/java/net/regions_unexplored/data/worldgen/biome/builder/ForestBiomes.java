@@ -27,10 +27,11 @@ public class ForestBiomes {
         return Mth.hsvToRgb(0.62222224F - $$1 * 0.05F, 0.5F + $$1 * 0.1F, 1.0F);
     }
 
-    private static MobSpawnSettings.Builder baseForestSpawning() {
+    private static MobSpawnSettings.Builder baseForestSpawning(boolean hasWolfSpawns) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
         BiomeDefaultFeatures.farmAnimals(spawnBuilder);
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        if(hasWolfSpawns)spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.WOLF, 5, 4, 4));
         return spawnBuilder;
     }
 
@@ -70,7 +71,7 @@ public class ForestBiomes {
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, RuVegetationPlacements.AUTUMNAL_SHRUB_MIX);
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseForestSpawning();
+        MobSpawnSettings.Builder spawnBuilder = baseForestSpawning(true);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(true)
@@ -106,7 +107,7 @@ public class ForestBiomes {
 
         RuBiomeDefaultFeatures.addBamboo(biomeBuilder);
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseForestSpawning();
+        MobSpawnSettings.Builder spawnBuilder = baseForestSpawning(false);
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.PANDA, 80, 1, 2));
 
         return (new Biome.BiomeBuilder())
@@ -134,9 +135,7 @@ public class ForestBiomes {
         BiomeGenerationSettings.Builder biomeBuilder = baseForestGeneration(featureGetter, carverGetter, false);
 
         //add RU features
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, RuTreePlacements.MAGNOLIA_TREE);
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, RuTreePlacements.PINK_MAGNOLIA_TREE);
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, RuTreePlacements.WHITE_MAGNOLIA_TREE);
+        RuBiomeDefaultFeatures.sakuraTrees(biomeBuilder);
 
         RuBiomeDefaultFeatures.addTsubaki(biomeBuilder);
 
@@ -146,7 +145,7 @@ public class ForestBiomes {
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, RuVegetationPlacements.MAGNOLIA_SHRUB_MIX);
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseForestSpawning();
+        MobSpawnSettings.Builder spawnBuilder = baseForestSpawning(false);
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.FOX, 8, 2, 4));
 
         return (new Biome.BiomeBuilder())
@@ -184,7 +183,7 @@ public class ForestBiomes {
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, RuVegetationPlacements.OAK_SHRUB);
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseForestSpawning();
+        MobSpawnSettings.Builder spawnBuilder = baseForestSpawning(true);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(true)
@@ -218,8 +217,7 @@ public class ForestBiomes {
 
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseForestSpawning();
-        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.WOLF, 5, 4, 4));
+        MobSpawnSettings.Builder spawnBuilder = baseForestSpawning(true);
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(true)
@@ -256,7 +254,7 @@ public class ForestBiomes {
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, RuVegetationPlacements.MAUVE_ENCHANTED_SHRUB_MIX);
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseForestSpawning();
+        MobSpawnSettings.Builder spawnBuilder = baseForestSpawning(false);
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.CHICKEN, 10, 4, 4));
 
         return (new Biome.BiomeBuilder())
@@ -295,7 +293,7 @@ public class ForestBiomes {
 
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseForestSpawning();
+        MobSpawnSettings.Builder spawnBuilder = baseForestSpawning(false);
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.RABBIT, 8, 4, 4));
 
         return (new Biome.BiomeBuilder())
@@ -333,7 +331,7 @@ public class ForestBiomes {
 
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseForestSpawning();
+        MobSpawnSettings.Builder spawnBuilder = baseForestSpawning(true);
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.WOLF, 5, 4, 4));
 
         return (new Biome.BiomeBuilder())
@@ -371,7 +369,7 @@ public class ForestBiomes {
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, RuVegetationPlacements.OAK_SHRUB);
 
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseForestSpawning();
+        MobSpawnSettings.Builder spawnBuilder = baseForestSpawning(false);
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.WOLF, 5, 4, 4));
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.RABBIT, 15, 3, 4));
 
@@ -412,7 +410,7 @@ public class ForestBiomes {
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, RuVegetationPlacements.FERNS);
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, RuVegetationPlacements.WILLOW_MAGNOLIA_SHRUB_MIX);
         //add mob spawns
-        MobSpawnSettings.Builder spawnBuilder = baseForestSpawning();
+        MobSpawnSettings.Builder spawnBuilder = baseForestSpawning(true);
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.FOX, 10, 3, 4));
 
         return (new Biome.BiomeBuilder())

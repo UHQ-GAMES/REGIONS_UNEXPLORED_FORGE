@@ -16,7 +16,6 @@ import net.regions_unexplored.data.worldgen.biome.surface.RuSurfaceRuleData;
 import net.regions_unexplored.world.level.region.RuRegionNether;
 import net.regions_unexplored.world.level.region.RuRegionPrimary;
 import net.regions_unexplored.world.level.region.RuRegionSecondary;
-import terrablender.api.EndBiomeRegistry;
 import terrablender.api.Regions;
 import terrablender.api.SurfaceRuleManager;
 
@@ -61,7 +60,7 @@ public class BiomeRegistry {
         register(context, RuBiomes.BARLEY_FIELDS, PlainsBiomes.barleyFields(featuresGetter, carversGetter));
         register(context, RuBiomes.FLOWER_FIELDS, PlainsBiomes.flowerFields(featuresGetter, carversGetter));
         register(context, RuBiomes.GRASSLAND, PlainsBiomes.grassland(featuresGetter, carversGetter));
-        register(context, RuBiomes.CLOVER_PLAINS, PlainsBiomes.lupinePlains(featuresGetter, carversGetter));
+        register(context, RuBiomes.CLOVER_PLAINS, PlainsBiomes.cloverPlains(featuresGetter, carversGetter));
         register(context, RuBiomes.ROCKY_MEADOW, PlainsBiomes.rockyMeadow(featuresGetter, carversGetter));
         register(context, RuBiomes.POPPY_FIELDS, PlainsBiomes.poppyFields(featuresGetter, carversGetter));
         register(context, RuBiomes.PRAIRIE, PlainsBiomes.prairie(featuresGetter, carversGetter));

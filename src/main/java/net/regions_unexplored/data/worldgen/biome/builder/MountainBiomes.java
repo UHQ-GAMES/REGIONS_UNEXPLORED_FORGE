@@ -102,6 +102,7 @@ public class MountainBiomes {
 
         //add mob spawns
         MobSpawnSettings.Builder spawnBuilder = baseExtremeHillsSpawning();
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.ARMADILLO, 6, 1, 2));
 
         return (new Biome.BiomeBuilder())
                 .hasPrecipitation(false)
