@@ -1,4 +1,4 @@
-// 1.21	2024-07-15T02:15:06.6350091	Registries
+// 1.21	2024-07-15T03:15:02.6102176	Registries
 7160b581d0e9c894f25f3d6f26a93cd78c42e0cd data/regions_unexplored/damage_type/dorcel.json
 d22fdc0aeef6a23fc29b12a9ebabe7e22aea59c4 data/regions_unexplored/damage_type/dusk_trap.json
 4c8b08e26e9184211fbccd69bfbfdd86c8975160 data/regions_unexplored/worldgen/biome/alpha_grove.json
@@ -549,7 +549,7 @@ f6e60a913dd08cd63b1a26829de4f13506d8fda6 data/regions_unexplored/worldgen/placed
 da4eef7558f249a22f1353ffc0f21ea8e78892c4 data/regions_unexplored/worldgen/placed_feature/large_pointed_redstone.json
 452c8742e914084619227b83cf7417baca2bd5d3 data/regions_unexplored/worldgen/placed_feature/large_pointed_redstone_nether.json
 677f5d4c3e32275afc3617f828e60a0ecccaabab data/regions_unexplored/worldgen/placed_feature/large_socotra_tree.json
-57cc0712d0629cfa6dc03363adb3bb1864004b54 data/regions_unexplored/worldgen/placed_feature/lava_fall.json
+e4012f932ee98d18e07fd8aed3747f1fcad18b9f data/regions_unexplored/worldgen/placed_feature/lava_fall.json
 a6201e4c313004d74bd518ca4c85666efae43db1 data/regions_unexplored/worldgen/placed_feature/lupine_vegetation.json
 9efc309ddce99eeb506f4cda95c78759a7c7a8c9 data/regions_unexplored/worldgen/placed_feature/lush_pine_tree.json
 7a2b5079f09d3c836114a89815c902c9dc268dfb data/regions_unexplored/worldgen/placed_feature/magnolia_flowers.json

@@ -136,7 +136,7 @@ public class RuMiscOverworldPlacements {
 
         register(context, RuMiscOverworldPlacements.MINERAL_POOL, MINERAL_POOL, CountPlacement.of(70), InSquarePlacement.spread(), PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, EnvironmentScanPlacement.scanningFor(Direction.DOWN, BlockPredicate.solid(), BlockPredicate.ONLY_IN_AIR_PREDICATE, 12), RandomOffsetPlacement.vertical(ConstantInt.of(1)), BiomeFilter.biome());
 
-        register(context, RuMiscOverworldPlacements.LAVA_FALL, LAVA_FALL, List.of(CountOnEveryLayerPlacement.of(4), BiomeFilter.biome()));
+        register(context, RuMiscOverworldPlacements.LAVA_FALL, LAVA_FALL, List.of(CountOnEveryLayerPlacement.of(1), BiomeFilter.biome()));
         register(context, RuMiscOverworldPlacements.OVERWORLD_LAVA_DELTA, OVERWORLD_LAVA_DELTA, CountPlacement.of(115), InSquarePlacement.spread(), PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, EnvironmentScanPlacement.scanningFor(Direction.DOWN, BlockPredicate.solid(), BlockPredicate.ONLY_IN_AIR_PREDICATE, 12), RandomOffsetPlacement.vertical(ConstantInt.of(1)), BiomeFilter.biome());
         register(context, RuMiscOverworldPlacements.ASH_VENT, ASH_VENT, List.of(CountOnEveryLayerPlacement.of(7), BiomeFilter.biome()));
         register(context, RuMiscOverworldPlacements.BASALT_BLOB, BASALT_BLOB, CountOnEveryLayerPlacement.of(4), BiomeFilter.biome());
