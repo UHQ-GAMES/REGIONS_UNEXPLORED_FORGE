@@ -7,6 +7,8 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.regions_unexplored.block.RuBlocks;
@@ -26,6 +28,13 @@ public class RuBlockTagProvider extends BlockTagsProvider {
     public void addTags(HolderLookup.Provider provider) {
         addForgeTags(provider);
         //mineable_tags
+        this.tag(BlockTags.ARMADILLO_SPAWNABLE_ON)
+                .add(Blocks.SAND)
+                .add(RuBlocks.PEAT_COARSE_DIRT.getKey())
+                .add(RuBlocks.SILT_COARSE_DIRT.getKey())
+                .add(RuBlocks.SILT_GRASS_BLOCK.getKey())
+                .add(RuBlocks.SILT_PODZOL.getKey())
+        ;
         this.tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(RuBlocks.BLUE_BIOSHROOM_BLOCK.getKey())
                 .add(RuBlocks.GREEN_BIOSHROOM_BLOCK.getKey())
@@ -1073,6 +1082,10 @@ public class RuBlockTagProvider extends BlockTagsProvider {
         this.tag(BlockTags.WOLVES_SPAWNABLE_ON)
                 .add(RuBlocks.PEAT_GRASS_BLOCK.getKey())
                 .add(RuBlocks.SILT_GRASS_BLOCK.getKey())
+                .add(RuBlocks.PEAT_COARSE_DIRT.getKey())
+                .add(RuBlocks.SILT_COARSE_DIRT.getKey())
+                .add(RuBlocks.PEAT_PODZOL.getKey())
+                .add(RuBlocks.SILT_PODZOL.getKey())
         ;
         this.tag(BlockTags.WOODEN_BUTTONS)
                 .add(RuBlocks.BAOBAB_BUTTON.getKey())

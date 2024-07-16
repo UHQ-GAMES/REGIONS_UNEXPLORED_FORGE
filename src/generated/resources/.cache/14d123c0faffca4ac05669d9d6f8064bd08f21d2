@@ -1,4 +1,4 @@
-// 1.21	2024-07-12T00:03:23.9517613	Tags for minecraft:block mod id regions_unexplored
+// 1.21	2024-07-16T01:42:42.3784662	Tags for minecraft:block mod id regions_unexplored
 c68b911808b65d6d0bfdc3f30335a8603b276a7f data/forge/tags/block/doors/wooden.json
 42cbe3f376a6f8296386e47b2cc55792c9131c39 data/forge/tags/block/fences/wooden.json
 fa5edfcedc25e4053b7dd6e9679d69e0d74e295e data/forge/tags/block/fence_gates/wooden.json
@@ -18,6 +18,7 @@ f6301659f44bc38bca7a03d2c7326849284fe2bc data/forge/tags/block/stripped_wood.jso
 bf0863653166da0dc7a7739d249b94b322ec08ae data/forge/tags/block/trapdoors/wooden.json
 e459eef48589bf5de7517164b3e61feac670e3f1 data/forge/tags/block/wood.json
 56d739d9964d88d8d57ed225feeb6df1914c9106 data/minecraft/tags/block/animals_spawnable_on.json
+76101a248668a9ddfc82226d4d490492f6e1f78e data/minecraft/tags/block/armadillo_spawnable_on.json
 ebcf7881dcf42cb3d8c8b5c2e92ebf16fd9d7284 data/minecraft/tags/block/axolotls_spawnable_on.json
 56d739d9964d88d8d57ed225feeb6df1914c9106 data/minecraft/tags/block/azalea_grows_on.json
 1cc6465fdc3acf8fe7b1b7222366b5ac6a51047f data/minecraft/tags/block/bamboo_blocks.json
@@ -83,7 +84,7 @@ b8c8af302d208b5ef09a69b21a061039572dc4c6 data/minecraft/tags/block/valid_spawn.j
 e8e8dbfa6d5dfb222eed30309ca45f75cb46e2f5 data/minecraft/tags/block/wall_post_override.json
 f30ee57328a9a17301587c632fde36d6a0d717d8 data/minecraft/tags/block/wall_signs.json
 4c7fcca0d17285ee04b3c0fa755237e1c4bbd5d8 data/minecraft/tags/block/wart_blocks.json
-3ba09d5092fa23740d80147a98cbf90b5a3e2928 data/minecraft/tags/block/wolves_spawnable_on.json
+adb9f0e4076f6b6107e5fb6debad875f2dd16404 data/minecraft/tags/block/wolves_spawnable_on.json
 6594a2530b2b40ef81448b218c39eb541acb21d9 data/minecraft/tags/block/wooden_buttons.json
 c68b911808b65d6d0bfdc3f30335a8603b276a7f data/minecraft/tags/block/wooden_doors.json
 42cbe3f376a6f8296386e47b2cc55792c9131c39 data/minecraft/tags/block/wooden_fences.json
