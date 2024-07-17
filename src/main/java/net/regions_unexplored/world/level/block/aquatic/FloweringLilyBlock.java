@@ -1,4 +1,4 @@
-package net.regions_unexplored.world.level.block.plant.aquatic;
+package net.regions_unexplored.world.level.block.aquatic;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=true": {
+      "model": "regions_unexplored:block/flouramine_active"
+    },
+    "active=false": {
+      "model": "regions_unexplored:block/flouramine_inactive"
+    }
+  }
+}

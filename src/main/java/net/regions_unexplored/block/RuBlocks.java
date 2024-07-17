@@ -13,6 +13,7 @@ import net.regions_unexplored.data.block.RuWoodTypes;
 import net.regions_unexplored.data.worldgen.features.RuNetherFeatures;
 import net.regions_unexplored.registry.BlockRegistry;
 import net.regions_unexplored.world.level.block.alpha.AlphaGrassBlock;
+import net.regions_unexplored.world.level.block.aquatic.*;
 import net.regions_unexplored.world.level.block.cave.*;
 import net.regions_unexplored.world.level.block.forest_dirt.PeatDirtPathBlock;
 import net.regions_unexplored.world.level.block.forest_dirt.PeatFarmBlock;
@@ -24,10 +25,6 @@ import net.regions_unexplored.world.level.block.other_dirt.*;
 import net.regions_unexplored.world.level.block.plains_dirt.SiltDirtPathBlock;
 import net.regions_unexplored.world.level.block.plains_dirt.SiltFarmBlock;
 import net.regions_unexplored.world.level.block.plains_dirt.SiltGrassBlock;
-import net.regions_unexplored.world.level.block.plant.aquatic.DuckweedBlock;
-import net.regions_unexplored.world.level.block.plant.aquatic.FloweringLilyBlock;
-import net.regions_unexplored.world.level.block.plant.aquatic.GiantLilyBlock;
-import net.regions_unexplored.world.level.block.plant.aquatic.TallHyacinthStockBlock;
 import net.regions_unexplored.world.level.block.plant.branch.BranchBlock;
 import net.regions_unexplored.world.level.block.plant.dusktrap.DuskTrapBlock;
 import net.regions_unexplored.world.level.block.plant.flower.CaveFlowerBlock;
@@ -47,6 +44,10 @@ import net.regions_unexplored.world.level.block.wood.StrippedBambooLogBlock;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 
 public class RuBlocks {
+    //0.6.0
+    public static RegistryObject<Block> FLOURAMINE;
+    public static RegistryObject<Block> FLOURAMINE_PLANT;
+
     /*-----------------CAVE_BLOCKS-----------------*/
     //PRISMA_BLOCKS
     public static RegistryObject<Block> PRISMOSS;
@@ -975,6 +976,9 @@ public class RuBlocks {
     public static RegistryObject<Block> MYCOTOXIC_NYLIUM;
 
     public static void addBlocks() {
+        //0.6.0
+        FLOURAMINE = BlockRegistry.registerDefaultBlock("flouramine", () -> new FlouramineBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).strength(0.5f, 0f).randomTicks().sound(SoundType.WET_GRASS).pushReaction(PushReaction.DESTROY).lightLevel((state) -> {return FlouramineBlock.isActive(state) ? 12 : 0;})));
+        FLOURAMINE_PLANT = RegionsUnexploredMod.BLOCK_REGISTRY.register("flouramine_plant", () -> new FlouraminePlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().strength(0.5f, 0f).sound(SoundType.WET_GRASS).pushReaction(PushReaction.DESTROY)));
         /*-----------------CAVE_BLOCKS-----------------*/
         //PRISMA_BLOCKS
         PRISMOSS = BlockRegistry.registerDefaultBlock("prismoss", () -> new PrismossBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_LIGHT_GREEN).sound(SoundType.STONE).randomTicks().strength(1.5f, 6f).requiresCorrectToolForDrops()));

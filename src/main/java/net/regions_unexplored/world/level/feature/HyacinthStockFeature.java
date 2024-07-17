@@ -13,7 +13,7 @@ import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.regions_unexplored.block.RuBlocks;
 import net.regions_unexplored.data.tags.RuTags;
-import net.regions_unexplored.world.level.block.plant.aquatic.TallHyacinthStockBlock;
+import net.regions_unexplored.world.level.block.aquatic.TallHyacinthStockBlock;
 import net.regions_unexplored.world.level.block.state.properties.TallHyacinthStockShape;
 import net.regions_unexplored.world.level.feature.configuration.HyacinthStockConfiguration;
 
