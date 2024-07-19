@@ -1,4 +1,4 @@
-// 1.21	2024-07-12T00:03:23.9332463	Loot Tables
+// 1.21	2024-07-17T21:23:16.6662766	Loot Tables
 4dd7ed5a8bb239ce51b25abdb847bc9f98e09954 data/regions_unexplored/loot_table/blocks/acacia_branch.json
 9a9c5fbba217f07ec7cb6067e42dba80d311e355 data/regions_unexplored/loot_table/blocks/acacia_shrub.json
 db69029ed53dd57ea783ac8375ab18767e9fa5a0 data/regions_unexplored/loot_table/blocks/alpha_dandelion.json
@@ -233,6 +233,8 @@ a545ed6542aa35a44ce3958d6fe44685765e5fb0 data/regions_unexplored/loot_table/bloc
 02adb41ebb6fa1fe217574f9ca63c0a665422616 data/regions_unexplored/loot_table/blocks/eucalyptus_wood.json
 bd78e761f2aaf82a561214681c283367d7169db3 data/regions_unexplored/loot_table/blocks/felicia_daisy.json
 6edf72f0dfb8fba92f7b4b139168ff4177c51283 data/regions_unexplored/loot_table/blocks/fireweed.json
+3a01c850a02bc1e5b6bb369ca031b53ba819fbcc data/regions_unexplored/loot_table/blocks/flouramine.json
+b3a0901b1a1ab11fc57c804aa2451f57fa73c312 data/regions_unexplored/loot_table/blocks/flouramine_plant.json
 2b66c7c0c7dcb42d5fde53951563289bbf7e7bf2 data/regions_unexplored/loot_table/blocks/flowering_leaves.json
 aa61f367853ef4052a4b22131d3db594a1e8f618 data/regions_unexplored/loot_table/blocks/flowering_lily_pad.json
 236952a82ee74d16e433af082afde0cd49b711f5 data/regions_unexplored/loot_table/blocks/flowering_sapling.json

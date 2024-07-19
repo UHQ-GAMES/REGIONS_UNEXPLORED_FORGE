@@ -164,6 +164,37 @@ public class AquaticBiomes {
                 .build();
     }
 
+    public static Biome chargedDepths(HolderGetter<PlacedFeature> featureGetter, HolderGetter<ConfiguredWorldCarver<?>> carverGetter) {
+        BiomeSpecialEffects.Builder effectBuilder = (new BiomeSpecialEffects.Builder())
+                .skyColor(calculateSkyColor(0.4F))
+                .fogColor(OVERWORLD_FOG_COLOR)
+                .waterColor(NORMAL_WATER_COLOR)
+                .waterFogColor(922884)
+                .foliageColorOverride(6655808)
+                .grassColorOverride(8818496)
+                .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS)
+                .backgroundMusic(Musics.createGameMusic(SoundEvents.MUSIC_BIOME_SWAMP));
+
+        //add features
+        BiomeGenerationSettings.Builder biomeBuilder = baseOceanGeneration(featureGetter, carverGetter);
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, AquaticPlacements.SEAGRASS_NORMAL);
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, RuAquaticPlacements.FLOURAMINE);
+
+
+        //add mob spawns
+        MobSpawnSettings.Builder spawnBuilder = baseOceanSpawning();
+
+        return (new Biome.BiomeBuilder())
+                .hasPrecipitation(false)
+                .temperature(0.9F)
+                .downfall(0.0f)
+                .specialEffects(effectBuilder.build())
+                .mobSpawnSettings(spawnBuilder.build())
+                .generationSettings(biomeBuilder.build())
+                .build();
+    }
+
     public static Biome hyacinthDeeps(HolderGetter<PlacedFeature> featureGetter, HolderGetter<ConfiguredWorldCarver<?>> carverGetter) {
         BiomeSpecialEffects.Builder effectBuilder = (new BiomeSpecialEffects.Builder())
                 .skyColor(calculateSkyColor(0.0F))

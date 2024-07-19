@@ -5,6 +5,7 @@ import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraftforge.registries.RegistryObject;
 import net.regions_unexplored.RegionsUnexploredMod;
 import net.regions_unexplored.world.level.feature.*;
+import net.regions_unexplored.world.level.feature.aquatic.FlouramineFeature;
 import net.regions_unexplored.world.level.feature.bioshroom.GiantBlueBioshroomFeature;
 import net.regions_unexplored.world.level.feature.bioshroom.GiantGreenBioshroomFeature;
 import net.regions_unexplored.world.level.feature.bioshroom.GiantPinkBioshroomFeature;
@@ -15,6 +16,8 @@ import net.regions_unexplored.world.level.feature.tree.nether.BrimWillowFeature;
 import net.regions_unexplored.world.level.feature.tree.nether.TallBrimWillowFeature;
 
 public class FeatureRegistry {
+    //0.6.0
+    public static RegistryObject<Feature> FLOURAMINE;
     //BIOSHROOMS
     public static RegistryObject<Feature> GIANT_BLUE_BIOSHROOM;
     public static RegistryObject<Feature> GIANT_GREEN_BIOSHROOM;
@@ -94,6 +97,8 @@ public class FeatureRegistry {
     public static RegistryObject<Feature> OBSIDIAN_SPIRE;
 
     public static void addFeatures() {
+        //0.6.0
+        FLOURAMINE = RegionsUnexploredMod.FEATURE_REGISTRY.register("flouramine", () -> new FlouramineFeature(NoneFeatureConfiguration.CODEC));
         //BIOSHROOMS
         GIANT_BLUE_BIOSHROOM = RegionsUnexploredMod.FEATURE_REGISTRY.register("giant_blue_bioshroom", () -> new GiantBlueBioshroomFeature(GiantBioshroomConfiguration.CODEC));
         GIANT_GREEN_BIOSHROOM = RegionsUnexploredMod.FEATURE_REGISTRY.register("giant_green_bioshroom", () -> new GiantGreenBioshroomFeature(GiantBioshroomConfiguration.CODEC));

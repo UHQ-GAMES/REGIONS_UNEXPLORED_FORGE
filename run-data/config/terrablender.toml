@@ -7,6 +7,7 @@
 	nether_region_size = 2
 	#The weighting of vanilla biome regions in the overworld.
 	vanilla_overworld_region_weight = 10
+
 [end]
 	#The size of edge end biomes.
 	edge_biome_size = 3

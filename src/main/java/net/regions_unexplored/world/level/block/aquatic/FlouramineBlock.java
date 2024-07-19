@@ -2,13 +2,18 @@ package net.regions_unexplored.world.level.block.aquatic;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.*;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.tags.FluidTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.ai.targeting.TargetingConditions;
+import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.animal.WaterAnimal;
+import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -18,33 +23,25 @@ import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityTicker;
-import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.entity.EnchantingTableBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.Property;
-import net.minecraft.world.level.block.state.properties.SculkSensorPhase;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.regions_unexplored.block.RuBlocks;
-import net.regions_unexplored.block.entity.RuBlockEntities;
-import net.regions_unexplored.block.entity.block.FlouramineBlockEntity;
-import net.regions_unexplored.world.level.block.other_dirt.AshenDirtBlock;
+import net.regions_unexplored.world.level.block.other.CobaltObsidianBlock;
 import net.regions_unexplored.world.level.block.state.properties.RuBlockStateProperties;
-import org.jetbrains.annotations.Nullable;
 
-import java.util.Comparator;
+import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Set;
-import java.util.function.Function;
 
-public class FlouramineBlock extends GrowingPlantHeadBlock implements LiquidBlockContainer, EntityBlock {
+public class FlouramineBlock extends GrowingPlantHeadBlock implements LiquidBlockContainer {
     public static final MapCodec<FlouramineBlock> CODEC = simpleCodec(FlouramineBlock::new);
     protected static final VoxelShape SHAPE = Block.box(1.0, 0.0, 1.0, 15.0, 14, 15.0);
     public static final BooleanProperty IS_ACTIVE = RuBlockStateProperties.ACTIVE;
@@ -67,53 +64,72 @@ public class FlouramineBlock extends GrowingPlantHeadBlock implements LiquidBloc
         return (BlockState)this.defaultBlockState().setValue(AGE, p_53949_.getRandom().nextInt(25));
     }
 
-    //BlockEntity
-    @Override
-    public BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
-        return RuBlockEntities.FLOURAMINE_BLOCK_ENTITY.get().create(blockPos, blockState);
-    }
-
-    @Nullable
-    @Override
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> entityType) {
-
-        return !level.isClientSide ? createTickerHelper(entityType, RuBlockEntities.FLOURAMINE_BLOCK_ENTITY.get(), FlouramineBlockEntity::setActive) : null;
-    }
-
-    @Nullable
-    protected static <E extends BlockEntity, A extends BlockEntity> BlockEntityTicker<A> createTickerHelper(BlockEntityType<A> p_152133_, BlockEntityType<E> p_152134_, BlockEntityTicker<? super E> p_152135_) {
-        return p_152134_ == p_152133_ ? (BlockEntityTicker<A>) p_152135_ : null;
-    }
-
-    //
-
-
-    public static boolean canActivate(BlockState state) {
-        return state.getValue(IS_ACTIVE);
-    }
-
-    public void activate(BlockState state) {
-        state.setValue(IS_ACTIVE, true);
-    }
-
-    public void deactivate(BlockState state) {
-        state.setValue(IS_ACTIVE, false);
-    }
-
     public static boolean isActive(BlockState state) {
         return state.getValue(IS_ACTIVE);
     }
 
+    public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource randomSource) {
+        if (isActive(state)) {
+            Direction direction = Direction.getRandom(randomSource);
+            if (direction != Direction.UP) {
+                BlockPos blockpos = pos.relative(direction);
+                BlockState blockstate = level.getBlockState(blockpos);
+                for(int i = 0; i <= 2; i++){
+                    if (!state.canOcclude() || !blockstate.isFaceSturdy(level, blockpos, direction.getOpposite())) {
+                        double d0 = direction.getStepX() == 0 ? randomSource.nextDouble() : 0.5D + (double)direction.getStepX() * 0.6D;
+                        double d1 = direction.getStepY() == 0 ? randomSource.nextDouble() : 0.5D + (double)direction.getStepY() * 0.6D;
+                        double d2 = direction.getStepZ() == 0 ? randomSource.nextDouble() : 0.5D + (double)direction.getStepZ() * 0.6D;
+                        level.addParticle(ParticleTypes.BUBBLE_COLUMN_UP, (double)pos.getX() + d0, (double)pos.getY() + d1, (double)pos.getZ() + d2, 0.0D, 0.0D, 0.0D);
+                    }
+                }
+            }
+        }
+    }
+
     @Override
     public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-
+        checkForEntity(state, level, pos, pos.getX(), pos.getY(), pos.getZ());
         super.tick(state, level, pos, random);
+        level.scheduleTick(pos, this, 3);
     }
+
+    @Override
+    public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
+        super.onPlace(blockstate, world, pos, oldState, moving);
+        world.scheduleTick(pos, this, 1);
+    }
+
+
+    public static void checkForEntity(BlockState state, LevelAccessor levelAccessor, BlockPos pos, double x, double y, double z) {
+        List<Player> player = levelAccessor.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 6, 6, 6), e -> true);
+        List<Monster> monster = levelAccessor.getEntitiesOfClass(Monster.class, AABB.ofSize(new Vec3(x, y, z), 6, 6, 6), e -> true);
+        List<Animal> animals = levelAccessor.getEntitiesOfClass(Animal.class, AABB.ofSize(new Vec3(x, y, z), 6, 6, 6), e -> true);
+
+        if (!player.isEmpty()||!monster.isEmpty()||!animals.isEmpty()) {
+            if (!state.getValue(IS_ACTIVE)){
+                activate(state,levelAccessor,pos);
+            }
+        }
+        else if(state.getValue(IS_ACTIVE)){
+            deactivate(state,levelAccessor,pos);
+        }
+    }
+
+    public static void activate(BlockState state, LevelAccessor level, BlockPos pos) {
+        level.playSound(null, pos, SoundEvents.PUFFER_FISH_BLOW_UP, SoundSource.BLOCKS, 1.0F, 0.5F);
+        level.setBlock(pos, state.setValue(IS_ACTIVE, true), 2);
+    }
+
+    public static void deactivate(BlockState state, LevelAccessor level, BlockPos pos) {
+        level.playSound(null, pos, SoundEvents.PUFFER_FISH_BLOW_OUT, SoundSource.BLOCKS, 1.0F, 0.5F);
+        level.setBlock(pos, state.setValue(IS_ACTIVE, false), 2);
+    }
+
 
     @Override
     public void entityInside(BlockState state, Level level, BlockPos pos, Entity entity) {
         if (!level.isClientSide) {
-            if (!(entity instanceof WaterAnimal)) {
+            if (entity instanceof Player||entity instanceof Monster||entity instanceof Animal) {
                 tryExplode(level, pos);
             }
         }
@@ -173,9 +189,10 @@ public class FlouramineBlock extends GrowingPlantHeadBlock implements LiquidBloc
         return true;
     }
 
-    @Override
-    public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return this.defaultBlockState().setValue(IS_ACTIVE, false);
+    @Nullable
+    public BlockState getStateForPlacement(BlockPlaceContext p_54302_) {
+        FluidState fluidstate = p_54302_.getLevel().getFluidState(p_54302_.getClickedPos());
+        return fluidstate.is(FluidTags.WATER) && fluidstate.getAmount() == 8 ? super.getStateForPlacement(p_54302_) : null;
     }
 
     @Override

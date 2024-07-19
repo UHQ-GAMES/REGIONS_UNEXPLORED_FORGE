@@ -4,6 +4,7 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.data.worldgen.SurfaceRuleData;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Blocks;
@@ -16,6 +17,8 @@ import net.regions_unexplored.registry.PlacedFeatureRegistry;
 import java.util.List;
 
 public class RuAquaticPlacements {
+    //0.6.0
+    public static final ResourceKey<PlacedFeature> FLOURAMINE = PlacedFeatureRegistry.createKey("flouramine");
 
     public static final ResourceKey<PlacedFeature> CATTAIL_FEN = PlacedFeatureRegistry.createKey("cattail_fen");
     public static final ResourceKey<PlacedFeature> CATTAIL_RIVER = PlacedFeatureRegistry.createKey("cattail_river");
@@ -37,6 +40,9 @@ public class RuAquaticPlacements {
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> featureGetter = context.lookup(Registries.CONFIGURED_FEATURE);
 
+        //0.6.0
+        final Holder<ConfiguredFeature<?, ?>> FLOURAMINE = featureGetter.getOrThrow(RuAquaticFeatures.FLOURAMINE);
+
         final Holder<ConfiguredFeature<?, ?>> FEN_CATTAIL = featureGetter.getOrThrow(RuAquaticFeatures.FEN_CATTAIL);
         final Holder<ConfiguredFeature<?, ?>> WATER_CATTAIL = featureGetter.getOrThrow(RuAquaticFeatures.WATER_CATTAIL);
 
@@ -54,6 +60,8 @@ public class RuAquaticPlacements {
         final Holder<ConfiguredFeature<?, ?>> ELEPHANT_EAR_AQUATIC = featureGetter.getOrThrow(RuAquaticFeatures.ELEPHANT_EAR_AQUATIC);
         final Holder<ConfiguredFeature<?, ?>> PALM_SAPLING_AQUATIC = featureGetter.getOrThrow(RuVegetationFeatures.PALM_SHRUB);
 
+        //0.6.0
+        register(context, RuAquaticPlacements.FLOURAMINE, FLOURAMINE, NoiseBasedCountPlacement.of(80, 10.0D, 0.3D), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_OCEAN_FLOOR, BiomeFilter.biome());
 
         register(context, RuAquaticPlacements.CATTAIL_FEN, FEN_CATTAIL, List.of(NoiseThresholdCountPlacement.of(-0.8D, 5, 24), InSquarePlacement.spread(), SurfaceWaterDepthFilter.forMaxDepth(3), PlacementUtils.HEIGHTMAP_OCEAN_FLOOR, BiomeFilter.biome()));
         register(context, RuAquaticPlacements.CATTAIL_RIVER, WATER_CATTAIL, List.of(NoiseThresholdCountPlacement.of(-0.8D, 5, 6), InSquarePlacement.spread(), SurfaceWaterDepthFilter.forMaxDepth(3), PlacementUtils.HEIGHTMAP_OCEAN_FLOOR, BiomeFilter.biome()));

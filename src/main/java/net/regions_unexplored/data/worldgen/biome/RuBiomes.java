@@ -7,6 +7,15 @@ import net.minecraft.world.level.biome.Biome;
 import net.regions_unexplored.RegionsUnexploredMod;
 
 public class RuBiomes {
+    //0.6.0
+    //public static ResourceKey<Biome> BRINE = createKey("brine");
+    //public static ResourceKey<Biome> CAMBRIAN_OCEAN = createKey("cambrian_ocean");
+    public static ResourceKey<Biome> CHARGED_DEPTHS = createKey("charged_depths");
+    public static ResourceKey<Biome> HYACINTH_DEEPS = createKey("hyacinth_deeps");
+    //public static ResourceKey<Biome> HYDROTHERMAL_FIELD = createKey("hydrothermal_field");
+    //public static ResourceKey<Biome> RED_KELP_FOREST = createKey("red_kelp_forest");
+    public static ResourceKey<Biome> ROCKY_REEF = createKey("rocky_reef");
+
     public static ResourceKey<Biome> ALPHA_GROVE = createKey("alpha_grove");
     public static ResourceKey<Biome> ANCIENT_DELTA = createKey("ancient_delta");
     public static ResourceKey<Biome> ARID_MOUNTAINS = createKey("arid_mountains");
@@ -39,7 +48,6 @@ public class RuBiomes {
     public static ResourceKey<Biome> GRASSY_BEACH = createKey("grassy_beach");
     public static ResourceKey<Biome> GRAVEL_BEACH = createKey("gravel_beach");
     public static ResourceKey<Biome> HIGHLAND_FIELDS = createKey("highland_fields");
-    public static ResourceKey<Biome> HYACINTH_DEEPS = createKey("hyacinth_deeps");
     public static ResourceKey<Biome> ICY_HEIGHTS = createKey("icy_heights");
     public static ResourceKey<Biome> INFERNAL_HOLT = createKey("infernal_holt");
     public static ResourceKey<Biome> JOSHUA_DESERT = createKey("joshua_desert");
@@ -64,7 +72,6 @@ public class RuBiomes {
     public static ResourceKey<Biome> REDSTONE_CAVES = createKey("redstone_caves");
     public static ResourceKey<Biome> REDWOODS = createKey("redwoods");
     public static ResourceKey<Biome> ROCKY_MEADOW = createKey("rocky_meadow");
-    public static ResourceKey<Biome> ROCKY_REEF = createKey("rocky_reef");
     public static ResourceKey<Biome> SAGUARO_DESERT = createKey("saguaro_desert");
     public static ResourceKey<Biome> SCORCHING_CAVES = createKey("scorching_caves");
     public static ResourceKey<Biome> SHRUBLAND = createKey("shrubland");

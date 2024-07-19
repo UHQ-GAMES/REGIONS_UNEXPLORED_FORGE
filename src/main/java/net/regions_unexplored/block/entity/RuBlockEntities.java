@@ -4,18 +4,13 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.registries.RegistryObject;
 import net.regions_unexplored.RegionsUnexploredMod;
 import net.regions_unexplored.block.RuBlocks;
-import net.regions_unexplored.block.entity.block.FlouramineBlockEntity;
 
 public class RuBlockEntities {
-
-    public static RegistryObject<BlockEntityType<FlouramineBlockEntity>> FLOURAMINE_BLOCK_ENTITY;
 
     public static RegistryObject<BlockEntityType<RuSignBlockEntity>> SIGN_BLOCK_ENTITIES;
     public static RegistryObject<BlockEntityType<RuHangingSignBlockEntity>> HANGING_SIGN_BLOCK_ENTITIES;
     
     public static void addBlockEntities() {
-        FLOURAMINE_BLOCK_ENTITY = RegionsUnexploredMod.BLOCK_ENTITY_REGISTRY.register("flouramine_block_entity", () ->
-                BlockEntityType.Builder.of(FlouramineBlockEntity::new, RuBlocks.FLOURAMINE.get()).build(null));
 
         SIGN_BLOCK_ENTITIES = RegionsUnexploredMod.BLOCK_ENTITY_REGISTRY.register("sign_block_entity", () ->
 

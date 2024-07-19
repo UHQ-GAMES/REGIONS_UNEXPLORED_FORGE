@@ -78,6 +78,10 @@ public class RuBlockLootTables extends BlockLootSubProvider {
 
         HolderGetter<Enchantment> holdergetter = registries.lookupOrThrow(Registries.ENCHANTMENT);
 
+        //0.6.0
+        dropSelf(RuBlocks.FLOURAMINE.get());
+        add(RuBlocks.FLOURAMINE_PLANT.get(), (block) -> createSingleItemTable(RuBlocks.FLOURAMINE.get()));
+
         /*-----------------CAVE_BLOCKS-----------------*/
         //PRISMA_BLOCKS
         add(RuBlocks.PRISMOSS.get(), (block) -> createSingleItemTableWithSilkTouch(block, Blocks.COBBLESTONE));

@@ -22,6 +22,9 @@ import net.regions_unexplored.world.level.feature.configuration.RuTreeConfigurat
 import net.regions_unexplored.world.level.feature.configuration.SeaRockConfiguration;
 
 public class RuAquaticFeatures {
+    //0.6.0
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FLOURAMINE = ConfiguredFeatureRegistry.createKey("flouramine");
+
     public static final ResourceKey<ConfiguredFeature<?, ?>> FEN_CATTAIL = ConfiguredFeatureRegistry.createKey("fen_cattail");
     public static final ResourceKey<ConfiguredFeature<?, ?>> WATER_CATTAIL = ConfiguredFeatureRegistry.createKey("water_cattail");
 
@@ -40,6 +43,9 @@ public class RuAquaticFeatures {
     
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         HolderGetter<ConfiguredFeature<?, ?>> holderGetter = context.lookup(Registries.CONFIGURED_FEATURE);
+        //0.6.0
+        register(context, FLOURAMINE, FeatureRegistry.FLOURAMINE.get(), FeatureConfiguration.NONE);
+
         register(context, FEN_CATTAIL, FeatureRegistry.FEN_CATTAIL.get(), FeatureConfiguration.NONE);
         register(context, WATER_CATTAIL, FeatureRegistry.WATER_CATTAIL.get(), FeatureConfiguration.NONE);
         

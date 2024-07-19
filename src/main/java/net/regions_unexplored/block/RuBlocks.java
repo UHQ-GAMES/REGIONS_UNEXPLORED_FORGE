@@ -977,7 +977,7 @@ public class RuBlocks {
 
     public static void addBlocks() {
         //0.6.0
-        FLOURAMINE = BlockRegistry.registerDefaultBlock("flouramine", () -> new FlouramineBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).strength(0.5f, 0f).randomTicks().sound(SoundType.WET_GRASS).pushReaction(PushReaction.DESTROY).lightLevel((state) -> {return FlouramineBlock.isActive(state) ? 12 : 0;})));
+        FLOURAMINE = BlockRegistry.registerDefaultBlock("flouramine", () -> new FlouramineBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().strength(0.5f, 0f).randomTicks().sound(SoundType.WET_GRASS).pushReaction(PushReaction.DESTROY).lightLevel((state) -> {return FlouramineBlock.isActive(state) ? 12 : 0;})));
         FLOURAMINE_PLANT = RegionsUnexploredMod.BLOCK_REGISTRY.register("flouramine_plant", () -> new FlouraminePlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().strength(0.5f, 0f).sound(SoundType.WET_GRASS).pushReaction(PushReaction.DESTROY)));
         /*-----------------CAVE_BLOCKS-----------------*/
         //PRISMA_BLOCKS

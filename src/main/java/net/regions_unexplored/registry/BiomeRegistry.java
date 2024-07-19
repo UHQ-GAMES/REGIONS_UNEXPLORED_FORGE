@@ -37,6 +37,14 @@ public class BiomeRegistry {
     public static void bootstrap(BootstrapContext<Biome> context) {
         HolderGetter<ConfiguredWorldCarver<?>> carversGetter = context.lookup(Registries.CONFIGURED_CARVER);
         HolderGetter<PlacedFeature> featuresGetter = context.lookup(Registries.PLACED_FEATURE);
+        //0.6.0
+        //register(context, RuBiomes.BRINE, AquaticBiomes.brine(featuresGetter, carversGetter));
+        //register(context, RuBiomes.CAMBRIAN_OCEAN, AquaticBiomes.cambrianOcean(featuresGetter, carversGetter));
+        register(context, RuBiomes.CHARGED_DEPTHS, AquaticBiomes.chargedDepths(featuresGetter, carversGetter));
+        register(context, RuBiomes.HYACINTH_DEEPS, AquaticBiomes.hyacinthDeeps(featuresGetter, carversGetter));
+        //register(context, RuBiomes.HYDROTHERMAL_FIELD, AquaticBiomes.hydrothermalField(featuresGetter, carversGetter));
+        //register(context, RuBiomes.RED_KELP_FOREST, AquaticBiomes.redKelpForest(featuresGetter, carversGetter));
+        register(context, RuBiomes.ROCKY_REEF, AquaticBiomes.rockyReef(featuresGetter, carversGetter));
 
         //FOREST
         register(context, RuBiomes.AUTUMNAL_MAPLE_FOREST, ForestBiomes.autumnalMapleForest(featuresGetter, carversGetter));
@@ -95,9 +103,7 @@ public class BiomeRegistry {
         //AQUATIC
         register(context, RuBiomes.ALPHA_GROVE, AquaticBiomes.alphaGrove(featuresGetter, carversGetter));
         register(context, RuBiomes.COLD_RIVER, AquaticBiomes.coldRiver(featuresGetter, carversGetter));
-        register(context, RuBiomes.HYACINTH_DEEPS, AquaticBiomes.hyacinthDeeps(featuresGetter, carversGetter));
         register(context, RuBiomes.MUDDY_RIVER, AquaticBiomes.muddyRiver(featuresGetter, carversGetter));
-        register(context, RuBiomes.ROCKY_REEF, AquaticBiomes.rockyReef(featuresGetter, carversGetter));
         register(context, RuBiomes.ASHEN_WOODLAND, AquaticBiomes.ashenWoodland(featuresGetter, carversGetter));
         register(context, RuBiomes.TROPICAL_RIVER, AquaticBiomes.tropicalRiver(featuresGetter, carversGetter));
         register(context, RuBiomes.TROPICS, AquaticBiomes.tropics(featuresGetter, carversGetter));
