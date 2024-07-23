@@ -1,7 +1,9 @@
 package net.regions_unexplored.world.level.block.plant.sapling;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
@@ -21,6 +23,12 @@ public class RuCactusSaplingBlock extends SaplingBlock implements BonemealableBl
     public RuCactusSaplingBlock(TreeGrower treeGrower, Properties properties) {
         super(treeGrower, properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(STAGE, Integer.valueOf(0)));
+    }
+
+    public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource randomSource) {
+        if ((level.getMaxLocalRawBrightness(pos.above()) >= 9 && randomSource.nextInt(7) == 0)&&(!(level.getBlockState(pos.below()).is(Blocks.CACTUS)||level.getBlockState(pos.below()).is(RuBlocks.SAGUARO_CACTUS.get())))) {
+            this.advanceTree(level, pos, state, randomSource);
+        }
     }
 
     @Override
