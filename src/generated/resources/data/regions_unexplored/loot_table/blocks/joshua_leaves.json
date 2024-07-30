@@ -34,7 +34,7 @@
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "items": "minecraft:shears"
+                    "items": "#forge:shears"
                   }
                 }
               ],
@@ -104,7 +104,7 @@
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "items": "minecraft:shears"
+                    "items": "#forge:shears"
                   }
                 }
               ],
