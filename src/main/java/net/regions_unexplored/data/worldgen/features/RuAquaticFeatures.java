@@ -20,9 +20,11 @@ import net.regions_unexplored.registry.FeatureRegistry;
 import net.regions_unexplored.world.level.feature.configuration.HyacinthStockConfiguration;
 import net.regions_unexplored.world.level.feature.configuration.RuTreeConfiguration;
 import net.regions_unexplored.world.level.feature.configuration.SeaRockConfiguration;
+import net.regions_unexplored.world.level.feature.configuration.ShrubConfiguration;
 
 public class RuAquaticFeatures {
     //0.6.0
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AIR_CORAL = ConfiguredFeatureRegistry.createKey("air_coral");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FLOURAMINE = ConfiguredFeatureRegistry.createKey("flouramine");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> FEN_CATTAIL = ConfiguredFeatureRegistry.createKey("fen_cattail");
@@ -44,6 +46,7 @@ public class RuAquaticFeatures {
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         HolderGetter<ConfiguredFeature<?, ?>> holderGetter = context.lookup(Registries.CONFIGURED_FEATURE);
         //0.6.0
+        FeatureUtils.register(context, AIR_CORAL, FeatureRegistry.AQUATIC_SHRUB.get(), new ShrubConfiguration(BlockStateProvider.simple(RuBlocks.AIR_CORAL.get())));
         register(context, FLOURAMINE, FeatureRegistry.FLOURAMINE.get(), FeatureConfiguration.NONE);
 
         register(context, FEN_CATTAIL, FeatureRegistry.FEN_CATTAIL.get(), FeatureConfiguration.NONE);

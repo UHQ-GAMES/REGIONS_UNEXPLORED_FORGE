@@ -5,6 +5,7 @@ import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraftforge.registries.RegistryObject;
 import net.regions_unexplored.RegionsUnexploredMod;
 import net.regions_unexplored.world.level.feature.*;
+import net.regions_unexplored.world.level.feature.aquatic.AquaticShrubFeature;
 import net.regions_unexplored.world.level.feature.aquatic.FlouramineFeature;
 import net.regions_unexplored.world.level.feature.bioshroom.GiantBlueBioshroomFeature;
 import net.regions_unexplored.world.level.feature.bioshroom.GiantGreenBioshroomFeature;
@@ -17,6 +18,7 @@ import net.regions_unexplored.world.level.feature.tree.nether.TallBrimWillowFeat
 
 public class FeatureRegistry {
     //0.6.0
+    public static RegistryObject<Feature> AQUATIC_SHRUB;
     public static RegistryObject<Feature> FLOURAMINE;
     //BIOSHROOMS
     public static RegistryObject<Feature> GIANT_BLUE_BIOSHROOM;
@@ -98,6 +100,7 @@ public class FeatureRegistry {
 
     public static void addFeatures() {
         //0.6.0
+        AQUATIC_SHRUB = RegionsUnexploredMod.FEATURE_REGISTRY.register("aquatic_shrub", () -> new AquaticShrubFeature(ShrubConfiguration.CODEC));
         FLOURAMINE = RegionsUnexploredMod.FEATURE_REGISTRY.register("flouramine", () -> new FlouramineFeature(NoneFeatureConfiguration.CODEC));
         //BIOSHROOMS
         GIANT_BLUE_BIOSHROOM = RegionsUnexploredMod.FEATURE_REGISTRY.register("giant_blue_bioshroom", () -> new GiantBlueBioshroomFeature(GiantBioshroomConfiguration.CODEC));

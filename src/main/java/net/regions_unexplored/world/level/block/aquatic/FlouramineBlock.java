@@ -61,7 +61,7 @@ public class FlouramineBlock extends GrowingPlantHeadBlock implements LiquidBloc
     }
 
     public BlockState getStateForPlacement(LevelAccessor p_53949_) {
-        return (BlockState)this.defaultBlockState().setValue(AGE, p_53949_.getRandom().nextInt(25));
+        return this.defaultBlockState().setValue(AGE, p_53949_.getRandom().nextInt(25));
     }
 
     public static boolean isActive(BlockState state) {
@@ -98,7 +98,6 @@ public class FlouramineBlock extends GrowingPlantHeadBlock implements LiquidBloc
         super.onPlace(blockstate, world, pos, oldState, moving);
         world.scheduleTick(pos, this, 1);
     }
-
 
     public static void checkForEntity(BlockState state, LevelAccessor levelAccessor, BlockPos pos, double x, double y, double z) {
         List<Player> player = levelAccessor.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 6, 6, 6), e -> true);

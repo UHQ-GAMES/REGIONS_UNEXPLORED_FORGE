@@ -45,6 +45,7 @@ import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 
 public class RuBlocks {
     //0.6.0
+    public static RegistryObject<Block> AIR_CORAL;
     public static RegistryObject<Block> FLOURAMINE;
     public static RegistryObject<Block> FLOURAMINE_PLANT;
 
@@ -977,8 +978,9 @@ public class RuBlocks {
 
     public static void addBlocks() {
         //0.6.0
-        FLOURAMINE = BlockRegistry.registerDefaultBlock("flouramine", () -> new FlouramineBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().strength(0.5f, 0f).randomTicks().sound(SoundType.WET_GRASS).pushReaction(PushReaction.DESTROY).lightLevel((state) -> {return FlouramineBlock.isActive(state) ? 12 : 0;})));
-        FLOURAMINE_PLANT = RegionsUnexploredMod.BLOCK_REGISTRY.register("flouramine_plant", () -> new FlouraminePlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().strength(0.5f, 0f).sound(SoundType.WET_GRASS).pushReaction(PushReaction.DESTROY)));
+        AIR_CORAL = BlockRegistry.registerDefaultBlock("air_coral", () -> new AirCoralBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().instabreak().randomTicks().sound(SoundType.WET_GRASS).pushReaction(PushReaction.DESTROY).hasPostProcess((bs, br, bp) -> bs.getValue(AirCoralBlock.IS_ACTIVE)).emissiveRendering((bs, br, bp) -> bs.getValue(AirCoralBlock.IS_ACTIVE)).lightLevel((state) -> AirCoralBlock.isActive(state) ? 6 : 0)));
+        FLOURAMINE = BlockRegistry.registerDefaultBlock("flouramine", () -> new FlouramineBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().strength(0.5f, 0f).randomTicks().sound(SoundType.WET_GRASS).pushReaction(PushReaction.DESTROY).hasPostProcess((bs, br, bp) -> bs.getValue(FlouramineBlock.IS_ACTIVE)).emissiveRendering((bs, br, bp) -> bs.getValue(FlouramineBlock.IS_ACTIVE)).lightLevel((state) -> FlouramineBlock.isActive(state) ? 12 : 0).offsetType(BlockBehaviour.OffsetType.XZ)));
+        FLOURAMINE_PLANT = RegionsUnexploredMod.BLOCK_REGISTRY.register("flouramine_plant", () -> new FlouraminePlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().strength(0.5f, 0f).sound(SoundType.WET_GRASS).pushReaction(PushReaction.DESTROY).offsetType(BlockBehaviour.OffsetType.XZ)));
         /*-----------------CAVE_BLOCKS-----------------*/
         //PRISMA_BLOCKS
         PRISMOSS = BlockRegistry.registerDefaultBlock("prismoss", () -> new PrismossBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_LIGHT_GREEN).sound(SoundType.STONE).randomTicks().strength(1.5f, 6f).requiresCorrectToolForDrops()));

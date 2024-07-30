@@ -1,0 +1,15 @@
+{
+  "type": "regions_unexplored:aquatic_shrub",
+  "config": {
+    "sapling_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "regions_unexplored:air_coral",
+        "Properties": {
+          "active": "true",
+          "half": "lower"
+        }
+      }
+    }
+  }
+}

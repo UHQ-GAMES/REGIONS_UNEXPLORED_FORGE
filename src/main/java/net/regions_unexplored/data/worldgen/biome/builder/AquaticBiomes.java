@@ -168,7 +168,7 @@ public class AquaticBiomes {
         BiomeSpecialEffects.Builder effectBuilder = (new BiomeSpecialEffects.Builder())
                 .skyColor(calculateSkyColor(0.4F))
                 .fogColor(OVERWORLD_FOG_COLOR)
-                .waterColor(NORMAL_WATER_COLOR)
+                .waterColor(3062934)
                 .waterFogColor(922884)
                 .foliageColorOverride(6655808)
                 .grassColorOverride(8818496)
@@ -180,6 +180,7 @@ public class AquaticBiomes {
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, AquaticPlacements.SEAGRASS_NORMAL);
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, RuAquaticPlacements.FLOURAMINE);
+        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, RuAquaticPlacements.AIR_CORAL);
 
 
         //add mob spawns

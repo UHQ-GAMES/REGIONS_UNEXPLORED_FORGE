@@ -1,0 +1,33 @@
+{
+  "feature": "regions_unexplored:air_coral",
+  "placement": [
+    {
+      "type": "minecraft:noise_based_count",
+      "noise_factor": 10.0,
+      "noise_offset": -0.25,
+      "noise_to_count_ratio": 20
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:would_survive",
+        "state": {
+          "Name": "minecraft:tall_seagrass",
+          "Properties": {
+            "half": "lower"
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

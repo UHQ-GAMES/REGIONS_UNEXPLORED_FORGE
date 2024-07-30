@@ -1,13 +1,19 @@
 package net.regions_unexplored.data.worldgen.placement;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.SurfaceRuleData;
+import net.minecraft.data.worldgen.placement.AquaticPlacements;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.levelgen.GenerationStep;
+import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.*;
 import net.regions_unexplored.data.worldgen.features.RuAquaticFeatures;
@@ -18,6 +24,7 @@ import java.util.List;
 
 public class RuAquaticPlacements {
     //0.6.0
+    public static final ResourceKey<PlacedFeature> AIR_CORAL = PlacedFeatureRegistry.createKey("air_coral");
     public static final ResourceKey<PlacedFeature> FLOURAMINE = PlacedFeatureRegistry.createKey("flouramine");
 
     public static final ResourceKey<PlacedFeature> CATTAIL_FEN = PlacedFeatureRegistry.createKey("cattail_fen");
@@ -41,6 +48,7 @@ public class RuAquaticPlacements {
         HolderGetter<ConfiguredFeature<?, ?>> featureGetter = context.lookup(Registries.CONFIGURED_FEATURE);
 
         //0.6.0
+        final Holder<ConfiguredFeature<?, ?>> AIR_CORAL = featureGetter.getOrThrow(RuAquaticFeatures.AIR_CORAL);
         final Holder<ConfiguredFeature<?, ?>> FLOURAMINE = featureGetter.getOrThrow(RuAquaticFeatures.FLOURAMINE);
 
         final Holder<ConfiguredFeature<?, ?>> FEN_CATTAIL = featureGetter.getOrThrow(RuAquaticFeatures.FEN_CATTAIL);
@@ -59,8 +67,8 @@ public class RuAquaticPlacements {
         final Holder<ConfiguredFeature<?, ?>> PALM_TREE_AQUATIC = featureGetter.getOrThrow(RuAquaticFeatures.PALM_TREE_AQUATIC);
         final Holder<ConfiguredFeature<?, ?>> ELEPHANT_EAR_AQUATIC = featureGetter.getOrThrow(RuAquaticFeatures.ELEPHANT_EAR_AQUATIC);
         final Holder<ConfiguredFeature<?, ?>> PALM_SAPLING_AQUATIC = featureGetter.getOrThrow(RuVegetationFeatures.PALM_SHRUB);
-
         //0.6.0
+        register(context, RuAquaticPlacements.AIR_CORAL, AIR_CORAL, NoiseBasedCountPlacement.of(20, 10.0D, -0.25D), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_OCEAN_FLOOR, PlacementUtils.filteredByBlockSurvival(Blocks.TALL_SEAGRASS), BiomeFilter.biome());
         register(context, RuAquaticPlacements.FLOURAMINE, FLOURAMINE, NoiseBasedCountPlacement.of(80, 10.0D, 0.3D), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_OCEAN_FLOOR, BiomeFilter.biome());
 
         register(context, RuAquaticPlacements.CATTAIL_FEN, FEN_CATTAIL, List.of(NoiseThresholdCountPlacement.of(-0.8D, 5, 24), InSquarePlacement.spread(), SurfaceWaterDepthFilter.forMaxDepth(3), PlacementUtils.HEIGHTMAP_OCEAN_FLOOR, BiomeFilter.biome()));

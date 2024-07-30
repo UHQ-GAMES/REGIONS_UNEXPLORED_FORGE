@@ -11,8 +11,12 @@ import net.regions_unexplored.api.item.FoodItemWithBlock;
 import net.regions_unexplored.block.RuBlocks;
 import net.regions_unexplored.entity.custom.RuBoat;
 import net.regions_unexplored.item.items.RuBoatItem;
+import net.regions_unexplored.world.level.Item.food.AirCoralSacItem;
 
 public class RuItems {
+    //0.6.0
+    public static RegistryObject<Item> AIR_CORAL_SAC;
+
     public static RegistryObject<Item> BAOBAB_HANGING_SIGN;
     public static RegistryObject<Item> BLACKWOOD_HANGING_SIGN;
     public static RegistryObject<Item> BLUE_BIOSHROOM_HANGING_SIGN;
@@ -98,6 +102,9 @@ public class RuItems {
     public static RegistryObject<Item> MEADOW_SAGE;
     
     public static void addItems(){
+        //0.6.0
+        AIR_CORAL_SAC = RegionsUnexploredMod.ITEM_REGISTRY.register("air_coral_sac", () -> new AirCoralSacItem(new Item.Properties(),  new Food(2, 0.1f).alwaysEdible()));
+
         BAOBAB_HANGING_SIGN = RegionsUnexploredMod.ITEM_REGISTRY.register("baobab_hanging_sign", () -> new HangingSignItem(RuBlocks.BAOBAB_HANGING_SIGN.get(), RuBlocks.BAOBAB_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
         BLACKWOOD_HANGING_SIGN = RegionsUnexploredMod.ITEM_REGISTRY.register("blackwood_hanging_sign", () -> new SignItem(new Item.Properties().stacksTo(16), RuBlocks.BLACKWOOD_HANGING_SIGN.get(), RuBlocks.BLACKWOOD_WALL_HANGING_SIGN.get()));
         BLUE_BIOSHROOM_HANGING_SIGN = RegionsUnexploredMod.ITEM_REGISTRY.register("blue_bioshroom_hanging_sign", () -> new SignItem(new Item.Properties().stacksTo(16), RuBlocks.BLUE_BIOSHROOM_HANGING_SIGN.get(), RuBlocks.BLUE_BIOSHROOM_WALL_HANGING_SIGN.get()));

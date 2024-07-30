@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "half=upper,active=true": {
+      "model": "regions_unexplored:block/air_coral"
+    },
+    "half=lower,active=true": {
+      "model": "regions_unexplored:block/air_coral_bottom"
+    },
+    "half=upper,active=false": {
+      "model": "regions_unexplored:block/air_coral_harvested"
+    },
+    "half=lower,active=false": {
+      "model": "regions_unexplored:block/air_coral_harvested_bottom"
+    }
+  }
+}

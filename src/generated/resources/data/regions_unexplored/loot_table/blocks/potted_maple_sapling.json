@@ -26,7 +26,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:air"
+          "name": "regions_unexplored:maple_sapling"
         }
       ],
       "rolls": 1.0

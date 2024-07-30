@@ -23,6 +23,8 @@ public class RuTabs {
                         .withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
                         .displayItems((featureFlags, output) -> {
 
+                            output.accept(new ItemStack(RuBlocks.AIR_CORAL.get()));
+                            output.accept(new ItemStack(RuItems.AIR_CORAL_SAC.get()));
                             output.accept(new ItemStack(RuBlocks.FLOURAMINE.get()));
 
                             output.accept(new ItemStack(RuBlocks.PRISMOSS.get()));

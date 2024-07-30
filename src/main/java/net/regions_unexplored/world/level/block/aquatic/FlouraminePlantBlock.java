@@ -3,7 +3,10 @@ package net.regions_unexplored.world.level.block.aquatic;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.Holder;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
@@ -17,6 +20,8 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.regions_unexplored.block.RuBlocks;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Set;
 
 public class FlouraminePlantBlock extends GrowingPlantBodyBlock implements LiquidBlockContainer {
     public static final MapCodec<FlouraminePlantBlock> CODEC = simpleCodec(FlouraminePlantBlock::new);
@@ -35,7 +40,20 @@ public class FlouraminePlantBlock extends GrowingPlantBodyBlock implements Liqui
 
     @Override
     public boolean onDestroyedByPlayer(BlockState state, Level level, BlockPos pos, Player player, boolean willHarvest, FluidState fluid) {
-        return this.getHeadBlock().onDestroyedByPlayer(state, level, pos, player, willHarvest, fluid);
+        ItemStack item = player.getWeaponItem();
+        Set<Holder<Enchantment>> enchantments = item.getEnchantments().keySet();
+        boolean hasSilkTouch = enchantments.toString().contains("silk_touch");
+        if (!level.isClientSide) {
+            if(!hasSilkTouch){
+                BlockPos.MutableBlockPos pos1 = pos.below().mutable();
+                while(level.getBlockState(pos1).is(RuBlocks.FLOURAMINE.get())||level.getBlockState(pos1).is(RuBlocks.FLOURAMINE_PLANT.get())){
+                    level.removeBlock(pos1, true);
+                    pos1.move(Direction.DOWN);
+                }
+                this.getHeadBlock().tryExplode(level, pos);
+            }
+        }
+        return super.onDestroyedByPlayer(state, level, pos, player, willHarvest, fluid);
     }
 
     public boolean canAttachTo(BlockState state) {

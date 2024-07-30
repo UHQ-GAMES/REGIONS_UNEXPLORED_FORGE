@@ -73,6 +73,7 @@ public class RuSurfaceRuleData {
     private static final SurfaceRules.RuleSource ORANGE_TERRACOTTA = makeStateRule(Blocks.ORANGE_TERRACOTTA);
     private static final SurfaceRules.RuleSource WHITE_TERRACOTTA = makeStateRule(Blocks.ORANGE_TERRACOTTA);
     private static final SurfaceRules.RuleSource COBBLESTONE = makeStateRule(Blocks.COBBLESTONE);
+    private static final SurfaceRules.RuleSource MOSSY_COBBLESTONE = makeStateRule(Blocks.MOSSY_COBBLESTONE);
     private static final SurfaceRules.RuleSource MOSSY_STONE = makeStateRule(RuBlocks.MOSSY_STONE.get());
     private static final SurfaceRules.RuleSource SANDSTONE = makeStateRule(Blocks.SANDSTONE);
     private static final SurfaceRules.RuleSource RED_SANDSTONE = makeStateRule(Blocks.RED_SANDSTONE);
@@ -352,7 +353,12 @@ public class RuSurfaceRuleData {
                 SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.sequence(
                         SurfaceRules.ifTrue(SurfaceRules.isBiome(Biomes.FROZEN_PEAKS, Biomes.JAGGED_PEAKS), STONE),
 
-                        SurfaceRules.ifTrue(SurfaceRules.isBiome(RuBiomes.ROCKY_REEF), sandWithSandstoneOverhang)))
+                        SurfaceRules.ifTrue(SurfaceRules.isBiome(RuBiomes.ROCKY_REEF), sandWithSandstoneOverhang),
+
+                        SurfaceRules.ifTrue(SurfaceRules.isBiome(RuBiomes.CHARGED_DEPTHS),
+                                SurfaceRules.sequence(SurfaceRules.ifTrue(shieldNoise(1.75D), MOSSY_COBBLESTONE),
+                                        SurfaceRules.ifTrue(shieldNoise(-0.95D), MOSS_BLOCK)))
+                        ))
         );
 
         ImmutableList.Builder<SurfaceRules.RuleSource> builder = ImmutableList.builder();
@@ -424,8 +430,8 @@ public class RuSurfaceRuleData {
         return AIR;
     }
 
-    private static SurfaceRules.ConditionSource surfaceNoiseAbove(double p_194809_) {
-        return SurfaceRules.noiseCondition(Noises.SURFACE, p_194809_ / 8.25D, Double.MAX_VALUE);
+    private static SurfaceRules.ConditionSource surfaceNoiseAbove(double noise) {
+        return SurfaceRules.noiseCondition(Noises.SURFACE, noise / 8.25D, Double.MAX_VALUE);
     }
 
     private static SurfaceRules.ConditionSource shieldNoise(double noise) {
