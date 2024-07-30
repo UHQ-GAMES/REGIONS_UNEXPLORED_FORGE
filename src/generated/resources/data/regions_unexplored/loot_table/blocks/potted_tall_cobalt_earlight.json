@@ -26,7 +26,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:air"
+          "name": "regions_unexplored:tall_cobalt_earlight"
         }
       ],
       "rolls": 1.0
