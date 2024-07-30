@@ -26,7 +26,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:air"
+          "name": "regions_unexplored:cactus_flower"
         }
       ],
       "rolls": 1.0
