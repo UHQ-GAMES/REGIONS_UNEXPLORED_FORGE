@@ -22,6 +22,7 @@ import net.regions_unexplored.world.level.block.sign.RuWallSignBlock;
 import net.regions_unexplored.world.level.block.wood.AspenLogBlock;
 import net.regions_unexplored.world.level.block.wood.MagmaLogBlock;
 import net.regions_unexplored.world.level.block.wood.PineLogBlock;
+import net.regions_unexplored.world.level.block.wood.WillowLogBlock;
 
 import java.util.function.Supplier;
 
@@ -57,6 +58,9 @@ public class BlockRegistry {
             return p_152624_.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? colour : colour2;
         }).instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(sound).ignitedByLava());
     }
+    public static WillowLogBlock willowLog(MapColor colour, MapColor colour2, SoundType sound) {
+        return new WillowLogBlock(BlockBehaviour.Properties.of().mapColor((blockState) -> blockState.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? colour : colour2).instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(sound).ignitedByLava());
+    }
     //Configure log block
     public static RotatedPillarBlock log(MapColor colour, MapColor colour2, SoundType sound) {
         return new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor((p_152624_) -> {
@@ -66,6 +70,9 @@ public class BlockRegistry {
     //Configure wood block
     public static RotatedPillarBlock woodBlock(MapColor colour, SoundType sound) {
         return new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(colour).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sound(sound).ignitedByLava());
+    }
+    public static WillowLogBlock willowWoodBlock(MapColor colour, SoundType sound) {
+        return new WillowLogBlock(BlockBehaviour.Properties.of().mapColor(colour).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sound(sound).ignitedByLava());
     }
     //Configure wooden planks
     public static Block woodPlanks(MapColor colour, SoundType sound) {

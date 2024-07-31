@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "willow_shape=base": {
+      "model": "regions_unexplored:block/willow_vines_base"
+    },
+    "willow_shape=middle": {
+      "model": "regions_unexplored:block/willow_vines_middle"
+    },
+    "willow_shape=end": {
+      "model": "regions_unexplored:block/willow_vines_end"
+    }
+  }
+}

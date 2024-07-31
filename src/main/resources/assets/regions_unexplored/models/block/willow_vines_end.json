@@ -1,0 +1,8 @@
+{
+  "parent": "block/tinted_cross",
+  "textures": {
+    "cross": "regions_unexplored:block/willow_vines_end",
+    "particle": "regions_unexplored:block/willow_vines_end"
+  },
+  "render_type": "cutout"
+}

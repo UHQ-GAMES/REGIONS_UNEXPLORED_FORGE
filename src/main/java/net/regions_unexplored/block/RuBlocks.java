@@ -49,6 +49,30 @@ public class RuBlocks {
     public static RegistryObject<Block> FLOURAMINE;
     public static RegistryObject<Block> FLOURAMINE_PLANT;
 
+    //WILLOW_BLOCKS
+    public static RegistryObject<Block> WILLOW_LEAVES;
+    public static RegistryObject<Block> WILLOW_VINES;
+
+    public static RegistryObject<Block> WILLOW_SAPLING;
+
+    public static RegistryObject<Block> WILLOW_LOG;
+    public static RegistryObject<Block> STRIPPED_WILLOW_LOG;
+    public static RegistryObject<Block> WILLOW_WOOD;
+    public static RegistryObject<Block> STRIPPED_WILLOW_WOOD;
+    public static RegistryObject<Block> WILLOW_PLANKS;
+    public static RegistryObject<Block> WILLOW_STAIRS;
+    public static RegistryObject<Block> WILLOW_SLAB;
+    public static RegistryObject<Block> WILLOW_FENCE;
+    public static RegistryObject<Block> WILLOW_DOOR;
+    public static RegistryObject<Block> WILLOW_FENCE_GATE;
+    public static RegistryObject<Block> WILLOW_TRAPDOOR;
+    public static RegistryObject<Block> WILLOW_PRESSURE_PLATE;
+    public static RegistryObject<Block> WILLOW_BUTTON;
+    public static RegistryObject<Block> WILLOW_SIGN;
+    public static RegistryObject<Block> WILLOW_WALL_SIGN;
+    public static RegistryObject<Block> WILLOW_HANGING_SIGN;
+    public static RegistryObject<Block> WILLOW_WALL_HANGING_SIGN;
+
     /*-----------------CAVE_BLOCKS-----------------*/
     //PRISMA_BLOCKS
     public static RegistryObject<Block> PRISMOSS;
@@ -186,7 +210,6 @@ public class RuBlocks {
     public static RegistryObject<Block> SMALL_OAK_SAPLING;
     public static RegistryObject<Block> SOCOTRA_SAPLING;
     public static RegistryObject<Block> WHITE_MAGNOLIA_SAPLING;
-    public static RegistryObject<Block> WILLOW_SAPLING;
     //SHRUBS
     public static RegistryObject<Block> ACACIA_SHRUB;
     public static RegistryObject<Block> BAOBAB_SHRUB;
@@ -241,7 +264,6 @@ public class RuBlocks {
     public static RegistryObject<Block> SPANISH_MOSS_PLANT;
     public static RegistryObject<Block> KAPOK_VINES;
     public static RegistryObject<Block> KAPOK_VINES_PLANT;
-    //public static RegistryObject<Block> WILLOW_VINES;
     public static RegistryObject<Block> FLOWERING_LILY_PAD;
     public static RegistryObject<Block> GIANT_LILY_PAD;
     //FOOD_PLANT_BLOCKS
@@ -399,7 +421,6 @@ public class RuBlocks {
     public static RegistryObject<Block> SOCOTRA_LEAVES;
     public static RegistryObject<Block> ENCHANTED_BIRCH_LEAVES;
     public static RegistryObject<Block> WHITE_MAGNOLIA_LEAVES;
-    public static RegistryObject<Block> WILLOW_LEAVES;
 
     /*-----------------BRANCHES-----------------*/
     public static RegistryObject<Block> ACACIA_BRANCH;
@@ -855,24 +876,6 @@ public class RuBlocks {
     public static RegistryObject<Block> SOCOTRA_WALL_SIGN;
     public static RegistryObject<Block> SOCOTRA_HANGING_SIGN;
     public static RegistryObject<Block> SOCOTRA_WALL_HANGING_SIGN;
-    //WILLOW_BLOCKS
-    public static RegistryObject<Block> WILLOW_LOG;
-    public static RegistryObject<Block> STRIPPED_WILLOW_LOG;
-    public static RegistryObject<Block> WILLOW_WOOD;
-    public static RegistryObject<Block> STRIPPED_WILLOW_WOOD;
-    public static RegistryObject<Block> WILLOW_PLANKS;
-    public static RegistryObject<Block> WILLOW_STAIRS;
-    public static RegistryObject<Block> WILLOW_SLAB;
-    public static RegistryObject<Block> WILLOW_FENCE;
-    public static RegistryObject<Block> WILLOW_DOOR;
-    public static RegistryObject<Block> WILLOW_FENCE_GATE;
-    public static RegistryObject<Block> WILLOW_TRAPDOOR;
-    public static RegistryObject<Block> WILLOW_PRESSURE_PLATE;
-    public static RegistryObject<Block> WILLOW_BUTTON;
-    public static RegistryObject<Block> WILLOW_SIGN;
-    public static RegistryObject<Block> WILLOW_WALL_SIGN;
-    public static RegistryObject<Block> WILLOW_HANGING_SIGN;
-    public static RegistryObject<Block> WILLOW_WALL_HANGING_SIGN;
     //YELLOW_BIOSHROOM_BLOCKS
     public static RegistryObject<Block> YELLOW_BIOSHROOM_STEM;
     public static RegistryObject<Block> STRIPPED_YELLOW_BIOSHROOM_STEM;
@@ -981,6 +984,29 @@ public class RuBlocks {
         AIR_CORAL = BlockRegistry.registerDefaultBlock("air_coral", () -> new AirCoralBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().instabreak().randomTicks().sound(SoundType.WET_GRASS).pushReaction(PushReaction.DESTROY).hasPostProcess((bs, br, bp) -> bs.getValue(AirCoralBlock.IS_ACTIVE)).emissiveRendering((bs, br, bp) -> bs.getValue(AirCoralBlock.IS_ACTIVE)).lightLevel((state) -> AirCoralBlock.isActive(state) ? 6 : 0)));
         FLOURAMINE = BlockRegistry.registerDefaultBlock("flouramine", () -> new FlouramineBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().strength(0.5f, 0f).randomTicks().sound(SoundType.WET_GRASS).pushReaction(PushReaction.DESTROY).hasPostProcess((bs, br, bp) -> bs.getValue(FlouramineBlock.IS_ACTIVE)).emissiveRendering((bs, br, bp) -> bs.getValue(FlouramineBlock.IS_ACTIVE)).lightLevel((state) -> FlouramineBlock.isActive(state) ? 12 : 0).offsetType(BlockBehaviour.OffsetType.XZ)));
         FLOURAMINE_PLANT = RegionsUnexploredMod.BLOCK_REGISTRY.register("flouramine_plant", () -> new FlouraminePlantBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().strength(0.5f, 0f).sound(SoundType.WET_GRASS).pushReaction(PushReaction.DESTROY).offsetType(BlockBehaviour.OffsetType.XZ)));
+        //WILLOW_BLOCKS
+        WILLOW_LEAVES = BlockRegistry.registerDefaultBlock("willow_leaves", () -> BlockRegistry.leaves(MapColor.PLANT));
+        WILLOW_VINES = BlockRegistry.registerDefaultBlock("willow_vines", () -> new WillowVinesBlock(BlockBehaviour.Properties.of().pushReaction(PushReaction.DESTROY).ignitedByLava().randomTicks().noCollission().instabreak().sound(SoundType.AZALEA)));
+
+        WILLOW_SAPLING = BlockRegistry.registerDefaultBlock("willow_sapling", () -> new SaplingBlock(RuTreeGrowers.WILLOW, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+
+        WILLOW_LOG = BlockRegistry.registerDefaultBlock("willow_log", () -> BlockRegistry.willowLog(MapColor.WOOD, MapColor.WOOD, SoundType.WOOD));
+        STRIPPED_WILLOW_LOG = BlockRegistry.registerDefaultBlock("stripped_willow_log", () -> BlockRegistry.log(MapColor.WOOD, MapColor.WOOD, SoundType.WOOD));
+        WILLOW_WOOD = BlockRegistry.registerDefaultBlock("willow_wood", () -> BlockRegistry.willowWoodBlock(MapColor.WOOD, SoundType.WOOD));
+        STRIPPED_WILLOW_WOOD = BlockRegistry.registerDefaultBlock("stripped_willow_wood", () -> BlockRegistry.woodBlock(MapColor.WOOD, SoundType.WOOD));
+        WILLOW_PLANKS = BlockRegistry.registerDefaultBlock("willow_planks", () -> BlockRegistry.woodPlanks(MapColor.WOOD, SoundType.WOOD));
+        WILLOW_STAIRS = BlockRegistry.registerDefaultBlock("willow_stairs", () -> BlockRegistry.woodStairs(MapColor.WOOD, SoundType.WOOD));
+        WILLOW_SLAB = BlockRegistry.registerDefaultBlock("willow_slab", () -> BlockRegistry.woodSlab(MapColor.WOOD, SoundType.WOOD));
+        WILLOW_FENCE = BlockRegistry.registerDefaultBlock("willow_fence", () -> BlockRegistry.woodFence(MapColor.WOOD, SoundType.WOOD));
+        WILLOW_DOOR = BlockRegistry.registerDefaultBlock("willow_door", () -> BlockRegistry.woodDoor(MapColor.WOOD, SoundType.WOOD, RuBlockSetType.WILLOW));
+        WILLOW_FENCE_GATE = BlockRegistry.registerDefaultBlock("willow_fence_gate", () -> BlockRegistry.woodFenceGate(MapColor.WOOD, RuWoodTypes.WILLOW, SoundType.WOOD));
+        WILLOW_TRAPDOOR = BlockRegistry.registerDefaultBlock("willow_trapdoor", () -> BlockRegistry.woodTrapDoor(MapColor.WOOD, SoundType.WOOD, RuBlockSetType.WILLOW));
+        WILLOW_PRESSURE_PLATE = BlockRegistry.registerDefaultBlock("willow_pressure_plate", () -> BlockRegistry.woodPressurePlate(MapColor.WOOD, SoundType.WOOD, RuBlockSetType.WILLOW));
+        WILLOW_BUTTON = BlockRegistry.registerDefaultBlock("willow_button", () -> BlockRegistry.woodButton(SoundType.WOOD, RuBlockSetType.WILLOW));
+        WILLOW_SIGN = RegionsUnexploredMod.BLOCK_REGISTRY.register("willow_sign", () -> BlockRegistry.sign(SoundType.WOOD, RuWoodTypes.WILLOW));
+        WILLOW_WALL_SIGN = RegionsUnexploredMod.BLOCK_REGISTRY.register("willow_wall_sign", () -> BlockRegistry.wallSign(SoundType.WOOD, WILLOW_SIGN.get(), RuWoodTypes.WILLOW));
+        WILLOW_HANGING_SIGN = RegionsUnexploredMod.BLOCK_REGISTRY.register("willow_hanging_sign", () -> BlockRegistry.hangingSign(MapColor.WOOD, SoundType.NETHER_WOOD, RuWoodTypes.WILLOW));
+        WILLOW_WALL_HANGING_SIGN = RegionsUnexploredMod.BLOCK_REGISTRY.register("willow_wall_hanging_sign", () -> BlockRegistry.wallHangingSign(MapColor.WOOD, SoundType.NETHER_WOOD, WILLOW_HANGING_SIGN.get(), RuWoodTypes.WILLOW));
         /*-----------------CAVE_BLOCKS-----------------*/
         //PRISMA_BLOCKS
         PRISMOSS = BlockRegistry.registerDefaultBlock("prismoss", () -> new PrismossBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_LIGHT_GREEN).sound(SoundType.STONE).randomTicks().strength(1.5f, 6f).requiresCorrectToolForDrops()));
@@ -1118,8 +1144,7 @@ public class RuBlocks {
         SMALL_OAK_SAPLING = BlockRegistry.registerDefaultBlock("small_oak_sapling", () -> new SaplingBlock(RuTreeGrowers.SMALL_OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
         SILVER_BIRCH_SAPLING = BlockRegistry.registerDefaultBlock("silver_birch_sapling", () -> new SaplingBlock(RuTreeGrowers.SILVER_BIRCH, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
         SOCOTRA_SAPLING = BlockRegistry.registerDefaultBlock("socotra_sapling", () -> new SaplingBlock(RuTreeGrowers.SOCOTRA, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
-        WILLOW_SAPLING = BlockRegistry.registerDefaultBlock("willow_sapling", () -> new SaplingBlock(RuTreeGrowers.WILLOW, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
-        //SHRUBS
+         //SHRUBS
         ACACIA_SHRUB = BlockRegistry.registerDefaultBlock("acacia_shrub", () -> new ShrubBlock(BlockBehaviour.Properties.of().pushReaction(PushReaction.DESTROY).ignitedByLava().noCollission().instabreak().sound(SoundType.AZALEA).offsetType(BlockBehaviour.OffsetType.XZ)));
         BAOBAB_SHRUB = BlockRegistry.registerDefaultBlock("baobab_shrub", () -> new ShrubBlock(BlockBehaviour.Properties.ofFullCopy(ACACIA_SHRUB.get())));
         BIRCH_SHRUB = BlockRegistry.registerDefaultBlock("birch_shrub", () -> new ShrubBlock(BlockBehaviour.Properties.ofFullCopy(ACACIA_SHRUB.get())));
@@ -1329,7 +1354,6 @@ public class RuBlocks {
         SILVER_BIRCH_LEAVES = BlockRegistry.registerDefaultBlock("silver_birch_leaves", () -> BlockRegistry.silverBirchLeaves(MapColor.COLOR_YELLOW));
         SOCOTRA_LEAVES = BlockRegistry.registerDefaultBlock("socotra_leaves", () -> BlockRegistry.leaves(MapColor.PLANT));
         WHITE_MAGNOLIA_LEAVES = BlockRegistry.registerDefaultBlock("white_magnolia_leaves", () -> BlockRegistry.whiteMagnoliaLeaves(MapColor.TERRACOTTA_WHITE));
-        WILLOW_LEAVES = BlockRegistry.registerDefaultBlock("willow_leaves", () -> BlockRegistry.leaves(MapColor.PLANT));
 
         /*-----------------BRANCHES-----------------*/
         ACACIA_BRANCH = BlockRegistry.registerDefaultBlock("acacia_branch", () -> new BranchBlock(BlockBehaviour.Properties.of().noOcclusion().sound(SoundType.MANGROVE_ROOTS).strength(1.0F, 1.5F).dynamicShape(), BranchBlock.BranchType.BRANCH));
@@ -1785,25 +1809,7 @@ public class RuBlocks {
         SOCOTRA_WALL_SIGN = RegionsUnexploredMod.BLOCK_REGISTRY.register("socotra_wall_sign", () -> BlockRegistry.wallSign(SoundType.CHERRY_WOOD, SOCOTRA_SIGN.get(), RuWoodTypes.SOCOTRA));
         SOCOTRA_HANGING_SIGN = RegionsUnexploredMod.BLOCK_REGISTRY.register("socotra_hanging_sign", () -> BlockRegistry.hangingSign(MapColor.TERRACOTTA_ORANGE, SoundType.NETHER_WOOD, RuWoodTypes.SOCOTRA));
         SOCOTRA_WALL_HANGING_SIGN = RegionsUnexploredMod.BLOCK_REGISTRY.register("socotra_wall_hanging_sign", () -> BlockRegistry.wallHangingSign(MapColor.TERRACOTTA_ORANGE, SoundType.NETHER_WOOD, SOCOTRA_HANGING_SIGN.get(), RuWoodTypes.SOCOTRA));
-        //WILLOW_BLOCKS
 
-        WILLOW_LOG = BlockRegistry.registerDefaultBlock("willow_log", () -> BlockRegistry.log(MapColor.WOOD, MapColor.WOOD, SoundType.WOOD));
-        STRIPPED_WILLOW_LOG = BlockRegistry.registerDefaultBlock("stripped_willow_log", () -> BlockRegistry.log(MapColor.WOOD, MapColor.WOOD, SoundType.WOOD));
-        WILLOW_WOOD = BlockRegistry.registerDefaultBlock("willow_wood", () -> BlockRegistry.woodBlock(MapColor.WOOD, SoundType.WOOD));
-        STRIPPED_WILLOW_WOOD = BlockRegistry.registerDefaultBlock("stripped_willow_wood", () -> BlockRegistry.woodBlock(MapColor.WOOD, SoundType.WOOD));
-        WILLOW_PLANKS = BlockRegistry.registerDefaultBlock("willow_planks", () -> BlockRegistry.woodPlanks(MapColor.WOOD, SoundType.WOOD));
-        WILLOW_STAIRS = BlockRegistry.registerDefaultBlock("willow_stairs", () -> BlockRegistry.woodStairs(MapColor.WOOD, SoundType.WOOD));
-        WILLOW_SLAB = BlockRegistry.registerDefaultBlock("willow_slab", () -> BlockRegistry.woodSlab(MapColor.WOOD, SoundType.WOOD));
-        WILLOW_FENCE = BlockRegistry.registerDefaultBlock("willow_fence", () -> BlockRegistry.woodFence(MapColor.WOOD, SoundType.WOOD));
-        WILLOW_DOOR = BlockRegistry.registerDefaultBlock("willow_door", () -> BlockRegistry.woodDoor(MapColor.WOOD, SoundType.WOOD, RuBlockSetType.WILLOW));
-        WILLOW_FENCE_GATE = BlockRegistry.registerDefaultBlock("willow_fence_gate", () -> BlockRegistry.woodFenceGate(MapColor.WOOD, RuWoodTypes.WILLOW, SoundType.WOOD));
-        WILLOW_TRAPDOOR = BlockRegistry.registerDefaultBlock("willow_trapdoor", () -> BlockRegistry.woodTrapDoor(MapColor.WOOD, SoundType.WOOD, RuBlockSetType.WILLOW));
-        WILLOW_PRESSURE_PLATE = BlockRegistry.registerDefaultBlock("willow_pressure_plate", () -> BlockRegistry.woodPressurePlate(MapColor.WOOD, SoundType.WOOD, RuBlockSetType.WILLOW));
-        WILLOW_BUTTON = BlockRegistry.registerDefaultBlock("willow_button", () -> BlockRegistry.woodButton(SoundType.WOOD, RuBlockSetType.WILLOW));
-        WILLOW_SIGN = RegionsUnexploredMod.BLOCK_REGISTRY.register("willow_sign", () -> BlockRegistry.sign(SoundType.WOOD, RuWoodTypes.WILLOW));
-        WILLOW_WALL_SIGN = RegionsUnexploredMod.BLOCK_REGISTRY.register("willow_wall_sign", () -> BlockRegistry.wallSign(SoundType.WOOD, WILLOW_SIGN.get(), RuWoodTypes.WILLOW));
-        WILLOW_HANGING_SIGN = RegionsUnexploredMod.BLOCK_REGISTRY.register("willow_hanging_sign", () -> BlockRegistry.hangingSign(MapColor.WOOD, SoundType.NETHER_WOOD, RuWoodTypes.WILLOW));
-        WILLOW_WALL_HANGING_SIGN = RegionsUnexploredMod.BLOCK_REGISTRY.register("willow_wall_hanging_sign", () -> BlockRegistry.wallHangingSign(MapColor.WOOD, SoundType.NETHER_WOOD, WILLOW_HANGING_SIGN.get(), RuWoodTypes.WILLOW));
         //YELLOW_BIOSHROOM_BLOCKS
         YELLOW_BIOSHROOM_STEM = BlockRegistry.registerDefaultBlock("yellow_bioshroom_stem", () -> BlockRegistry.fireproofLog(MapColor.COLOR_YELLOW, MapColor.COLOR_YELLOW, SoundType.NETHER_WOOD));
         STRIPPED_YELLOW_BIOSHROOM_STEM = BlockRegistry.registerDefaultBlock("stripped_yellow_bioshroom_stem", () -> BlockRegistry.fireproofLog(MapColor.COLOR_YELLOW, MapColor.COLOR_YELLOW, SoundType.NETHER_WOOD));

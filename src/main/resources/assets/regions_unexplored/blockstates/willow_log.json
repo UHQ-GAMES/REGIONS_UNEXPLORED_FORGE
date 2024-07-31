@@ -1,16 +1,61 @@
 {
-  "variants": {
-    "axis=x": {
-      "model": "regions_unexplored:block/willow_log",
-      "x": 90,
-      "y": 90
+  "multipart": [
+    {
+      "apply": {
+        "model": "regions_unexplored:block/willow_log",
+        "x": 90,
+        "y": 90
+      },
+      "when": {
+        "axis": "x"
+      }
     },
-    "axis=y": {
-      "model": "regions_unexplored:block/willow_log"
+    {
+      "apply": {
+        "model": "regions_unexplored:block/mossed_block_overlay_rotated",
+        "x": 90,
+        "y": 90
+      },
+      "when": {
+        "mossed": "true",
+        "axis": "x"
+      }
     },
-    "axis=z": {
-      "model": "regions_unexplored:block/willow_log",
-      "x": 90
+    {
+      "apply": {
+        "model": "regions_unexplored:block/willow_log"
+      },
+      "when": {
+        "axis": "y"
+      }
+    },
+    {
+      "apply": {
+        "model": "regions_unexplored:block/mossed_block_overlay"
+      },
+      "when": {
+        "mossed": "true",
+        "axis": "y"
+      }
+    },
+    {
+      "apply": {
+        "model": "regions_unexplored:block/willow_log",
+        "x": 90
+      },
+      "when": {
+        "axis": "z"
+      }
+    },
+    {
+      "apply": {
+        "model": "regions_unexplored:block/mossed_block_overlay_rotated",
+        "x": 90
+      },
+      "when": {
+        "mossed": "true",
+        "axis": "z"
+      }
     }
-  }
+  ]
 }

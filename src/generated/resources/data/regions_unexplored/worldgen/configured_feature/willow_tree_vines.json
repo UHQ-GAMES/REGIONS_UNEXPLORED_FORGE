@@ -52,7 +52,8 @@
       "state": {
         "Name": "regions_unexplored:willow_log",
         "Properties": {
-          "axis": "y"
+          "axis": "y",
+          "mossed": "false"
         }
       }
     }

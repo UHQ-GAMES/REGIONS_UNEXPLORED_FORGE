@@ -1,4 +1,4 @@
-// 1.21	2024-07-29T01:13:11.9570693	Loot Tables
+// 1.21	2024-07-31T00:20:22.1101271	Loot Tables
 4dd7ed5a8bb239ce51b25abdb847bc9f98e09954 data/regions_unexplored/loot_table/blocks/acacia_branch.json
 9a9c5fbba217f07ec7cb6067e42dba80d311e355 data/regions_unexplored/loot_table/blocks/acacia_shrub.json
 5a51e067949ccb31cee5835d415e76b8c69190e3 data/regions_unexplored/loot_table/blocks/air_coral.json
@@ -769,6 +769,7 @@ cb5543c389e2d2bf704359ad963a38b9cf46f175 data/regions_unexplored/loot_table/bloc
 972c74fb5d203f4b19dcf29be8f5de74ff7507ce data/regions_unexplored/loot_table/blocks/willow_slab.json
 fc1c17e39487a0fdefc664d279913fe9ba71cc66 data/regions_unexplored/loot_table/blocks/willow_stairs.json
 cc9a1c4bc1dc70deb3510493ae5771b850190f8e data/regions_unexplored/loot_table/blocks/willow_trapdoor.json
+4b04a544d52b66e490bd504d583cb73156b4f035 data/regions_unexplored/loot_table/blocks/willow_vines.json
 235ceb40b25b428121fdc99e90f524531869d6a6 data/regions_unexplored/loot_table/blocks/willow_wood.json
 09d94713e5f33fb70e58a4e89d4e7613a66f2a68 data/regions_unexplored/loot_table/blocks/wilting_trillium.json
 2020d3dcd4cb078011b914bf149e5a746dede961 data/regions_unexplored/loot_table/blocks/windswept_grass.json

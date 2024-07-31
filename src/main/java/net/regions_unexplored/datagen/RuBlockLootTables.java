@@ -81,6 +81,9 @@ public class RuBlockLootTables extends BlockLootSubProvider {
         add(RuBlocks.FLOURAMINE.get(), this::createSilkTouchOnlyTable);
         add(RuBlocks.FLOURAMINE_PLANT.get(), (block) -> createSilkTouchOnlyTable(RuBlocks.FLOURAMINE.get()));
 
+
+        add(RuBlocks.WILLOW_VINES.get(), (block) -> createShearsOnlyDrop(block));
+
         /*-----------------CAVE_BLOCKS-----------------*/
         //PRISMA_BLOCKS
         add(RuBlocks.PRISMOSS.get(), (block) -> createSingleItemTableWithSilkTouch(block, Blocks.COBBLESTONE));
